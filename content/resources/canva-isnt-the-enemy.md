@@ -3,6 +3,7 @@ title: "Canva isn't the enemy. Inconsistency is."
 description: "Most pastors I talk to feel guilty about using Canva. They shouldn't. The problem isn't the tool. It's that nobody is the keeper of the brand."
 date: "2025-10-03"
 tags: ["brand", "design strategy"]
+image: "/portfolio/logos-logo-2.webp"
 ---
 
 Most pastors I talk to feel a little guilty about using Canva. They shouldn't. Canva is a perfectly good tool. So is PowerPoint. So is whatever the worship lead has on their laptop. The tool isn't the problem.

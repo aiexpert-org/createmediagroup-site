@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
  *   LocalBusinessJsonLd      local SEO (Noblesville / Indianapolis service area)
  *   ServiceJsonLd            pricing tiers
  *   FaqJsonLd                FAQ pages
- *   BlogPostingJsonLd        blog post pages
+ *   ResourceArticleJsonLd    resource article pages
  *   BreadcrumbJsonLd         nested pages
  */
 
@@ -134,7 +134,7 @@ export function FaqJsonLd({
   });
 }
 
-export function BlogPostingJsonLd({
+export function ResourceArticleJsonLd({
   title,
   description,
   slug,
@@ -151,8 +151,8 @@ export function BlogPostingJsonLd({
 }) {
   return jsonScript({
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": `${siteConfig.url}/blog/${slug}#article`,
+    "@type": "Article",
+    "@id": `${siteConfig.url}/resources/${slug}#article`,
     headline: title,
     description,
     datePublished,
@@ -168,13 +168,13 @@ export function BlogPostingJsonLd({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteConfig.url}/blog/${slug}`,
+      "@id": `${siteConfig.url}/resources/${slug}`,
     },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: speakableSelectors,
     },
-    url: `${siteConfig.url}/blog/${slug}`,
+    url: `${siteConfig.url}/resources/${slug}`,
   });
 }
 

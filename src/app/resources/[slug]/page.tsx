@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/container";
 import { Section, Eyebrow } from "@/components/section";
 import { ButtonLink } from "@/components/button";
-import { BlogPostingJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
+import { ResourceArticleJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import {
-  getAllPostSlugs,
-  getPostBySlug,
-  getAllPostsMeta,
-} from "@/lib/blog";
+  getAllResourceSlugs,
+  getResourceBySlug,
+  getAllResourcesMeta,
+} from "@/lib/resources";
 import { siteConfig } from "@/lib/site-config";
 
 export async function generateStaticParams() {
-  return getAllPostSlugs().map((slug) => ({ slug }));
+  return getAllResourceSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -23,16 +24,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   try {
-    const post = await getPostBySlug(slug);
+    const post = await getResourceBySlug(slug);
     return {
       title: post.title,
       description: post.description,
-      alternates: { canonical: `/blog/${slug}` },
+      alternates: { canonical: `/resources/${slug}` },
       openGraph: {
         type: "article",
         title: post.title,
         description: post.description,
-        url: `${siteConfig.url}/blog/${slug}`,
+        url: `${siteConfig.url}/resources/${slug}`,
         publishedTime: post.date,
       },
     };
@@ -50,7 +51,7 @@ function formatDate(iso: string) {
   });
 }
 
-export default async function BlogPostPage({
+export default async function ResourcePage({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -58,20 +59,20 @@ export default async function BlogPostPage({
   const { slug } = await params;
   let post;
   try {
-    post = await getPostBySlug(slug);
+    post = await getResourceBySlug(slug);
   } catch {
     notFound();
   }
   if (!post) notFound();
 
-  const all = getAllPostsMeta();
+  const all = getAllResourcesMeta();
   const idx = all.findIndex((p) => p.slug === slug);
   const next = idx > 0 ? all[idx - 1] : undefined;
   const prev = idx < all.length - 1 ? all[idx + 1] : undefined;
 
   return (
     <>
-      <BlogPostingJsonLd
+      <ResourceArticleJsonLd
         title={post.title}
         description={post.description}
         slug={post.slug}
@@ -80,8 +81,8 @@ export default async function BlogPostPage({
       <BreadcrumbJsonLd
         items={[
           { name: "Home", url: "/" },
-          { name: "Journal", url: "/blog" },
-          { name: post.title, url: `/blog/${post.slug}` },
+          { name: "Resources", url: "/resources" },
+          { name: post.title, url: `/resources/${post.slug}` },
         ]}
       />
 
@@ -89,10 +90,10 @@ export default async function BlogPostPage({
         <Container>
           <article className="max-w-3xl mx-auto">
             <Link
-              href="/blog"
+              href="/resources"
               className="text-xs uppercase tracking-[0.22em] text-[color:var(--color-muted)] hover:text-[color:var(--color-accent)]"
             >
-              ← Journal
+              ← Resources
             </Link>
             <div className="mt-6 flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
               <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -111,6 +112,21 @@ export default async function BlogPostPage({
               {post.description}
             </p>
           </article>
+
+          {post.image && (
+            <figure className="mt-10 max-w-4xl mx-auto">
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
+                <Image
+                  src={post.image}
+                  alt={`Featured design work for ${post.title}.`}
+                  fill
+                  sizes="(min-width: 1024px) 800px, 100vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </figure>
+          )}
         </Container>
       </Section>
 
@@ -139,12 +155,12 @@ export default async function BlogPostPage({
             </div>
 
             <nav
-              aria-label="More posts"
+              aria-label="More resources"
               className="mt-16 grid sm:grid-cols-2 gap-4"
             >
               {prev ? (
                 <Link
-                  href={`/blog/${prev.slug}`}
+                  href={`/resources/${prev.slug}`}
                   className="rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
@@ -159,7 +175,7 @@ export default async function BlogPostPage({
               )}
               {next ? (
                 <Link
-                  href={`/blog/${next.slug}`}
+                  href={`/resources/${next.slug}`}
                   className="rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors text-right"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">

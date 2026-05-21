@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/subscription", label: "Subscription" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/case-studies", label: "Case studies" },
-  { href: "/blog", label: "Journal" },
+  { href: "/resources", label: "Resources" },
   { href: "/about", label: "About" },
 ];
 

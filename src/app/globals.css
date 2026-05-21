@@ -84,7 +84,7 @@ body {
   border-color: var(--color-border);
 }
 
-/* Prose styles for blog post bodies and case studies. */
+/* Prose styles for resource article bodies and case studies. */
 .prose {
   font-size: 18px;
   line-height: 1.75;

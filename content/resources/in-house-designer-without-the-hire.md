@@ -3,6 +3,7 @@ title: "How to get an in-house designer without making the hire"
 description: "Most mid-sized churches can't justify a $65k a year in-house designer. Almost every mid-sized church needs one. Here's how the model collapses the gap."
 date: "2026-03-04"
 tags: ["operations", "hiring"]
+image: "/portfolio/sermon-malachi.webp"
 ---
 
 The conversation I have with most senior pastors goes like this.

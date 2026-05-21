@@ -3,6 +3,7 @@ title: "Subscription design vs. freelance: which fits a church"
 description: "Both have their place. For most mid-sized churches, the subscription model wins on a few specific dimensions that pastors usually only realize 6 months in."
 date: "2026-01-14"
 tags: ["pricing", "operations"]
+image: "/portfolio/sermon-trees-11.jpg"
 ---
 
 Most churches I talk to have tried freelance. They've found a designer on Fiverr or through a friend, paid them by the project, gotten a sermon series graphic back, and then... not had a consistent design partner six months later.

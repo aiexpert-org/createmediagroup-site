@@ -3,6 +3,7 @@ title: "Why sermon series art matters more than you think"
 description: "A sermon series graphic isn't decoration. It's the cover of a book your church is reading together for six weeks. Here's why that compounds."
 date: "2025-09-12"
 tags: ["sermon series", "design strategy"]
+image: "/portfolio/sermon-this-is-church.webp"
 ---
 
 There's a temptation, when budgets are tight, to treat sermon series art as decoration. Get *something* on the screen behind the title. Throw a Bible verse on a stock photo. Move on.

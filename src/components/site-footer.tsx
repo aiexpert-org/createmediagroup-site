@@ -27,7 +27,7 @@ const footerNav = [
     heading: "Company",
     links: [
       { href: "/about", label: "About Emily" },
-      { href: "/blog", label: "Journal" },
+      { href: "/resources", label: "Resources" },
       { href: "/contact", label: "Contact" },
     ],
   },

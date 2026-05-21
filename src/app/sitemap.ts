@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { getAllPostsMeta } from "@/lib/blog";
+import { getAllResourcesMeta } from "@/lib/resources";
 
 const staticRoutes: {
   path: string;
@@ -13,7 +13,7 @@ const staticRoutes: {
   { path: "/portfolio", priority: 0.85, changeFrequency: "weekly" },
   { path: "/case-studies", priority: 0.85, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/blog", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/resources", priority: 0.8, changeFrequency: "weekly" },
   { path: "/contact", priority: 0.9, changeFrequency: "monthly" },
 ];
 
@@ -26,12 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }));
 
-  const blogEntries = getAllPostsMeta().map((post) => ({
-    url: `${siteConfig.url}/blog/${post.slug}`,
+  const resourceEntries = getAllResourcesMeta().map((post) => ({
+    url: `${siteConfig.url}/resources/${post.slug}`,
     lastModified: new Date(post.date + "T00:00:00"),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...blogEntries];
+  return [...staticEntries, ...resourceEntries];
 }

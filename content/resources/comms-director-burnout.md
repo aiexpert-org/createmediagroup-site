@@ -3,6 +3,7 @@ title: "The comms director burnout problem nobody is solving"
 description: "If you have a comms director under 35, you have about 18 months before they leave. Here's what's actually breaking them, and what isn't."
 date: "2025-11-08"
 tags: ["staff", "burnout", "comms"]
+image: "/portfolio/social-asset-1.webp"
 ---
 
 There's a number I've been tracking with friends who pastor mid-sized churches. The median tenure of a church communications director, in my admittedly anecdotal sample, is somewhere around 18 to 24 months.
