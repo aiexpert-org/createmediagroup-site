@@ -39,38 +39,91 @@ export default function HomePage() {
       <ServiceJsonLd />
       <FaqJsonLd items={homeFaqs} />
 
-      {/* HERO - kept for commit 1, restructured in commit 2 */}
-      <Section className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20">
+      {/* HERO - 5/7 two-column. Text left, still-life right. Emily-headshot as the CTA's visual signature. */}
+      {/* Per brand-direction memo Section 6. Bridge fallback: three existing portfolio JPGs composed as a triptych. */}
+      {/* TODO: replace right-column composition with a photographed still-life of three real Emily artifacts */}
+      {/*       (sermon-series poster, folded bulletin on a pew, iPhone showing a social tile) per Section 6. */}
+      <Section className="pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-28">
         <Container>
-          <div className="max-w-4xl">
-            <Eyebrow>Graphic design for churches</Eyebrow>
-            <h1 className="mt-5 font-serif text-[clamp(2.75rem,6.5vw,5.5rem)] leading-[0.98] tracking-tight text-[color:var(--color-ink)]">
-              Unlimited graphic design for{" "}
-              <span className="font-serif-italic text-[color:var(--color-accent)]">
-                pastors and churches.
-              </span>
-            </h1>
-            <p className="mt-7 max-w-2xl text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              Your church&rsquo;s design team, on a monthly subscription.
-              Same-day rush available. Sermon series, social, signage, kids and
-              youth, announcements, brand.{" "}
-              <span className="text-[color:var(--color-ink)]">
-                $800 a month, flat.
-              </span>
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <ButtonLink href="/subscription" variant="primary" size="lg">
-                See the subscription
-              </ButtonLink>
-              <ButtonLink href="/how-it-works" variant="outline" size="lg">
-                How it works
-              </ButtonLink>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* LEFT COLUMN: 5/12 — text */}
+            <div className="lg:col-span-5">
+              <h1 className="font-serif font-normal text-[44px] md:text-[80px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[14ch]">
+                Unlimited graphic design for pastors and churches.
+              </h1>
+              <p className="mt-7 text-xl leading-[1.55] text-[color:var(--color-ink)]/80 max-w-[36ch]">
+                Your church&rsquo;s design team, on a monthly subscription.
+                Same-day rush available.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6">
+                {/* Primary CTA — the one visual signature: Emily's headshot as a 36px round avatar */}
+                {/*  on the leading edge. Hand-rolled here instead of ButtonLink to keep the avatar slot */}
+                {/*  scoped to the home hero only (per brand memo Section 5). */}
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 rounded-lg bg-[color:var(--color-accent)] pl-2 pr-7 h-14 text-base font-medium text-[color:var(--color-accent-foreground)] hover:bg-[color:var(--color-accent-hover)] transition-colors"
+                >
+                  <Image
+                    src="/about/emily-headshot.webp"
+                    alt=""
+                    width={36}
+                    height={36}
+                    className="rounded-full object-cover h-9 w-9"
+                  />
+                  Book a call with Emily.
+                </Link>
+                {/* Tertiary CTA — underlined text, letterpress-feel link treatment */}
+                <Link
+                  href="/portfolio"
+                  className="text-base font-medium text-[color:var(--color-ink)] underline decoration-[color:var(--color-accent)] decoration-2 underline-offset-4 hover:decoration-[color:var(--color-ink)] transition-colors"
+                >
+                  See the work
+                </Link>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: 7/12 — still-life triptych of three real Emily portfolio pieces. */}
+            {/* Bridge fallback per Section 6: three existing JPGs from /public/portfolio composed with shadows + slight rotation. */}
+            <div className="lg:col-span-7">
+              <div className="relative w-full max-w-md mx-auto lg:max-w-none lg:pl-8">
+                {/* Primary artifact: sermon-series poster, large vertical */}
+                <div className="relative aspect-[3/4] overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)] shadow-[0_24px_48px_-18px_rgba(26,25,22,0.22)]">
+                  <Image
+                    src="/portfolio/sermon-malachi.webp"
+                    alt="Malachi sermon-series poster designed by Emily Farmer for a church."
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 80vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Secondary artifact: announcement card, top-right, slight clockwise tilt */}
+                <div className="absolute -top-6 -right-2 sm:-right-4 lg:-right-6 w-[40%] aspect-[4/5] overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)] shadow-[0_18px_36px_-12px_rgba(26,25,22,0.22)] rotate-[3deg]">
+                  <Image
+                    src="/portfolio/announcements-baptism.webp"
+                    alt="Baptism announcement graphic designed by Emily Farmer."
+                    fill
+                    sizes="(min-width: 1024px) 18vw, 35vw"
+                    className="object-cover"
+                  />
+                </div>
+                {/* Tertiary artifact: social tile, bottom-left, slight counter-clockwise tilt */}
+                <div className="absolute -bottom-8 -left-2 sm:-left-4 lg:-left-6 w-[38%] aspect-square overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)] shadow-[0_18px_36px_-12px_rgba(26,25,22,0.22)] -rotate-[4deg]">
+                  <Image
+                    src="/portfolio/social-summer-sundays.webp"
+                    alt="Summer Sundays social media tile designed by Emily Farmer."
+                    fill
+                    sizes="(min-width: 1024px) 18vw, 35vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* STAT RIBBON - kept for commit 1, stripped in commit 3 */}
+      {/* STAT RIBBON - kept for commit 2, stripped in commit 3 */}
       <section className="border-y border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
         <Container className="py-8 sm:py-10">
           <dl className="grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-8">
@@ -233,7 +286,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* MEET YOUR DESIGNER - kept for commit 1, restructured in commit 2 */}
+      {/* MEET YOUR DESIGNER - kept for commit 2, will move onto clay band in future pass */}
       <Section>
         <Container>
           <div className="grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-16 items-center">
@@ -337,7 +390,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* PRICING TEASER - Sparkle badge dropped, rounded-xl to rounded-lg */}
+      {/* PRICING TEASER - Sparkle badge dropped, rounded-lg */}
       <Section>
         <Container>
           <div className="grid lg:grid-cols-2 gap-10 items-start">
@@ -396,7 +449,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* FINAL CTA - dark block deleted, replaced with cream-substrate quiet close */}
+      {/* FINAL CTA - cream substrate */}
       <Section className="bg-[color:var(--color-surface)]">
         <Container>
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
