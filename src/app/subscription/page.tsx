@@ -118,8 +118,8 @@ export default function SubscriptionPage() {
                 </span>
               </p>
               <p className="mt-1 text-sm text-[color:var(--color-accent)]">
-                ~${siteConfig.pricing.annual.perMonth} a month. Twelve months
-                for the price of eleven.
+                ~${siteConfig.pricing.annual.perMonth} a month. Save almost
+                $2,000 on the year.
               </p>
               <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
                 {siteConfig.pricing.annual.blurb}
