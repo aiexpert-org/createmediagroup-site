@@ -48,6 +48,10 @@ export default function AboutPage() {
       <Section className="pt-4 pb-16">
         <Container>
           <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-start">
+            {/* TODO: rewrite About paragraphs in Emily voice per corpus. */}
+            {/* Best-of quotes #2 + #3 from research/emily-voice-corpus.md Section 9 should land here */}
+            {/* once Brett extracts a 10-minute voice memo from Emily for paragraphs 3, 4, 5 of the */}
+            {/* About arc per brand-direction memo Section 11 item 5. */}
             <div className="space-y-6 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
               <p>
                 I started Create Media Group because most of the churches I

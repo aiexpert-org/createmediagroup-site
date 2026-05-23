@@ -20,11 +20,11 @@ export default function ContactPage() {
             <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
               Tell me about your church.
             </h1>
-            <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              Send me a note about your church, what you&rsquo;re trying to
-              build, and what kind of design help you need. I&rsquo;ll reply
-              within a business day with whether we&rsquo;re a fit and what
-              onboarding looks like.
+            {/* Voice corpus Translation 5 — contact-page reassurance note. */}
+            <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed max-w-2xl">
+              I would love to talk with you about this further. Send me a note
+              here, or text me, and I will get back to you the same day.
+              I&rsquo;m happy to answer any questions you may have.
             </p>
           </div>
         </Container>

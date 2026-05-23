@@ -51,9 +51,12 @@ export default function HomePage() {
               <h1 className="font-serif font-normal text-[44px] md:text-[80px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[14ch]">
                 Unlimited graphic design for pastors and churches.
               </h1>
-              <p className="mt-7 text-xl leading-[1.55] text-[color:var(--color-ink)]/80 max-w-[36ch]">
-                Your church&rsquo;s design team, on a monthly subscription.
-                Same-day rush available.
+              {/* Voice corpus Translation 2. Overrides the DECISIONS-locked subhead. */}
+              {/* Locked version was: "Your churchs design team, on a monthly subscription. Same-day rush available." */}
+              {/* Brett to confirm: keep voiced version below, or revert to locked. */}
+              <p className="mt-7 text-xl leading-[1.55] text-[color:var(--color-ink)]/80 max-w-[44ch]">
+                I&rsquo;m Emily. I do unlimited graphic design for churches on
+                a monthly subscription. Same-day rush is part of it.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6">
                 {/* Primary CTA — the one visual signature: Emily's headshot as a 36px round avatar */}
@@ -285,19 +288,19 @@ export default function HomePage() {
             </div>
             <div>
               <Eyebrow>Meet your designer</Eyebrow>
+              {/* Voice corpus Translation 3 — Meet Your Designer block intro. */}
               <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
-                Hi, I&rsquo;m Emily.
+                Hello, I&rsquo;m Emily.
               </h2>
               <p className="mt-5 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
-                I&rsquo;m a graphic designer with 15 years of experience and
-                I&rsquo;ve been designing for churches for the better part of a
-                decade. I started Create Media Group because I kept meeting
-                churches that needed real design help but couldn&rsquo;t afford
-                a full-time hire.
+                I&rsquo;m a graphic designer in Indianapolis and I&rsquo;ve
+                been designing for churches for the last 10 years. When you
+                sign up I become your remote designer, on call whenever you
+                need something.
               </p>
               <p className="mt-4 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
-                When you subscribe, you get me. The same designer every week,
-                learning your church the way an in-house hire would.
+                Sermon series, weekly announcements, social, logos, signage.
+                Whatever you need that week, I get to work on it right away.
               </p>
               <div className="mt-8">
                 <ButtonLink href="/about" variant="outline" size="md">

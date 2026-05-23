@@ -143,6 +143,22 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
+      {/* Voice corpus Translation 4 — why one-designer works. Pulled from the cold template */}
+      {/* and How-It-Works banner; positioned as a quiet editorial moment before the service list. */}
+      <Section>
+        <Container>
+          <div className="max-w-3xl">
+            <p className="font-serif text-2xl md:text-3xl leading-[1.3] text-[color:var(--color-ink)]">
+              I only work for a few churches at the same time. That&rsquo;s how
+              I can get things back to you same day, and that&rsquo;s why
+              you&rsquo;ll never wait behind a queue. When you send me a
+              project, I&rsquo;m the one designing it. The files are yours to
+              keep, and they will never be shared with any other church.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
       {/* SERVICES DETAIL - card chrome stripped, rule-divided */}
       <Section className="bg-[color:var(--color-surface)]">
         <Container>
@@ -174,7 +190,7 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
-      {/* FAQ - card chrome kept for commit 1, restructured in commit 3 */}
+      {/* FAQ - chrome dropped commit 3. TODO: rewrite answers in Emily voice per corpus. */}
       <Section>
         <Container>
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
@@ -241,7 +257,7 @@ function Includes() {
     "One dedicated designer (Emily)",
     "Unlimited requests",
     "Unlimited revisions",
-    "Same-week turnarounds. Same-day rush available.",
+    "I can even get things back to you same day.",
     "All six service categories included",
     "Source files and brand library",
     "Pause anytime",
