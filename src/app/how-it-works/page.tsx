@@ -17,11 +17,8 @@ export default function HowItWorksPage() {
       <Section className="pt-16 pb-12">
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow>How it works</Eyebrow>
-            <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-              From inquiry to a{" "}
-              <span className="font-serif-italic">finished file,</span>{" "}
-              start to finish.
+            <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
+              From inquiry to a finished file, start to finish.
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
               Five steps. One designer. No ticketing system, no account manager,

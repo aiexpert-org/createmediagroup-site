@@ -30,11 +30,8 @@ export default function ResourcesIndexPage() {
       <Section className="pt-16 pb-10">
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow>Resources</Eyebrow>
-            <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-              Notes on church design
-              <br />
-              <span className="font-serif-italic">from inside the work.</span>
+            <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
+              Notes on church design from inside the work.
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
               Articles, lessons, and training for church communications teams.

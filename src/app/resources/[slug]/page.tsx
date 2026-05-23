@@ -97,13 +97,14 @@ export default async function ResourcePage({
             </Link>
             <div className="mt-6 flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
               <time dateTime={post.date}>{formatDate(post.date)}</time>
-              <span>·</span>
+              <span aria-hidden="true">/</span>
               <span>{post.readTime} min read</span>
-              {post.tags.map((tag) => (
-                <span key={tag} className="text-[color:var(--color-accent)]">
-                  · {tag}
-                </span>
-              ))}
+              {post.tags.length > 0 && (
+                <>
+                  <span aria-hidden="true">/</span>
+                  <span className="text-[color:var(--color-accent)]">{post.tags.join(", ")}</span>
+                </>
+              )}
             </div>
             <h1 className="mt-5 font-serif text-[clamp(2.25rem,4.5vw,3.75rem)] leading-[1.05] tracking-tight text-[color:var(--color-ink)]">
               {post.title}
@@ -138,11 +139,9 @@ export default async function ResourcePage({
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
 
-            <div className="mt-16 rounded-lg border border-[color:var(--color-accent)]/40 bg-[color:var(--color-card)] p-8">
-              <Eyebrow>About Create Media Group</Eyebrow>
-              <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
-                {siteConfig.shortDescription} Written by {siteConfig.owner.name}
-                , founder and lead designer.
+            <div className="mt-16 border-t border-[color:var(--color-border)] pt-8">
+              <p className="font-serif-italic text-[color:var(--color-ink-soft)] leading-relaxed">
+                {siteConfig.shortDescription} Written by {siteConfig.owner.name}.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <ButtonLink href="/subscription" variant="primary" size="md">
@@ -161,7 +160,7 @@ export default async function ResourcePage({
               {prev ? (
                 <Link
                   href={`/resources/${prev.slug}`}
-                  className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors"
+                  className="block border-t border-[color:var(--color-border)] pt-5 hover:text-[color:var(--color-accent)] transition-colors"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
                     Previous
@@ -176,7 +175,7 @@ export default async function ResourcePage({
               {next ? (
                 <Link
                   href={`/resources/${next.slug}`}
-                  className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors text-right"
+                  className="block border-t border-[color:var(--color-border)] pt-5 hover:text-[color:var(--color-accent)] transition-colors text-right"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
                     Next

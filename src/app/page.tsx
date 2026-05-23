@@ -123,24 +123,6 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* STAT RIBBON - kept for commit 2, stripped in commit 3 */}
-      <section className="border-y border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
-        <Container className="py-8 sm:py-10">
-          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-8">
-            {siteConfig.stats.map((stat) => (
-              <div key={stat.label} className="text-center sm:text-left">
-                <dt className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
-                  {stat.label}
-                </dt>
-                <dd className="mt-1.5 font-serif text-3xl sm:text-4xl tracking-tight text-[color:var(--color-ink)]">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Container>
-      </section>
-
       {/* THE PROBLEM */}
       <Section>
         <Container>

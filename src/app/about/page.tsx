@@ -19,11 +19,8 @@ export default function AboutPage() {
         <Container>
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <Eyebrow>About</Eyebrow>
-              <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-                I&rsquo;m Emily.
-                <br />
-                <span className="font-serif-italic">I design for churches.</span>
+              <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
+                I&rsquo;m Emily. I design for churches.
               </h1>
               <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
                 Create Media Group is a quiet idea. A church should get the design

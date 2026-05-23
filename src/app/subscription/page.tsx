@@ -55,11 +55,8 @@ export default function SubscriptionPage() {
       <Section className="pt-16 pb-12">
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow>Subscription</Eyebrow>
-            <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-              One flat fee.
-              <br />
-              <span className="font-serif-italic">Everything your church needs designed.</span>
+            <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
+              One flat fee. Everything your church needs designed.
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
               No per-project pricing. No ticket points. No upsells on revisions.
@@ -196,11 +193,11 @@ export default function SubscriptionPage() {
                 </a>
               </p>
             </div>
-            <ul className="space-y-6">
+            <ul className="divide-y divide-[color:var(--color-border)]">
               {subscriptionFaqs.map((item) => (
                 <li
                   key={item.q}
-                  className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6"
+                  className="py-6"
                 >
                   <h3 className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]">
                     {item.q}

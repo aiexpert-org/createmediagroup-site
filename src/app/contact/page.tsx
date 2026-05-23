@@ -17,11 +17,8 @@ export default function ContactPage() {
       <Section className="pt-16 pb-10">
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow>Contact</Eyebrow>
-            <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-              Tell me about
-              <br />
-              <span className="font-serif-italic">your church.</span>
+            <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
+              Tell me about your church.
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
               Send me a note about your church, what you&rsquo;re trying to

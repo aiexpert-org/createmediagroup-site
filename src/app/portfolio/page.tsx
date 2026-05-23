@@ -37,29 +37,6 @@ export default function PortfolioPage() {
         </Container>
       </Section>
 
-      {/* Category jump links - rounded-full pills swapped to rounded-lg */}
-      <Section className="pt-0 pb-8">
-        <Container>
-          <nav aria-label="Portfolio categories" className="flex flex-wrap gap-2.5">
-            {portfolioCategories.map((cat) => {
-              const count = getPortfolioByCategory(cat.slug).length;
-              return (
-                <a
-                  key={cat.slug}
-                  href={`#${cat.slug}`}
-                  className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] px-4 py-2 text-sm text-[color:var(--color-ink)] hover:border-[color:var(--color-accent)]/60 transition-colors"
-                >
-                  {cat.name}
-                  <span className="text-[color:var(--color-muted)] text-xs">
-                    {count}
-                  </span>
-                </a>
-              );
-            })}
-          </nav>
-        </Container>
-      </Section>
-
       {/* Sections by category - card chrome around tiles softened to rounded-lg */}
       {portfolioCategories.map((cat) => {
         const items = getPortfolioByCategory(cat.slug);
