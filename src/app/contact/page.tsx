@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/container";
-import { Section, Eyebrow } from "@/components/section";
-import { ButtonLink } from "@/components/button";
+import { Section } from "@/components/section";
 import { siteConfig } from "@/lib/site-config";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -20,7 +20,6 @@ export default function ContactPage() {
             <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
               Tell me about your church.
             </h1>
-            {/* Voice corpus Translation 5 — contact-page reassurance note. */}
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed max-w-2xl">
               I would love to talk with you about this further. Send me a note
               here, or text me, and I will get back to you the same day.
@@ -33,92 +32,10 @@ export default function ContactPage() {
       <Section className="pt-4 pb-20">
         <Container>
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12">
-            {/* Form */}
             <div>
-              <form
-                action={`mailto:${siteConfig.contact.email}`}
-                method="post"
-                encType="text/plain"
-                className="space-y-5 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 lg:p-10"
-              >
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <Field
-                    label="Your name"
-                    name="name"
-                    placeholder="Pastor Sam Reynolds"
-                    required
-                  />
-                  <Field
-                    label="Your role"
-                    name="role"
-                    placeholder="Lead Pastor, Comms Director, etc."
-                  />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <Field
-                    label="Church name"
-                    name="church"
-                    placeholder="Faith Christian Fellowship"
-                    required
-                  />
-                  <Field
-                    label="City and state"
-                    name="location"
-                    placeholder="Trussville, AL"
-                  />
-                </div>
-                <Field
-                  label="Email"
-                  name="email"
-                  type="email"
-                  placeholder="you@yourchurch.org"
-                  required
-                />
-                <Field
-                  label="Phone (optional)"
-                  name="phone"
-                  type="tel"
-                  placeholder="555 123 4567"
-                />
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-[color:var(--color-ink)]"
-                  >
-                    What design help do you need?
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    placeholder="Tell me about your church, your team, and what's on your design plate."
-                    className="mt-1.5 w-full rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-background)] px-4 py-3 text-[color:var(--color-ink)] placeholder:text-[color:var(--color-muted)] focus:border-[color:var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-accent)]/30"
-                  />
-                </div>
-                <div>
-                  <ButtonLink
-                    href={`mailto:${siteConfig.contact.email}?subject=New church inquiry`}
-                    variant="primary"
-                    size="lg"
-                  >
-                    Send the note
-                  </ButtonLink>
-                  <p className="mt-3 text-xs text-[color:var(--color-muted)]">
-                    Submitting opens your email client with the form contents.
-                    Prefer to just send a plain email?{" "}
-                    <a
-                      className="underline underline-offset-2"
-                      href={`mailto:${siteConfig.contact.email}`}
-                    >
-                      {siteConfig.contact.email}
-                    </a>
-                  </p>
-                </div>
-              </form>
+              <ContactForm />
             </div>
 
-            {/* Direct contact column */}
             <aside className="space-y-6">
               <ContactCard
                 icon={<Mail className="h-4 w-4" />}
@@ -154,39 +71,6 @@ export default function ContactPage() {
         </Container>
       </Section>
     </>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  placeholder,
-  required,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  placeholder?: string;
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label
-        htmlFor={name}
-        className="block text-sm font-medium text-[color:var(--color-ink)]"
-      >
-        {label} {required && <span className="text-[color:var(--color-accent)]">*</span>}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        required={required}
-        className="mt-1.5 w-full rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-background)] px-4 py-3 text-[color:var(--color-ink)] placeholder:text-[color:var(--color-muted)] focus:border-[color:var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-accent)]/30"
-      />
-    </div>
   );
 }
 

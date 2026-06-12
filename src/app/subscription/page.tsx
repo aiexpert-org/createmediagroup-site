@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Subscription and pricing",
-  description: `Unlimited graphic design for churches. Flat $${siteConfig.pricing.monthly.amount} a month, or $${siteConfig.pricing.annual.amount.toLocaleString()} a year (twelve for the price of eleven). Sermon series, social, signage, kids and youth, announcements, brand.`,
+  description: `Unlimited graphic design for churches. Flat $${siteConfig.pricing.monthly.amount} a month, or $${siteConfig.pricing.annual.amount.toLocaleString()} a year (save almost $2,000). Sermon series, social, signage, kids and youth, announcements, brand.`,
   alternates: { canonical: "/subscription" },
 };
 
@@ -18,7 +18,7 @@ const subscriptionFaqs = [
   },
   {
     q: "Is there a contract?",
-    a: "Month-to-month for the monthly tier. Pause or cancel anytime. Your files are yours. The annual prepay tier is 12 months upfront for the price of 11.",
+    a: "Month-to-month for the monthly tier. Pause or cancel anytime. Your files are yours. The annual prepay tier is 12 months upfront and saves you almost $2,000.",
   },
   {
     q: "What if I have a slow month?",
@@ -38,7 +38,7 @@ const subscriptionFaqs = [
   },
   {
     q: "How do I send requests?",
-    a: "However works for your team. Most churches use a shared Notion or Google Doc. Some just text or Slack me. I'll match your pace. What matters is one place to see the queue, not a specific app.",
+    a: "However works for your team. Most churches use a shared Notion or Google Doc. Some just text or Slack me. I'll match your pace. What matters is having one place to see the queue. The app is up to you.",
   },
   {
     q: "What happens if you take on too many churches?",
@@ -143,8 +143,6 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
-      {/* Voice corpus Translation 4 — why one-designer works. Pulled from the cold template */}
-      {/* and How-It-Works banner; positioned as a quiet editorial moment before the service list. */}
       <Section>
         <Container>
           <div className="max-w-3xl">
@@ -190,7 +188,7 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
-      {/* FAQ - chrome dropped commit 3. TODO: rewrite answers in Emily voice per corpus. */}
+      {/* FAQ */}
       <Section>
         <Container>
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
@@ -257,7 +255,7 @@ function Includes() {
     "One dedicated designer (Emily)",
     "Unlimited requests",
     "Unlimited revisions",
-    "I can even get things back to you same day.",
+    "Same-day rush available",
     "All six service categories included",
     "Source files and brand library",
     "Pause anytime",

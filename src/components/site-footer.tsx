@@ -2,56 +2,31 @@ import Link from "next/link";
 import { Container } from "./container";
 import { siteConfig } from "@/lib/site-config";
 
-const footerNav = [
-  {
-    heading: "Work",
-    links: [
-      { href: "/how-it-works", label: "How it works" },
-      { href: "/portfolio", label: "Portfolio" },
-      { href: "/case-studies", label: "Case studies" },
-      { href: "/subscription", label: "Pricing" },
-    ],
-  },
-  {
-    heading: "Services",
-    links: [
-      { href: "/subscription#sermon-series", label: "Sermon series" },
-      { href: "/subscription#social-media", label: "Social media" },
-      { href: "/subscription#announcements", label: "Announcements" },
-      { href: "/subscription#youth-and-kids", label: "Youth and kids" },
-      { href: "/subscription#logos", label: "Logos and branding" },
-      { href: "/subscription#signage", label: "Signage and print" },
-    ],
-  },
-  {
-    heading: "Company",
-    links: [
-      { href: "/about", label: "About Emily" },
-      { href: "/resources", label: "Resources" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
+const footerLinks = [
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/subscription", label: "Pricing" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
-      <Container className="py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div>
+      <Container className="py-14">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="max-w-sm">
             <Link
               href="/"
               className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]"
             >
               Create Media Group
             </Link>
-            <p className="mt-5 max-w-sm text-sm text-[color:var(--color-muted)] leading-relaxed">
-              Unlimited graphic design for pastors and churches. Sermon series,
-              signage, social, kids and youth, announcements, brand. One flat
-              monthly subscription.
+            <p className="mt-4 text-sm text-[color:var(--color-muted)] leading-relaxed">
+              {siteConfig.shortDescription}
             </p>
-            <div className="mt-6 space-y-1.5 text-sm text-[color:var(--color-muted)]">
+            <div className="mt-5 space-y-1.5 text-sm text-[color:var(--color-muted)]">
               <p>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
@@ -68,36 +43,28 @@ export function SiteFooter() {
                   {siteConfig.contact.phone}
                 </a>
               </p>
-              <p className="pt-2">
+              <p className="pt-1.5">
                 {siteConfig.location.city}, {siteConfig.location.region}. Working with churches nationwide.
               </p>
             </div>
           </div>
 
-          {footerNav.map((group) => (
-            <div key={group.heading}>
-              <h4 className="text-xs uppercase tracking-[0.22em] text-[color:var(--color-ink)] font-medium">
-                {group.heading}
-              </h4>
-              <ul className="mt-4 space-y-2.5 text-sm">
-                {group.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-[color:var(--color-muted)] hover:text-[color:var(--color-accent)] transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <nav aria-label="Footer" className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
+            {footerLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[color:var(--color-muted)] hover:text-[color:var(--color-accent)] transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-t border-[color:var(--color-border)] pt-6 text-xs text-[color:var(--color-muted)]">
+        <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-t border-[color:var(--color-border)] pt-6 text-xs text-[color:var(--color-muted)]">
           <p>
-            © {year} {siteConfig.legalName}. Designed in Indiana. Working with churches everywhere.
+            © {year} {siteConfig.legalName}. Designed in Indiana.
           </p>
           <p className="italic font-serif">Unlimited graphic design for pastors and churches.</p>
         </div>

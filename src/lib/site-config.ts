@@ -30,9 +30,9 @@ export const siteConfig = {
   },
 
   contact: {
-    email: "emilyfarmer808@gmail.com",
-    phone: "317-502-7443",
-    phoneE164: "+13175027443",
+    email: "emily@createmediagroup.org",
+    phone: "317-537-1179",
+    phoneE164: "+13175371179",
   },
 
   // Geographic frame for LocalBusiness schema + local SEO copy.
