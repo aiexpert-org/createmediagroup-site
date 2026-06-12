@@ -25,9 +25,9 @@ export function SiteHeader() {
         <Link
           href="/"
           className="font-serif text-xl tracking-tight text-[color:var(--color-ink)] hover:text-[color:var(--color-accent)] transition-colors"
-          aria-label="Create Media Group, home"
+          aria-label="Create, home"
         >
-          Create Media Group
+          Create
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7" aria-label="Primary">

@@ -54,7 +54,7 @@ Rough math on a 500-attendance church with typical design needs.
 
 - **Freelance, project-based.** $300 to $1,200 per project, ~3 to 5 projects per month, ~$1,500 to $3,000 a month, plus 10 to 15 hours a month of comms director project management.
 - **Full-time designer.** $55,000 to $75,000 a year salary plus benefits, which works out to $5,500 to $8,000 a month effective cost.
-- **Create Media Group subscription.** $997 a month, all-in, no per-project pricing, no comms-director project management overhead.
+- **Create subscription.** $997 a month, all-in, no per-project pricing, no comms-director project management overhead.
 
 The subscription isn't always the right answer. For churches in the 300 to 1,500 attendance range with steady design needs, the math is usually obvious once you actually sit down and run it.
 

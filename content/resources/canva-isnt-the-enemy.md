@@ -39,7 +39,7 @@ This is structural. It's not a moral failing of your team.
 
 The fix isn't to switch from Canva to Adobe. (That'll actually make it worse. Fewer people on staff can use it.) The fix is to have one person who owns the visual system. Who decides what the brand is. Who pushes back when someone wants to use a one-off font for a one-off flyer.
 
-In big churches, that's a full-time in-house designer. In most churches, that hire isn't realistic. The middle path (and yes, this is what Create Media Group does) is a part-time relationship with a single designer who owns the brand from the outside.
+In big churches, that's a full-time in-house designer. In most churches, that hire isn't realistic. The middle path (and yes, this is what Create does) is a part-time relationship with a single designer who owns the brand from the outside.
 
 What you stop having is ten people on staff making ten slightly different versions of your church.
 

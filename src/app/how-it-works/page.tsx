@@ -29,9 +29,6 @@ export default function HowItWorksPage() {
         </Container>
       </Section>
 
-      {/* TODO: rewrite workflow step blurbs in Emily voice. Source is siteConfig.workflow in */}
-      {/* src/lib/site-config.ts. Current copy reads agency-third-person; her register */}
-      {/* would lead with first-person and "Here is how I work." */}
       <Section className="pt-0 pb-16">
         <Container>
           <ol className="space-y-12 lg:space-y-16">

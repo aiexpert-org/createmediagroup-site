@@ -23,7 +23,7 @@ export default function AboutPage() {
                 I&rsquo;m Emily. I design for churches.
               </h1>
               <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-                Create Media Group is a quiet idea. A church should get the design
+                Create is a quiet idea. A church should get the design
                 quality of a ten-person agency without the agency price, the
                 agency posturing, or the agency project manager who never picks
                 up the phone.
@@ -33,7 +33,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] max-w-md mx-auto rounded-lg overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
                 <Image
                   src="/about/emily-headshot.webp"
-                  alt="Emily Farmer, founder and lead designer of Create Media Group."
+                  alt="Emily Farmer, founder and lead designer of Create."
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
@@ -48,13 +48,9 @@ export default function AboutPage() {
       <Section className="pt-4 pb-16">
         <Container>
           <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-start">
-            {/* TODO: rewrite About paragraphs in Emily voice per corpus. */}
-            {/* Best-of quotes #2 + #3 from research/emily-voice-corpus.md Section 9 should land here */}
-            {/* once Brett extracts a 10-minute voice memo from Emily for paragraphs 3, 4, 5 of the */}
-            {/* About arc per brand-direction memo Section 11 item 5. */}
             <div className="space-y-6 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
               <p>
-                I started Create Media Group because most of the churches I
+                I started Create because most of the churches I
                 wanted to help couldn&rsquo;t afford to hire me full-time. A
                 full-time church designer in the U.S. runs $55,000 to $75,000 a
                 year plus benefits. That&rsquo;s out of reach for a 400-person

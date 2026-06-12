@@ -39,7 +39,7 @@ export default async function OpenGraphImage() {
           }}
         >
           <span style={{ fontFamily: "Georgia, serif" }}>
-            Create Media Group
+            Create
           </span>
           <span style={{ color: "#b85c38" }}>$997/mo. flat.</span>
         </div>

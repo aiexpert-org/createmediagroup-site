@@ -2,7 +2,8 @@
 
 @theme {
   /* Create Media Group. Warm, designer-led, light.
-     Cream background, deep charcoal foreground, single clay accent. */
+     Cream background, deep charcoal foreground, warm clay accent for
+     text labels and links, sunny yellow for primary action buttons. */
   --color-background: #faf7f2;
   --color-foreground: #1a1916;
   --color-muted: #6b6864;
@@ -14,15 +15,23 @@
   --color-accent-hover: #a44e2b;
   --color-accent-soft: #f5d9cb;
   --color-accent-foreground: #faf7f2;
+
+  /* Primary call-to-action. Sunny yellow fill, ink text (12.6:1, AAA).
+     Yellow reads only as a filled button, never as text on cream. */
+  --color-cta: #f5d547;
+  --color-cta-hover: #e8c23a;
+  --color-cta-foreground: #1a1916;
+
   --color-ink: #1a1916;
   --color-ink-soft: #2c2b27;
   --color-sage: #5a6b4d;
 
-  /* Type. Wired in src/app/layout.tsx via next/font CSS variables. */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+  /* Type. Plus Jakarta Sans throughout, per Emily's Azo Sans direction.
+     Wired in src/app/layout.tsx via next/font CSS variable. */
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, sans-serif;
-  --font-serif: var(--font-fraunces), Georgia, "Times New Roman",
-    Cambria, serif;
+  --font-serif: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
 
   /* Type scale. Generous, editorial. */
   --text-display: clamp(2.5rem, 6vw, 5rem);
@@ -56,18 +65,19 @@ body {
   color: var(--color-accent-foreground);
 }
 
-/* Display serif utility for hero h1s and editorial section heads. */
+/* Display utility for hero h1s and editorial section heads.
+   Plus Jakarta Sans at a bold display weight, tight tracking. */
 .font-serif {
   font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .font-serif-italic {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 /* Eyebrow / micro-label used above section headings. */
@@ -96,8 +106,8 @@ body {
 .prose h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 2.4vw, 2rem);
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   line-height: 1.2;
   margin-top: 2.2em;
   margin-bottom: 0.5em;
@@ -106,7 +116,8 @@ body {
 .prose h3 {
   font-family: var(--font-serif);
   font-size: clamp(1.25rem, 1.6vw, 1.5rem);
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin-top: 1.8em;
   margin-bottom: 0.4em;
   color: var(--color-ink);
