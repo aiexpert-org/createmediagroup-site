@@ -331,9 +331,11 @@ export function HeroMosaicBackground() {
       </div>
 
       {/* Right-to-left white gradient: ~96% white on the left where the copy
-          sits, fading to ~8% on the right so the tiles show through. */}
+          sits, fading to ~8% on the right so the tiles show through.
+          `pointer-events-none` so it does not swallow hover on the tiles below
+          (without it, this full-bleed overlay intercepts every tile hover). */}
       <div
-        className="absolute inset-0"
+        className="pointer-events-none absolute inset-0"
         style={{
           background:
             'linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.55) 62%, rgba(255,255,255,0.08) 100%)',
@@ -341,7 +343,7 @@ export function HeroMosaicBackground() {
       />
       {/* Soft white fade into the page below. */}
       <div
-        className="absolute inset-x-0 bottom-0 h-32"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
         style={{
           background:
             'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
