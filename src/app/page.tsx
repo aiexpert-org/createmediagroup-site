@@ -6,7 +6,8 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Button } from '@/components/Button'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
-import { HeroMosaic } from '@/components/HeroMosaic'
+import { HeroMosaic, HeroMosaicCluster } from '@/components/HeroMosaic'
+import { MarkerSwipe } from '@/components/MarkerSwipe'
 import { ChurchLogos } from '@/components/ChurchLogos'
 import { ContactBlock } from '@/components/ContactBlock'
 import { ServiceJsonLd } from '@/components/JsonLd'
@@ -40,22 +41,28 @@ export default function HomePage() {
     <>
       <ServiceJsonLd />
 
-      {/* Hero with layered mosaic background */}
+      {/* Hero with a corner cluster of portfolio tiles */}
       <div className="relative isolate">
-        {/* Desktop background mosaic, layered behind hero text */}
+        {/* Desktop mosaic, tucked into the upper-right corner */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden opacity-[0.35] md:block"
+          className="absolute top-0 right-0 -z-10 hidden w-1/3 opacity-[0.4] md:block lg:opacity-[0.45]"
         >
-          <div className="mx-auto h-full max-w-7xl px-6 lg:px-8">
-            <HeroMosaic />
-          </div>
+          <HeroMosaicCluster />
         </div>
 
         <Container className="mt-8 sm:mt-12 lg:mt-16">
           <FadeIn className="relative z-10 max-w-4xl">
+            <span className="mb-5 block font-display text-sm font-semibold tracking-wider text-neutral-600 uppercase">
+              Church design subscription
+            </span>
             <h1 className="font-display text-[2.75rem] leading-[1.05] font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-[4rem] lg:leading-[1.1]">
-              Unlimited graphic design for churches.
+              Unlimited{' '}
+              <span className="relative inline-block whitespace-nowrap">
+                <MarkerSwipe className="-inset-x-1 inset-y-1" />
+                <span className="relative">graphic design</span>
+              </span>{' '}
+              for churches.
             </h1>
             <p className="mt-6 max-w-2xl text-xl text-neutral-600">
               Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.

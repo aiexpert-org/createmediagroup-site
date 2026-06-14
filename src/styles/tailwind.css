@@ -38,10 +38,12 @@
 
   --font-display--font-variation-settings: 'wdth' 125;
 
-  /* CCM brand tokens: stark white, near-black ink, yellow CTA. */
-  --color-cta: #facc15;
-  --color-cta-hover: #eab308;
+  /* CCM brand tokens: stark white, near-black ink, brand yellow CTA.
+     Yellow sampled from Emily's "create." wordmark (#EEDD47). */
+  --color-cta: #eedd47;
+  --color-cta-hover: #e3cf2a;
   --color-cta-ink: #0a0a0a;
+  --color-brand-yellow: #eedd47;
 }
 
 html {

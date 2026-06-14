@@ -26,7 +26,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const merged = cn(
-    'inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+    'inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
     variants[variant],
     className,
   )

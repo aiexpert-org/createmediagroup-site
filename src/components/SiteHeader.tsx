@@ -7,6 +7,7 @@ import { cn } from '@/lib/cn'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 import { Logo } from '@/components/Logo'
+import { MarkerSwipe } from '@/components/MarkerSwipe'
 import { navItems, siteConfig } from '@/lib/site-config'
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -66,15 +67,21 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'rounded-full px-4 py-2 text-sm font-medium transition',
-                    'ring-1 ring-inset',
+                    'group relative inline-flex items-center px-4 py-2 text-sm font-medium transition',
                     active
-                      ? 'text-neutral-950 ring-[var(--color-cta)] bg-[var(--color-cta)]/15'
-                      : 'text-neutral-700 ring-transparent hover:text-neutral-950 hover:ring-[var(--color-cta)]',
+                      ? 'text-neutral-950'
+                      : 'text-neutral-700 hover:text-neutral-950',
                   )}
                   aria-current={active ? 'page' : undefined}
                 >
-                  {item.label}
+                  <MarkerSwipe
+                    className={cn(
+                      active
+                        ? 'opacity-100'
+                        : 'opacity-0 transition-opacity duration-200 group-hover:opacity-60',
+                    )}
+                  />
+                  <span className="relative">{item.label}</span>
                 </Link>
               )
             })}
@@ -90,7 +97,7 @@ export function SiteHeader() {
               aria-expanded={open}
               aria-controls="mobile-nav-panel"
               aria-label={open ? 'Close menu' : 'Open menu'}
-              className="lg:hidden -m-2.5 rounded-full p-2.5 text-neutral-950 transition hover:bg-neutral-950/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"
+              className="lg:hidden -m-2.5 rounded-md p-2.5 text-neutral-950 transition hover:bg-neutral-950/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"
             >
               {open ? (
                 <XIcon className="h-5 w-5" />
@@ -116,14 +123,21 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     className={cn(
-                      'block rounded-2xl px-4 py-3 text-base font-medium transition ring-1 ring-inset',
+                      'group relative inline-flex items-center px-4 py-3 text-base font-medium transition',
                       active
-                        ? 'text-neutral-950 ring-[var(--color-cta)] bg-[var(--color-cta)]/15'
-                        : 'text-neutral-700 ring-transparent hover:text-neutral-950 hover:ring-[var(--color-cta)]',
+                        ? 'text-neutral-950'
+                        : 'text-neutral-700 hover:text-neutral-950',
                     )}
                     aria-current={active ? 'page' : undefined}
                   >
-                    {item.label}
+                    <MarkerSwipe
+                      className={cn(
+                        active
+                          ? 'opacity-100'
+                          : 'opacity-0 transition-opacity duration-200 group-hover:opacity-60',
+                      )}
+                    />
+                    <span className="relative">{item.label}</span>
                   </Link>
                 </li>
               )

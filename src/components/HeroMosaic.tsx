@@ -166,3 +166,121 @@ export function HeroMosaic() {
     </>
   )
 }
+
+type ClusterTile = {
+  src: string
+  /** Position within the cluster box, in percent. */
+  left: number
+  top: number
+  /** Tile width as a percent of the cluster box. */
+  w: number
+  tilt: number
+  z: number
+}
+
+const CLUSTER_TILES: ClusterTile[] = [
+  { src: '/portfolio/sermon-malachi.webp', left: 40, top: 0, w: 58, tilt: 5, z: 4 },
+  { src: '/portfolio/sermon-love-your-neighbor.webp', left: 4, top: 20, w: 52, tilt: -6, z: 3 },
+  { src: '/portfolio/sermon-joy-in-every-season.webp', left: 46, top: 46, w: 50, tilt: 4, z: 2 },
+  { src: '/portfolio/sermon-matters-of-the-heart.webp', left: 12, top: 60, w: 42, tilt: -3, z: 1 },
+]
+
+/**
+ * Compact corner cluster of a few portfolio tiles, tucked in the upper-right.
+ * Keeps the cursor-proximity color amplification from the full mosaic so the
+ * visible tiles still warm up under the pointer.
+ */
+export function HeroMosaicCluster() {
+  const shouldReduceMotion = useReducedMotion()
+  const ref = useRef<HTMLDivElement>(null)
+  const [cursor, setCursor] = useState<{ x: number; y: number } | null>(null)
+  const [tileRects, setTileRects] = useState<Array<{ cx: number; cy: number } | null>>([])
+
+  const measure = useCallback(() => {
+    if (!ref.current) return
+    const containerRect = ref.current.getBoundingClientRect()
+    const tiles = ref.current.querySelectorAll<HTMLElement>('[data-cluster-tile]')
+    const rects: Array<{ cx: number; cy: number } | null> = []
+    tiles.forEach((el) => {
+      const r = el.getBoundingClientRect()
+      rects.push({
+        cx: r.left - containerRect.left + r.width / 2,
+        cy: r.top - containerRect.top + r.height / 2,
+      })
+    })
+    setTileRects(rects)
+  }, [])
+
+  useEffect(() => {
+    measure()
+    const onResize = () => measure()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [measure])
+
+  const onMove = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (shouldReduceMotion) return
+      if (!ref.current) return
+      const rect = ref.current.getBoundingClientRect()
+      setCursor({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+    },
+    [shouldReduceMotion],
+  )
+
+  const onLeave = useCallback(() => setCursor(null), [])
+
+  return (
+    <div
+      ref={ref}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      className="relative aspect-[3/4] w-full"
+      aria-hidden="true"
+    >
+      {CLUSTER_TILES.map((tile, i) => {
+        const rect = tileRects[i] ?? null
+        let darken = 0
+        if (cursor && rect) {
+          const dx = cursor.x - rect.cx
+          const dy = cursor.y - rect.cy
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          const radius = 160
+          darken = Math.max(0, 1 - dist / radius)
+        }
+        const grayscale = 1 - darken * 0.95
+        const brightness = 1.05 - darken * 0.35
+        const opacity = 0.7 + darken * 0.3
+
+        return (
+          <div
+            key={tile.src}
+            data-cluster-tile
+            className="absolute aspect-square overflow-hidden rounded-xl shadow-sm ring-1 ring-neutral-900/5"
+            style={{
+              left: `${tile.left}%`,
+              top: `${tile.top}%`,
+              width: `${tile.w}%`,
+              zIndex: tile.z,
+              transform: `rotate(${tile.tilt}deg)`,
+              transformOrigin: 'center',
+              transition: shouldReduceMotion
+                ? undefined
+                : 'filter 250ms ease, opacity 250ms ease',
+              filter: `grayscale(${grayscale}) brightness(${brightness})`,
+              opacity,
+            }}
+          >
+            <Image
+              src={tile.src}
+              alt=""
+              fill
+              sizes="(min-width: 768px) 20vw, 0px"
+              className="object-cover"
+            />
+          </div>
+        )
+      })}
+    </div>
+  )
+}

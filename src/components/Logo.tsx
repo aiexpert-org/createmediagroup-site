@@ -1,5 +1,11 @@
+import Image from 'next/image'
 import { cn } from '@/lib/cn'
 
+/**
+ * Emily's "create." wordmark. Black version on light surfaces, white version
+ * when inverted. Source PNGs are trimmed to the glyph bounds at a 981x200
+ * aspect ratio, rendered here at a 36px cap height.
+ */
 export function Logo({
   className,
   invert = false,
@@ -8,19 +14,13 @@ export function Logo({
   invert?: boolean
 }) {
   return (
-    <span
-      className={cn(
-        'inline-flex items-baseline gap-2 font-display text-lg font-semibold tracking-tight whitespace-nowrap',
-        invert ? 'text-white' : 'text-neutral-950',
-        className,
-      )}
-      aria-label="Create Church Media"
-    >
-      <span
-        aria-hidden="true"
-        className="inline-block size-3 rounded-full bg-[var(--color-cta)]"
-      />
-      Create Church Media
-    </span>
+    <Image
+      src={invert ? '/logos/create-wordmark-white.png' : '/logos/create-wordmark-black.png'}
+      alt="Create Church Media"
+      width={981}
+      height={200}
+      priority
+      className={cn('h-9 w-auto', className)}
+    />
   )
 }
