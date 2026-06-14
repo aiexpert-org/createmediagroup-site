@@ -6,6 +6,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StepList, type Step } from '@/components/StepList'
 import { ContactBlock } from '@/components/ContactBlock'
+import { HeroMosaicBackground } from '@/components/HeroMosaic'
 
 export const metadata: Metadata = {
   title: 'How it works',
@@ -49,12 +50,22 @@ const STEPS: Step[] = [
 export default function HowItWorksPage() {
   return (
     <>
-      <PageIntro eyebrow="How it works" title="From inquiry to a finished file, start to finish.">
-        <p className="italic text-neutral-700">Simple and efficient.</p>
-        <p className="mt-4">
-          You send me what you need. I design it. You review. I revise and send you the completed files.
-        </p>
-      </PageIntro>
+      {/* Hero with the same full-bleed portfolio mosaic + right-to-left white
+          gradient used on the home page. Headline sits left where the gradient
+          keeps the tiles clean; per-tile color pop on hover. */}
+      <div className="relative isolate overflow-hidden">
+        <div className="hidden md:block">
+          <HeroMosaicBackground />
+        </div>
+        <div className="relative z-10">
+          <PageIntro eyebrow="How it works" title="From inquiry to a finished file, start to finish.">
+            <p className="italic text-neutral-700">Simple and efficient.</p>
+            <p className="mt-4">
+              You send me what you need. I design it. You review. I revise and send you the completed files.
+            </p>
+          </PageIntro>
+        </div>
+      </div>
 
       <StepList steps={STEPS} />
 

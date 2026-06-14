@@ -3,9 +3,17 @@ import { cn } from '@/lib/cn'
 import { MarkerSwipe } from '@/components/MarkerSwipe'
 
 type Variant = 'primary' | 'secondary' | 'ghost'
+type Tone = 'light' | 'dark'
 
 type ButtonProps = {
   variant?: Variant
+  /**
+   * Background the CTA sits on. `light` (default) keeps the text near-black so
+   * it reads on white. `dark` flips the text to white so it stays legible over
+   * the yellow marker on a `bg-neutral-950` panel (the marker itself stays
+   * yellow either way).
+   */
+  tone?: Tone
   withArrow?: boolean
 } & (
   | React.ComponentPropsWithoutRef<typeof Link>
@@ -26,15 +34,20 @@ type ButtonProps = {
  */
 export function Button({
   variant = 'primary',
+  tone = 'light',
   withArrow = variant === 'primary',
   className,
   children,
   ...props
 }: ButtonProps) {
   const isPrimary = variant === 'primary'
+  const isDark = tone === 'dark'
 
   const merged = cn(
-    'group relative isolate inline-flex items-center justify-center gap-1.5 text-neutral-950 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950',
+    'group relative isolate inline-flex items-center justify-center gap-1.5 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4',
+    isDark
+      ? 'text-white focus-visible:outline-white'
+      : 'text-neutral-950 focus-visible:outline-neutral-950',
     isPrimary
       ? 'text-lg font-semibold sm:text-xl'
       : 'text-base font-medium',
@@ -54,7 +67,8 @@ export function Button({
         className={cn(
           'relative',
           !isPrimary &&
-            'underline decoration-dashed decoration-neutral-400 underline-offset-4 transition-colors group-hover:decoration-transparent',
+            'underline decoration-dashed underline-offset-4 transition-colors group-hover:decoration-transparent',
+          !isPrimary && (isDark ? 'decoration-neutral-500' : 'decoration-neutral-400'),
         )}
       >
         {children}

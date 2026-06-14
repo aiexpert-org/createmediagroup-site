@@ -20,7 +20,9 @@ export function ContactBlock({ heading, children }: Props) {
             </h2>
             <div className="mt-6 text-xl text-neutral-300">{children}</div>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Button href={siteConfig.waitlistUrl}>Join the wait list</Button>
+              <Button href={siteConfig.waitlistUrl} tone="dark">
+                Join the wait list
+              </Button>
             </div>
           </div>
 

@@ -156,6 +156,7 @@ function PriceCard({
         <Button
           href={siteConfig.waitlistUrl}
           variant={featured ? 'primary' : 'secondary'}
+          tone={featured ? 'dark' : 'light'}
           className="w-full"
         >
           Join the wait list

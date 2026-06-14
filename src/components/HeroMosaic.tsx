@@ -289,9 +289,13 @@ export function HeroMosaicCluster() {
  * Full-bleed hero background mosaic, Studio-style. A dense, edge-to-edge grid
  * of portfolio tiles fills the entire hero. Tiles sit desaturated and dimmed
  * by default; hovering an individual tile brings just that one to full color
- * (strict per-tile CSS `:hover`, no cursor-proximity math). A right-to-left
- * white gradient keeps the left side (where the headline and CTAs live) clean
- * while the colorful tiles show through on the right.
+ * and zooms it slightly. This is the Studio template's per-panel hover pattern
+ * (see the portfolio grid in `app/portfolio/page.tsx`): a `group` wrapper with
+ * a child image that transitions `grayscale -> grayscale-0` on `group-hover`,
+ * `duration-500`. Strict per-tile, no cursor-proximity math, so there is no
+ * chain effect or bleed. A right-to-left white gradient keeps the left side
+ * (where the headline and CTAs live) clean while the colorful tiles show
+ * through on the right.
  */
 const BG_TILES: string[] = [
   'sermon-malachi', 'announcements-easter-services', 'sermon-love-your-neighbor', 'social-smp-1', 'sermon-joy-in-every-season', 'announcements-baptism', 'sermon-reset', 'social-summer-sundays', 'youth-timothy', 'sermon-matters-of-the-heart',
@@ -312,14 +316,14 @@ export function HeroMosaicBackground() {
           <div
             key={`${src}-${i}`}
             tabIndex={-1}
-            className="mosaic-tile relative overflow-hidden rounded-sm"
+            className="group relative overflow-hidden rounded-sm transition duration-300 ease-out hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
           >
             <Image
               src={src}
               alt=""
               fill
               sizes="(min-width: 1024px) 10vw, (min-width: 640px) 12vw, 16vw"
-              className="object-cover"
+              className="object-cover opacity-55 brightness-95 grayscale-[0.85] transition duration-500 ease-out group-hover:scale-[1.04] group-hover:opacity-100 group-hover:brightness-105 group-hover:grayscale-0"
               priority={i < 10}
             />
           </div>
