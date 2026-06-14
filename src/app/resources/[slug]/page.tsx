@@ -187,9 +187,9 @@ export default async function ArticlePage({
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Want to talk about your church?">
+      <ContactBlock heading="Join the wait list.">
         <p>
-          Tell me about your church and your design needs. I will reply quickly and share what onboarding looks like.
+          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
         </p>
       </ContactBlock>
     </>

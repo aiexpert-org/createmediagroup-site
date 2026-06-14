@@ -8,10 +8,10 @@ tags:
   - "Noblesville"
   - "church design"
 image: "/portfolio/sermon-reset.webp"
-tldr: "Church graphic design in Noblesville comes down to consistency, turnaround, and someone who learns your church rather than guessing. Most local congregations do not need a one-time rebrand, they need a steady designer for sermon series, social, and signage every week. I run that as a flat $997 a month subscription from right here in Noblesville."
+tldr: "Church graphic design in Noblesville comes down to consistency, turnaround, and someone who learns your church rather than guessing. Most local congregations do not need a one-time rebrand, they need a steady designer for sermon series, social, and signage every week. I run that as a flat $997 a month subscription for Noblesville churches and the wider Indianapolis area."
 faqs:
   - question: "Do I need a designer based in Noblesville to get church design done?"
-    answer: "You do not strictly need a local designer, but it helps. Working with someone in Noblesville means I understand the churches here, the other ministries in Hamilton County your people compare you to, and the rhythm of the local calendar. Most of the work happens over email and shared files, so distance is rarely the issue. Local matters for the context it brings rather than for being physically close."
+    answer: "You do not strictly need a local designer, but it helps. Working with a designer who knows the Noblesville area means I understand the churches here, the other ministries in Hamilton County your people compare you to, and the rhythm of the local calendar. Most of the work happens over email and shared files, so distance is rarely the issue. Local matters for the context it brings rather than for being physically close."
   - question: "What church design work do Noblesville churches request most?"
     answer: "Sermon series art is the most common request, followed closely by social media graphics and announcement slides. Signage and event branding come up seasonally, especially around Easter, back to school, and Christmas. The subscription covers all of it under one flat fee, so churches stop deciding project by project whether design is in the budget."
   - question: "How much does ongoing church graphic design cost in Noblesville?"
@@ -46,4 +46,4 @@ I design for churches on a flat $997 a month subscription. You send as many requ
 
 That shift is the whole point. When design is a fixed line item instead of a per-project gamble, your team stops rationing it and starts using it.
 
-If you run a church in Noblesville and you are tired of the design drift, [tell me about your church](mailto:emily@createchurchmedia.com?subject=Church%20design%20in%20Noblesville) and I will share what onboarding looks like. The work happens right here in Noblesville, and I would love to help you build toward your vision.
+If you run a church in Noblesville and you are tired of the design drift, [join the wait list](/contact) and I will reach out by email when a spot opens.

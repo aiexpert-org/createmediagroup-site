@@ -4,17 +4,22 @@ export const siteConfig = {
   domain: 'createchurchmedia.com',
   url: 'https://createchurchmedia.com',
   email: 'emily@createchurchmedia.com',
-  city: 'Noblesville',
+  city: 'Indianapolis',
   state: 'IN',
-  zip: '46062',
   designer: 'Emily Farmer',
   description:
-    'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Noblesville, IN, serving the Indianapolis area.',
+    'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Indianapolis, IN.',
   pricing: {
     monthly: 997,
     annual: 9997,
   },
-  bookingUrl: 'mailto:emily@createchurchmedia.com?subject=Booking%20a%20call%20with%20Emily',
+  // The wait list is the only call to action. People join the list, Emily gets
+  // an email alert, and she reaches out personally when a spot opens.
+  waitlistUrl: '/contact',
+  ctaLabel: 'Join the wait list',
+  // Plain mailto fallback used if the wait list API is ever unavailable.
+  waitlistMailto:
+    'mailto:emily@createchurchmedia.com?subject=Joining%20the%20wait%20list',
   // Google Business Profile URL. Empty until Brett fills it in.
   googleBusinessUrl: '',
 } as const

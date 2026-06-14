@@ -45,7 +45,6 @@ export function Button({
     <>
       <MarkerSwipe
         className={cn(
-          '-inset-x-3 inset-y-0.5',
           isPrimary
             ? 'opacity-100'
             : 'opacity-0 transition-opacity duration-200 group-hover:opacity-70',

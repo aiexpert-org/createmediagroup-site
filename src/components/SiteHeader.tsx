@@ -67,7 +67,7 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'group relative inline-flex items-center px-4 py-2 text-sm font-medium transition',
+                    'group relative isolate inline-flex items-center px-4 py-2 text-sm font-medium transition',
                     active
                       ? 'text-neutral-950'
                       : 'text-neutral-700 hover:text-neutral-950',
@@ -88,8 +88,8 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button href={siteConfig.bookingUrl} className="hidden sm:inline-flex">
-              Book a call
+            <Button href={siteConfig.waitlistUrl} className="hidden sm:inline-flex">
+              Join the wait list
             </Button>
             <button
               type="button"
@@ -123,7 +123,7 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     className={cn(
-                      'group relative inline-flex items-center px-4 py-3 text-base font-medium transition',
+                      'group relative isolate inline-flex items-center px-4 py-3 text-base font-medium transition',
                       active
                         ? 'text-neutral-950'
                         : 'text-neutral-700 hover:text-neutral-950',
@@ -143,8 +143,8 @@ export function SiteHeader() {
               )
             })}
             <li className="mt-3">
-              <Button href={siteConfig.bookingUrl} className="w-full">
-                Book a call
+              <Button href={siteConfig.waitlistUrl} className="w-full">
+                Join the wait list
               </Button>
             </li>
           </ul>

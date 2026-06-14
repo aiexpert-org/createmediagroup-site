@@ -46,4 +46,4 @@ This is exactly the phase the subscription was built to carry. After the rebrand
 
 For some Indianapolis-area churches I run all three phases, helping shape the new system and then sustaining it. For others, the rebrand happens elsewhere and the subscription picks up phase three. Either way, the lesson is the same. The launch is not the finish line. It is the start of the part that matters.
 
-If your church is planning a rebrand in the Indianapolis area and you want a timeline that holds, [tell me where you are in the process](mailto:emily@createchurchmedia.com?subject=Church%20rebrand%20in%20the%20Indianapolis%20area) and I will help you map the phases, including the one most churches forget.
+If your church is planning a rebrand in the Indianapolis area and you want a timeline that holds, [join the wait list](/contact) and I will reach out by email when a spot opens.

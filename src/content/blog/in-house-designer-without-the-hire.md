@@ -55,7 +55,7 @@ The other half of in-house is the part pastors usually downplay until it bites t
 - Career growth. A designer at a 600-attendance church will outgrow the role in 3 to 4 years. Then you're either promoting them past their skill set or losing them.
 - Skills gaps. No single person is great at sermon graphics and brand strategy and print production and social. In-house means picking one and being average at the others.
 
-The subscription model dodges all six. You don't pay benefits. You don't manage a human. Vacation coverage isn't your problem. Slow weeks you pause the sub. Career growth isn't yours to worry about. And the designer's job (mine, as the Noblesville-based designer behind Create Church Media) is staying current on church design specifically, on my own dime.
+The subscription model dodges all six. You don't pay benefits. You don't manage a human. Vacation coverage isn't your problem. Slow weeks you pause the sub. Career growth isn't yours to worry about. And the designer's job (mine, as the Indianapolis-based designer behind Create Church Media) is staying current on church design specifically, on my own dime.
 
 ## Where the model fits (and where it doesn't)
 

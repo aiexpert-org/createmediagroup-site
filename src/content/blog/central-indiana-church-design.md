@@ -46,4 +46,4 @@ It is a flat $997 a month for unlimited requests and revisions. One designer, ho
 
 The graphics get better as a side effect. The real win is that the church stops depending on one exhausted person to hold its visual identity together.
 
-If this describes your church, and I suspect it might, [tell me how design gets done right now](mailto:emily@createchurchmedia.com?subject=Church%20design%20in%20Central%20Indiana) and I will show you what stepping off the treadmill looks like.
+If this describes your church, and I suspect it might, [join the wait list](/contact) and I will reach out by email when a spot opens.

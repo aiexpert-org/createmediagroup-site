@@ -46,6 +46,14 @@ export function SiteFooter() {
             </h2>
             <ul className="mt-6 space-y-3 text-sm text-neutral-700">
               <li>
+                <Link
+                  href={siteConfig.waitlistUrl}
+                  className="font-semibold text-neutral-950 transition hover:underline underline-offset-4 decoration-[var(--color-cta)]"
+                >
+                  Join the wait list
+                </Link>
+              </li>
+              <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
                   className="transition hover:text-neutral-950 hover:underline underline-offset-4 decoration-[var(--color-cta)]"

@@ -15,7 +15,7 @@ faqs:
   - question: "What do I give up by choosing a subscription over an agency near Indianapolis?"
     answer: "Mostly you give up the overhead. You work directly with the designer instead of through an account manager, which is actually faster. What you do not give up is quality or consistency. The tradeoff people worry about is capacity, and for a single church's weekly volume one dedicated designer is plenty. Very large multi-campus churches with constant high volume are the exception."
   - question: "Is the designer actually near Indianapolis?"
-    answer: "Yes. I am based in Noblesville, just north of Indianapolis, and I work with churches across the metro. Most of the collaboration happens over email and shared files, but being local means I understand the churches here and the community your church is reaching. You get local context without paying for an agency office."
+    answer: "Yes. I am based in the Indianapolis area and work with churches across the metro. Most of the collaboration happens over email and shared files, but being local means I understand the churches here and the community your church is reaching. You get local context without paying for an agency office."
 ---
 
 If you have ever asked an agency to quote church design work, you know the feeling. The number comes back, and it is built for a corporate client with a corporate budget. A single sermon series brand can cost more than some churches spend on design in a quarter. For a church near Indianapolis trying to run on a real budget, agency pricing rarely makes sense.
@@ -42,6 +42,6 @@ The one real tradeoff is capacity. A single dedicated designer is plenty for one
 
 ## Local without the office
 
-I am based in Noblesville, just north of Indianapolis, and I work with churches all over the metro. Being local means I understand the churches here and the community your church is reaching, the kind of context an out-of-state agency would never have. But you are not paying for a local office or local overhead. You are paying for a designer who happens to know your area.
+I am based in the Indianapolis area and work with churches all over the metro. Being local means I understand the churches here and the community your church is reaching, the kind of context an out-of-state agency would never have. But you are not paying for a local office or local overhead. You are paying for a designer who happens to know your area.
 
-If you have been quietly assuming strong church design near Indianapolis requires an agency budget, it does not. [Tell me what you need designed](mailto:emily@createchurchmedia.com?subject=Church%20designer%20near%20Indianapolis) and I will show you what the subscription covers for a flat monthly fee.
+If you have been quietly assuming strong church design near Indianapolis requires an agency budget, it does not. [join the wait list](/contact) and I will reach out by email when a spot opens.

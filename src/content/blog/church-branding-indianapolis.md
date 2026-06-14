@@ -52,4 +52,4 @@ The hard part of church branding is not designing it once. It is keeping it cons
 
 The cleanest fix I know is to give the system to one person who holds it. That is what I do at Create Church Media. One designer, a flat $997 a month, every sermon series and social post and sign run through the same visual language so your Indianapolis church looks like itself everywhere.
 
-If your church looks like five different churches depending on where someone finds you, [tell me about it](mailto:emily@createchurchmedia.com?subject=Church%20branding%20in%20Indianapolis) and I will walk you through how the subscription tightens that up.
+If your church looks like five different churches depending on where someone finds you, [join the wait list](/contact) and I will reach out by email when a spot opens.

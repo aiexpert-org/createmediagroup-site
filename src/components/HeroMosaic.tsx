@@ -284,3 +284,137 @@ export function HeroMosaicCluster() {
     </div>
   )
 }
+
+/**
+ * Full-bleed hero background mosaic, Studio-style. A dense, edge-to-edge grid
+ * of portfolio tiles fills the entire hero. Tiles sit desaturated and dimmed
+ * by default; the ones near the pointer warm up to full color. A right-to-left
+ * white gradient keeps the left side (where the headline and CTAs live) clean
+ * while the colorful tiles show through on the right.
+ */
+const BG_TILES: string[] = [
+  'sermon-malachi', 'announcements-easter-services', 'sermon-love-your-neighbor', 'social-smp-1', 'sermon-joy-in-every-season', 'announcements-baptism', 'sermon-reset', 'social-summer-sundays', 'youth-timothy', 'sermon-matters-of-the-heart',
+  'announcements-21-day-focus', 'sermon-drive-in-church', 'social-strong-men', 'announcements-spring-slides', 'sermon-me-i-want-to-be', 'signage-shot-1', 'social-1-peter', 'announcements-welcome-dinner', 'sermon-faq', 'youth-shot-1',
+  'announcements-connection-sunday', 'sermon-foster-care-christmas', 'social-smp-18', 'announcements-food-pantry', 'sermon-this-is-church', 'announcements-men-made-strong', 'social-smp-23', 'signage-guest-reception', 'youth-open-conversations', 'sermon-series-shot-1',
+  'announcements-clothing-drive', 'social-smp-9', 'announcements-august-bbq', 'sermon-series-shot-2', 'announcements-follow-the-leader', 'social-smp-35', 'announcements-virtual-group', 'signage-service-announcement', 'youth-shot-3', 'sermon-series-shot-3',
+  'social-smp-26', 'announcements-garage', 'sermon-series-shot-4', 'social-asset-1', 'signage-holiday-food', 'youth-shot-5', 'social-smp-40', 'announcements-slide-shot', 'sermon-series-asset', 'social-smp-10',
+].map((s) => `/portfolio/${s}.webp`)
+
+export function HeroMosaicBackground() {
+  const shouldReduceMotion = useReducedMotion()
+  const ref = useRef<HTMLDivElement>(null)
+  const rafRef = useRef<number | null>(null)
+  const [cursor, setCursor] = useState<{ x: number; y: number } | null>(null)
+  const [tileRects, setTileRects] = useState<Array<{ cx: number; cy: number } | null>>([])
+
+  const measure = useCallback(() => {
+    if (!ref.current) return
+    const containerRect = ref.current.getBoundingClientRect()
+    const tiles = ref.current.querySelectorAll<HTMLElement>('[data-bg-tile]')
+    const rects: Array<{ cx: number; cy: number } | null> = []
+    tiles.forEach((el) => {
+      const r = el.getBoundingClientRect()
+      rects.push({
+        cx: r.left - containerRect.left + r.width / 2,
+        cy: r.top - containerRect.top + r.height / 2,
+      })
+    })
+    setTileRects(rects)
+  }, [])
+
+  useEffect(() => {
+    measure()
+    const onResize = () => measure()
+    window.addEventListener('resize', onResize)
+    return () => {
+      window.removeEventListener('resize', onResize)
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
+    }
+  }, [measure])
+
+  const onMove = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (shouldReduceMotion || !ref.current) return
+      const rect = ref.current.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      if (rafRef.current) return
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = null
+        setCursor({ x, y })
+      })
+    },
+    [shouldReduceMotion],
+  )
+
+  const onLeave = useCallback(() => setCursor(null), [])
+
+  return (
+    <div
+      ref={ref}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      className="absolute inset-0 -z-10 overflow-hidden"
+      aria-hidden="true"
+    >
+      <div className="grid h-full w-full auto-rows-fr grid-cols-6 gap-1.5 sm:grid-cols-8 lg:grid-cols-10">
+        {BG_TILES.map((src, i) => {
+          const rect = tileRects[i] ?? null
+          let warm = 0
+          if (cursor && rect) {
+            const dx = cursor.x - rect.cx
+            const dy = cursor.y - rect.cy
+            const dist = Math.sqrt(dx * dx + dy * dy)
+            const radius = 200
+            warm = Math.max(0, 1 - dist / radius)
+          }
+          const grayscale = 0.8 - warm * 0.8
+          const opacity = 0.5 + warm * 0.5
+          const brightness = 1 + warm * 0.05
+
+          return (
+            <div
+              key={`${src}-${i}`}
+              data-bg-tile
+              className="relative overflow-hidden rounded-sm"
+              style={{
+                transition: shouldReduceMotion
+                  ? undefined
+                  : 'filter 280ms ease, opacity 280ms ease',
+                filter: `grayscale(${grayscale}) brightness(${brightness})`,
+                opacity,
+              }}
+            >
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 10vw, (min-width: 640px) 12vw, 16vw"
+                className="object-cover"
+                priority={i < 10}
+              />
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Right-to-left white gradient: ~96% white on the left where the copy
+          sits, fading to ~8% on the right so the tiles show through. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.55) 62%, rgba(255,255,255,0.08) 100%)',
+        }}
+      />
+      {/* Soft white fade into the page below. */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-32"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
+        }}
+      />
+    </div>
+  )
+}

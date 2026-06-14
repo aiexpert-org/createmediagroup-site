@@ -4,7 +4,7 @@ import { getAllPostSlugs } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
-  const routes = ['/', '/how-it-works', '/subscription', '/portfolio', '/resources']
+  const routes = ['/', '/how-it-works', '/subscription', '/portfolio', '/resources', '/contact']
 
   const baseEntries: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${siteConfig.url}${route === '/' ? '' : route}`,

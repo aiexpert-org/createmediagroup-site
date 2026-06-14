@@ -154,11 +154,11 @@ function PriceCard({
       </ul>
       <div className="mt-10">
         <Button
-          href={siteConfig.bookingUrl}
+          href={siteConfig.waitlistUrl}
           variant={featured ? 'primary' : 'secondary'}
           className="w-full"
         >
-          Book a call with Emily
+          Join the wait list
         </Button>
       </div>
     </FadeIn>
@@ -246,9 +246,9 @@ export default function SubscriptionPage() {
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Start the conversation.">
+      <ContactBlock heading="Join the wait list.">
         <p>
-          Send me a message about your church and I will reply very quickly. Onboarding is fast and effortless so the design work can start right away.
+          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
         </p>
       </ContactBlock>
     </>

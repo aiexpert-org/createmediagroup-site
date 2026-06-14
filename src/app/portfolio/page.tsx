@@ -100,9 +100,9 @@ export default function PortfolioPage() {
         </p>
       </SectionIntro>
 
-      <ContactBlock heading="Tell me about your church.">
+      <ContactBlock heading="Join the wait list.">
         <p>
-          Send me a message about your church and I will reply very quickly. Onboarding is fast and effortless so the design work can start right away.
+          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
         </p>
       </ContactBlock>
     </>

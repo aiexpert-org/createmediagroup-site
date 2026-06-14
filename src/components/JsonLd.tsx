@@ -4,9 +4,23 @@ export function OrganizationJsonLd() {
   const sameAs: string[] = []
   if (siteConfig.googleBusinessUrl) sameAs.push(siteConfig.googleBusinessUrl)
 
+  // Service-area business (no storefront), publicly based in Indianapolis and
+  // serving the surrounding metro. areaServed drives which local Map Pack
+  // queries CCM can surface for.
+  const areaServed = [
+    { '@type': 'City', name: 'Indianapolis' },
+    { '@type': 'City', name: 'Carmel' },
+    { '@type': 'City', name: 'Fishers' },
+    { '@type': 'City', name: 'Noblesville' },
+    { '@type': 'City', name: 'Westfield' },
+    { '@type': 'City', name: 'Greenwood' },
+    { '@type': 'AdministrativeArea', name: 'Hamilton County, IN' },
+    { '@type': 'State', name: 'Indiana' },
+  ]
+
   const data = {
     '@context': 'https://schema.org',
-    '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     '@id': `${siteConfig.url}#organization`,
     name: siteConfig.brand,
     alternateName: siteConfig.shortBrand,
@@ -19,27 +33,18 @@ export function OrganizationJsonLd() {
       '@type': 'PostalAddress',
       addressLocality: siteConfig.city,
       addressRegion: siteConfig.state,
-      postalCode: siteConfig.zip,
       addressCountry: 'US',
     },
-    areaServed: [
-      { '@type': 'City', name: 'Noblesville', sameAs: 'https://en.wikipedia.org/wiki/Noblesville,_Indiana' },
-      { '@type': 'City', name: 'Indianapolis', sameAs: 'https://en.wikipedia.org/wiki/Indianapolis' },
-      { '@type': 'City', name: 'Westfield', sameAs: 'https://en.wikipedia.org/wiki/Westfield,_Indiana' },
-      { '@type': 'City', name: 'Fishers', sameAs: 'https://en.wikipedia.org/wiki/Fishers,_Indiana' },
-      { '@type': 'City', name: 'Carmel', sameAs: 'https://en.wikipedia.org/wiki/Carmel,_Indiana' },
-      { '@type': 'AdministrativeArea', name: 'Hamilton County, IN' },
-      { '@type': 'State', name: 'Indiana' },
-      { '@type': 'Country', name: 'United States' },
-    ],
+    areaServed,
     serviceArea: {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: 40.0456,
-        longitude: -86.0086,
+        latitude: 39.7684,
+        longitude: -86.1581,
       },
-      geoRadius: 64374,
+      // ~50 mile radius around Indianapolis, covering the metro.
+      geoRadius: 80467,
     },
     founder: {
       '@type': 'Person',
@@ -49,7 +54,6 @@ export function OrganizationJsonLd() {
         '@type': 'PostalAddress',
         addressLocality: siteConfig.city,
         addressRegion: siteConfig.state,
-        postalCode: siteConfig.zip,
         addressCountry: 'US',
       },
     },
@@ -76,11 +80,12 @@ export function ServiceJsonLd() {
     },
     serviceType: 'Graphic design subscription',
     areaServed: [
-      { '@type': 'City', name: 'Noblesville' },
       { '@type': 'City', name: 'Indianapolis' },
-      { '@type': 'City', name: 'Westfield' },
-      { '@type': 'City', name: 'Fishers' },
       { '@type': 'City', name: 'Carmel' },
+      { '@type': 'City', name: 'Fishers' },
+      { '@type': 'City', name: 'Noblesville' },
+      { '@type': 'City', name: 'Westfield' },
+      { '@type': 'City', name: 'Greenwood' },
       { '@type': 'AdministrativeArea', name: 'Hamilton County, IN' },
       { '@type': 'Country', name: 'United States' },
     ],

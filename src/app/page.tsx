@@ -6,8 +6,7 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Button } from '@/components/Button'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
-import { HeroMosaic, HeroMosaicCluster } from '@/components/HeroMosaic'
-import { MarkerSwipe } from '@/components/MarkerSwipe'
+import { HeroMosaic, HeroMosaicBackground } from '@/components/HeroMosaic'
 import { ChurchLogos } from '@/components/ChurchLogos'
 import { ContactBlock } from '@/components/ContactBlock'
 import { ServiceJsonLd } from '@/components/JsonLd'
@@ -41,34 +40,27 @@ export default function HomePage() {
     <>
       <ServiceJsonLd />
 
-      {/* Hero with a corner cluster of portfolio tiles */}
-      <div className="relative isolate">
-        {/* Desktop mosaic, tucked into the upper-right corner */}
-        <div
-          aria-hidden="true"
-          className="absolute top-0 right-0 -z-10 hidden w-1/3 opacity-[0.4] md:block lg:opacity-[0.45]"
-        >
-          <HeroMosaicCluster />
+      {/* Hero with a full-bleed Studio-style portfolio mosaic background */}
+      <div className="relative isolate overflow-hidden">
+        {/* Desktop: edge-to-edge mosaic behind the copy, masked by a
+            right-to-left white gradient so the left side stays clean. */}
+        <div className="hidden md:block">
+          <HeroMosaicBackground />
         </div>
 
-        <Container className="mt-8 sm:mt-12 lg:mt-16">
-          <FadeIn className="relative z-10 max-w-4xl">
+        <Container className="mt-8 pb-12 sm:mt-12 sm:pb-20 lg:mt-16 lg:pb-28">
+          <FadeIn className="relative z-10 max-w-2xl lg:max-w-3xl">
             <span className="mb-5 block font-display text-sm font-semibold tracking-wider text-neutral-600 uppercase">
               Church design subscription
             </span>
             <h1 className="font-display text-[2.75rem] leading-[1.05] font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-[4rem] lg:leading-[1.1]">
-              Unlimited{' '}
-              <span className="relative inline-block whitespace-nowrap">
-                <MarkerSwipe className="-inset-x-1 inset-y-1" />
-                <span className="relative">graphic design</span>
-              </span>{' '}
-              for churches.
+              Unlimited graphic design for churches.
             </h1>
             <p className="mt-6 max-w-2xl text-xl text-neutral-600">
               Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Button href={siteConfig.bookingUrl}>Book a call with Emily</Button>
+            <div className="mt-10 flex flex-wrap items-center gap-6">
+              <Button href={siteConfig.waitlistUrl}>Join the wait list</Button>
               <Button href="/portfolio" variant="ghost">
                 See the work
               </Button>
@@ -138,9 +130,9 @@ export default function HomePage() {
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Tell me about your church.">
+      <ContactBlock heading="Join the wait list.">
         <p>
-          Tell me about your church and your design needs. I will reply quickly and share with you what onboarding looks like.
+          Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
         </p>
       </ContactBlock>
     </>

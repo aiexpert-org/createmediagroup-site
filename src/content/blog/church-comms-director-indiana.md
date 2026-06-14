@@ -50,4 +50,4 @@ The subscription takes that off their plate. Because I hold the visual system, t
 
 Put it together and the comms director gets one dependable designer instead of a coordination problem. Requests come back on time, in every format, on brand, for a flat $997 a month. That predictability is the difference between planning a week and surviving it.
 
-If you are a comms director at an Indiana church and this sounds like your Saturdays, [tell me what your week actually looks like](mailto:emily@createchurchmedia.com?subject=Church%20comms%20support%20in%20Indiana) and I will show you how the subscription takes the design variable off your plate.
+If you are a comms director at an Indiana church and this sounds like your Saturdays, [join the wait list](/contact) and I will reach out by email when a spot opens.

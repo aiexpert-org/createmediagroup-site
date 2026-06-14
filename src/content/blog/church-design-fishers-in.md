@@ -50,4 +50,4 @@ The churches where subscription does not fit are the very small ones with almost
 
 I am based nearby, and I know the churches in Fishers and the surrounding area. That local context shows up in the work. I understand the community your church is reaching, the rhythm of the local calendar, and the other ministries your people are comparing you to without realizing it.
 
-If your Fishers church is stuck between freelance and a hire and neither feels right, [tell me about your design load](mailto:emily@createchurchmedia.com?subject=Subscription%20design%20for%20Fishers) and I will help you figure out whether the subscription fits.
+If your Fishers church is stuck between freelance and a hire and neither feels right, [join the wait list](/contact) and I will reach out by email when a spot opens.
