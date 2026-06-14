@@ -31,7 +31,7 @@ const FEATURES = [
   {
     title: 'Fast turn around times.',
     body:
-      'I ask for a one-week lead time on project requests, but completely understand when things need to be designed or changed last minute. Same-day revisions are offered when needed. You are always free to email, call or text me.',
+      'I ask for a one-week lead time on project requests, but completely understand when things need to be designed or changed last minute. Same-day revisions are offered when needed. You are always free to email me anytime.',
   },
 ]
 
@@ -120,7 +120,7 @@ export default function HomePage() {
 
       <ContactBlock heading="Tell me about your church.">
         <p>
-          Tell me about your church and your design needs. I will reply quickly and share with you what onboarding looks like. You can also text me at {siteConfig.phone}.
+          Tell me about your church and your design needs. I will reply quickly and share with you what onboarding looks like.
         </p>
       </ContactBlock>
     </>
