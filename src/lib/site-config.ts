@@ -4,11 +4,12 @@ export const siteConfig = {
   domain: 'createchurchmedia.com',
   url: 'https://createchurchmedia.com',
   email: 'emily@createchurchmedia.com',
-  city: 'Indianapolis',
+  city: 'Noblesville',
   state: 'IN',
+  zip: '46062',
   designer: 'Emily Farmer',
   description:
-    'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Indianapolis, IN.',
+    'Unlimited graphic design for churches on a monthly subscription. Designer Emily Farmer based in Noblesville, IN, serving the Indianapolis area.',
   pricing: {
     monthly: 997,
     annual: 9997,

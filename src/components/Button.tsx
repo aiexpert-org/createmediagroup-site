@@ -1,47 +1,87 @@
 import Link from 'next/link'
 import { cn } from '@/lib/cn'
+import { MarkerSwipe } from '@/components/MarkerSwipe'
 
 type Variant = 'primary' | 'secondary' | 'ghost'
 
 type ButtonProps = {
   variant?: Variant
+  withArrow?: boolean
 } & (
   | React.ComponentPropsWithoutRef<typeof Link>
   | (React.ComponentPropsWithoutRef<'button'> & { href?: undefined })
 )
 
-const variants: Record<Variant, string> = {
-  primary:
-    'bg-[var(--color-cta)] text-[var(--color-cta-ink)] hover:bg-[var(--color-cta-hover)] focus-visible:outline-[var(--color-cta-ink)]',
-  secondary:
-    'bg-neutral-950 text-white hover:bg-neutral-800 focus-visible:outline-neutral-950',
-  ghost:
-    'bg-transparent text-neutral-950 ring-1 ring-inset ring-neutral-900/15 hover:ring-[var(--color-cta)] hover:bg-[var(--color-cta)]/10 focus-visible:outline-neutral-950',
-}
-
+/**
+ * CTAs read as marker-swiped text rather than filled rectangles.
+ *
+ * - primary: larger, semibold text with the highlighter swipe behind the whole
+ *   phrase (always visible). Optional trailing arrow.
+ * - secondary / ghost: body-weight text with a dashed underline at rest that
+ *   gives way to the swipe on hover.
+ *
+ * `isolate` keeps the swipe's negative z-index scoped to the button so it sits
+ * above the button's own (transparent) background but never escapes behind a
+ * dark section like the contact block.
+ */
 export function Button({
   variant = 'primary',
+  withArrow = variant === 'primary',
   className,
   children,
   ...props
 }: ButtonProps) {
+  const isPrimary = variant === 'primary'
+
   const merged = cn(
-    'inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
-    variants[variant],
+    'group relative isolate inline-flex items-center justify-center gap-1.5 text-neutral-950 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950',
+    isPrimary
+      ? 'text-lg font-semibold sm:text-xl'
+      : 'text-base font-medium',
     className,
+  )
+
+  const content = (
+    <>
+      <MarkerSwipe
+        className={cn(
+          '-inset-x-3 inset-y-0.5',
+          isPrimary
+            ? 'opacity-100'
+            : 'opacity-0 transition-opacity duration-200 group-hover:opacity-70',
+        )}
+      />
+      <span
+        className={cn(
+          'relative',
+          !isPrimary &&
+            'underline decoration-dashed decoration-neutral-400 underline-offset-4 transition-colors group-hover:decoration-transparent',
+        )}
+      >
+        {children}
+      </span>
+      {withArrow ? (
+        <span
+          aria-hidden="true"
+          className="relative transition-transform duration-200 group-hover:translate-x-0.5"
+        >
+          &rarr;
+        </span>
+      ) : null}
+    </>
   )
 
   if (typeof props.href === 'undefined') {
     return (
       <button className={merged} {...props}>
-        {children}
+        {content}
       </button>
     )
   }
 
   return (
     <Link className={merged} {...props}>
-      {children}
+      {content}
     </Link>
   )
 }

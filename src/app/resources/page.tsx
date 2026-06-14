@@ -37,7 +37,7 @@ export default async function ResourcesPage() {
     <>
       <PageIntro eyebrow="Resources" title="Notes from the design desk.">
         <p>
-          Quick reads on church branding, comms team workflows, and why sermon series art compounds over time. Written from where the work actually happens, here in Indianapolis.
+          Quick reads on church branding, comms team workflows, and why sermon series art compounds over time. Written from where the work actually happens, here in Noblesville.
         </p>
       </PageIntro>
 
