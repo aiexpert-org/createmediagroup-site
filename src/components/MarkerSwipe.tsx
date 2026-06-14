@@ -1,43 +1,41 @@
 import { cn } from '@/lib/cn'
 
 /**
- * Hand-drawn yellow highlighter pass, in the Greg Isenberg "Blog" style.
+ * Straight yellow highlighter pass, Greg Isenberg "Blog" style.
  *
- * It is a closed, filled blob (not a stroke) with subtly wavy top and bottom
- * edges so it reads like a real marker swipe rather than a pill. The fill is
- * slightly translucent and the whole shape sits a touch low and tilted, so the
- * bottom ~70% of the letterforms land inside the highlight while the tops peek
- * above it.
+ * A clean tape strip with lightly chamfered ends (straight top and bottom,
+ * short angled ends), tilted ~1.5deg so it reads like a quick marker swipe
+ * rather than a pill or a blob. Sized to bisect the middle ~75% of the text it
+ * sits behind: ascenders peek above the strip, descenders below, like a real
+ * highlighter pass straight through the letterforms.
  *
  * Rendered as an absolutely positioned layer behind its content. Callers place
- * the text in a `relative` span on top; pass opacity classes via `className`
- * (e.g. for hover reveal) or a numeric `opacity`.
+ * the text in a `relative` span on top and drive the reveal via `className`:
+ * pass `scale-x-0 ... group-hover:scale-x-100` for the center-expand animation,
+ * or `scale-x-100 opacity-100` for an always-on swipe.
  */
-export function MarkerSwipe({
-  className,
-  opacity,
-}: {
-  className?: string
-  opacity?: number
-}) {
+export function MarkerSwipe({ className }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
-      className={cn('pointer-events-none absolute inset-0 -z-10', className)}
+      className={cn(
+        'pointer-events-none absolute inset-0 -z-10 origin-center',
+        className,
+      )}
     >
       <svg
-        viewBox="0 0 100 26"
+        viewBox="0 0 100 22"
         preserveAspectRatio="none"
-        className="absolute top-[14%] left-[-7%] h-[82%] w-[114%]"
+        className="absolute top-1/2 left-1/2 h-[75%] w-[110%]"
         style={{
-          transform: 'rotate(-1.5deg)',
-          ...(opacity != null ? { opacity } : {}),
+          transform: 'translate(-50%, -50%) rotate(-1.5deg)',
+          overflow: 'visible',
         }}
       >
         <path
-          d="M 2,8 Q 12,4 28,6 Q 50,3 72,7 Q 88,5 98,9 L 97,22 Q 80,24 60,21 Q 35,25 12,22 Q 4,23 3,20 Z"
+          d="M 1,11 L 6,3.5 L 94,3.5 L 99,11 L 94,18.5 L 6,18.5 Z"
           fill="var(--color-cta)"
-          opacity="0.92"
+          opacity="0.85"
         />
       </svg>
     </span>

@@ -46,8 +46,8 @@ export function Button({
       <MarkerSwipe
         className={cn(
           isPrimary
-            ? 'opacity-100'
-            : 'opacity-0 transition-opacity duration-200 group-hover:opacity-70',
+            ? 'scale-x-100 opacity-100'
+            : 'scale-x-0 opacity-0 transition-[transform,opacity] duration-[280ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-x-100 group-hover:opacity-70',
         )}
       />
       <span

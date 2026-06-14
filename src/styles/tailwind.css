@@ -68,6 +68,30 @@ h4 {
   }
 }
 
+/* Hero background mosaic: strict per-tile hover. Every tile sits desaturated and
+   dimmed; hovering one individual tile brings it to full color and pops it above
+   its neighbors. No cursor/proximity math, so there is no chain effect or bleed:
+   one tile in, one tile out. */
+.mosaic-tile {
+  filter: grayscale(0.85) brightness(0.95);
+  opacity: 0.55;
+  z-index: 0;
+  transition:
+    filter 220ms ease-out,
+    transform 220ms ease-out,
+    opacity 220ms ease-out,
+    box-shadow 220ms ease-out,
+    z-index 220ms ease-out;
+}
+.mosaic-tile:hover,
+.mosaic-tile:focus-visible {
+  filter: grayscale(0) brightness(1.05);
+  opacity: 1;
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
 /* Article body styling for /resources/[slug] pages */
 .prose-blog {
   color: #404040;
