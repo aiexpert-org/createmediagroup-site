@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCM Hero Mockup v3</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; margin: 0; padding: 32px; background: #f6f5f1; color: #111; }
+  .frame { max-width: 1200px; margin: 0 auto; background: white; border-radius: 10px; overflow: hidden; border: 0.5px solid #d4d2cc; box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+  .browser-bar { display: flex; align-items: center; gap: 6px; padding: 10px 16px; background: #f0eee8; border-bottom: 0.5px solid #d4d2cc; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #ff5f57; }
+  .dot-yellow { background: #febc2e; }
+  .dot-green { background: #28c840; }
+  .url { margin-left: 18px; font-size: 12px; color: #777; font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: white; position: relative; z-index: 5; }
+  .logo { display: flex; align-items: baseline; gap: 1px; font-size: 26px; font-weight: 500; color: #111; letter-spacing: -0.03em; }
+  .logo-dot { display: inline-block; width: 11px; height: 11px; background: #EAD32C; border-radius: 50%; margin-left: 2px; transform: translateY(-3px); }
+  .nav-items { display: flex; gap: 28px; font-size: 14px; color: #111; align-items: center; }
+  .nav-item { position: relative; padding: 5px 9px; color: #444; }
+  .nav-item.active { color: #111; }
+  .nav-item .marker { position: absolute; top: 2px; left: -3px; width: calc(100% + 6px); height: calc(100% - 4px); z-index: 0; }
+  .nav-item .label { position: relative; }
+  .cta-dark { background: #111; color: white; padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: 500; border: none; cursor: pointer; }
+  .hero { position: relative; height: 540px; overflow: hidden; background: white; }
+  .mosaic { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(10, 1fr); grid-template-rows: repeat(6, 1fr); gap: 10px; padding: 20px; }
+  .tile { border-radius: 8px; opacity: 0.5; filter: grayscale(0.85) brightness(0.95); transition: all 240ms ease; }
+  .tile.hover-on { opacity: 1; filter: grayscale(0) brightness(1.05); box-shadow: 0 6px 24px rgba(0,0,0,0.2); z-index: 3; }
+  .fade { position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 42%, rgba(255,255,255,0.78) 62%, rgba(255,255,255,0.35) 84%, rgba(255,255,255,0.04) 100%); z-index: 2; }
+  .hero-content { position: relative; z-index: 3; padding: 56px 40px; max-width: 60%; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.2em; color: #555; text-transform: uppercase; margin-bottom: 20px; font-weight: 500; }
+  .h1 { font-size: 52px; line-height: 1.04; color: #111; font-weight: 500; letter-spacing: -0.035em; margin-bottom: 24px; }
+  .marker-span { position: relative; display: inline-block; }
+  .marker-svg { position: absolute; top: 50%; left: -8px; width: calc(100% + 16px); height: 108%; transform: translateY(-50%); z-index: 0; }
+  .marker-span > .text { position: relative; }
+  .subtitle { font-size: 17px; color: #444; line-height: 1.55; margin-bottom: 32px; max-width: 460px; }
+  .ctas { display: flex; gap: 12px; align-items: center; }
+  .cta-yellow { background: #EAD32C; color: #111; border: none; border-radius: 6px; padding: 13px 22px; font-size: 14px; font-weight: 500; cursor: pointer; }
+  .cta-ghost { background: transparent; color: #111; border: 0.5px solid #999; border-radius: 6px; padding: 13px 22px; font-size: 14px; font-weight: 500; cursor: pointer; }
+  .notes { max-width: 1200px; margin: 24px auto 0; padding: 24px; background: white; border-radius: 8px; border: 0.5px solid #d4d2cc; font-size: 14px; line-height: 1.6; color: #333; }
+  .notes h3 { margin: 0 0 12px; font-size: 16px; }
+  .notes ul { margin: 0; padding-left: 18px; }
+  .notes li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <div class="browser-bar">
+    <span class="dot dot-red"></span>
+    <span class="dot dot-yellow"></span>
+    <span class="dot dot-green"></span>
+    <span class="url">createchurchmedia.com</span>
+  </div>
+  <div class="nav">
+    <div class="logo">create<span class="logo-dot"></span></div>
+    <div class="nav-items">
+      <span class="nav-item active">
+        <svg class="marker" viewBox="0 0 80 22" preserveAspectRatio="none"><path d="M3,12 C18,5 50,18 78,9" stroke="#EAD32C" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.9"/></svg>
+        <span class="label">Home</span>
+      </span>
+      <span class="nav-item">How it works</span>
+      <span class="nav-item">Subscription</span>
+      <span class="nav-item">Portfolio</span>
+      <span class="nav-item">Resources</span>
+      <button class="cta-dark">Book a call</button>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="mosaic" id="mosaic"></div>
+    <div class="fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Church design subscription</div>
+      <div class="h1">
+        Unlimited
+        <span class="marker-span">
+          <svg class="marker-svg" viewBox="0 0 220 50" preserveAspectRatio="none"><path d="M4,28 C50,8 130,42 216,18" stroke="#EAD32C" stroke-width="30" stroke-linecap="round" fill="none" opacity="0.88"/></svg>
+          <span class="text">graphic design</span>
+        </span>
+        for churches.
+      </div>
+      <div class="subtitle">Hi, I'm Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.</div>
+      <div class="ctas">
+        <button class="cta-yellow">Book a call with Emily</button>
+        <button class="cta-ghost">See the work</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="notes">
+  <h3>Design intent — what's being mocked</h3>
+  <ul>
+    <li><strong>Logo:</strong> "create." with yellow period (Emily's actual brand mark).</li>
+    <li><strong>Nav active state:</strong> yellow marker swipe behind "Home" (replaces the old pill background). Same treatment on hover for every other item.</li>
+    <li><strong>Hero H1:</strong> yellow marker swipe behind "graphic design" in the headline.</li>
+    <li><strong>Eyebrow:</strong> "CHURCH DESIGN SUBSCRIPTION" in tracking-wide small caps above the H1.</li>
+    <li><strong>CTAs:</strong> rectangular 6px radius. Primary yellow + black text, secondary ghost. No more pills.</li>
+    <li><strong>Mosaic background:</strong> full-width grid of Emily's actual projects (FCC work for now, more churches as they backfill). Tiles desaturated by default. Move your mouse around — tiles you hover over lift to full color, the rest fade.</li>
+    <li><strong>Gradient overlay:</strong> right-to-left fade. White ~96% on the left where the H1 sits, dropping to ~4% on the far right so the colorful work shows through clearly.</li>
+    <li><strong>Brand yellow:</strong> #EAD32C (sampled from the wordmark logo file Emily provided).</li>
+  </ul>
+</div>
+
+<script>
+  const colors = [
+    '#2d4f3a','#c1a37b','#5b3a8f','#d97e3e','#1f3a5f','#8b4a3e','#d4a574','#3a5e4f','#6b3e75','#2b4a73',
+    '#c45f3e','#4a6b58','#8b5a2e','#3e5b8b','#6e4a8b','#d4823e','#2d5b4a','#a3823e','#5a3e75','#c2604a',
+    '#3a6b58','#6b3a5b','#d49955','#2e4f6b','#8b3a3e','#4a5a8b','#c4823e','#3a8b5a','#6b4a8b','#d45a4a',
+    '#2d3a5a','#8b6b3a','#5a8b6b','#c4a5a5','#4a4a8b','#8b4a4a','#3a8b4a','#6b8b3a','#8b3a6b','#3a6b8b',
+    '#d48b3a','#8b9a3e','#3e9a8b','#9a3e8b','#9a8b3e','#3e8b9a','#5a3a8b','#8b5a3e','#3e8b5a','#8b3e5a',
+    '#3e5a8b','#5a8b3a','#8b3a3a','#3a8b8b','#8b8b3a','#3a3a8b','#5a5a5a','#a08060','#3a4f4f','#604f60'
+  ];
+  const mosaic = document.getElementById('mosaic');
+  for (let i = 0; i < 60; i++) {
+    const tile = document.createElement('div');
+    tile.className = 'tile';
+    tile.style.background = colors[i % colors.length];
+    tile.style.transform = 'rotate(' + (Math.random() * 8 - 4).toFixed(1) + 'deg)';
+    if (i === 14 || i === 27) tile.classList.add('hover-on');
+    tile.addEventListener('mouseenter', () => tile.classList.add('hover-on'));
+    tile.addEventListener('mouseleave', () => tile.classList.remove('hover-on'));
+    mosaic.appendChild(tile);
+  }
+</script>
+
+</body>
+</html>
