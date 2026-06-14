@@ -2,6 +2,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
+import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { siteConfig } from '@/lib/site-config'
 
 type Props = {
@@ -14,16 +15,24 @@ export function ContactBlock({ heading, children }: Props) {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
         <div className="mx-auto max-w-4xl">
-          <div className="max-w-xl">
-            <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl text-balance">
-              {heading}
-            </h2>
-            <div className="mt-6 text-xl text-neutral-300">{children}</div>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Button href={siteConfig.waitlistUrl} tone="dark">
-                Join the wait list
-              </Button>
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
+            <div className="max-w-xl">
+              <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl text-balance">
+                {heading}
+              </h2>
+              <div className="mt-6 text-xl text-neutral-300">{children}</div>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Button href={siteConfig.waitlistUrl} tone="dark">
+                  Join the wait list
+                </Button>
+              </div>
             </div>
+
+            {/* Circular portrait of Emily humanizes the conversion moment. Shown
+                at lg+ where it balances the empty right side. */}
+            <FadeIn scaleIn className="hidden lg:block lg:justify-self-end">
+              <EmilyAvatar size={300} className="ring-2 ring-white/15" />
+            </FadeIn>
           </div>
 
           <Border className="mt-16 pt-10" invert>

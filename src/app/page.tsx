@@ -7,7 +7,8 @@ import { Button } from '@/components/Button'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
 import { HeroMosaic, HeroMosaicBackground } from '@/components/HeroMosaic'
-import { EmilyAvatar } from '@/components/EmilyAvatar'
+import { EmilyAvatar, EmilyPortrait } from '@/components/EmilyAvatar'
+import { WorkShowcase } from '@/components/WorkShowcase'
 import { ChurchLogos } from '@/components/ChurchLogos'
 import { ContactBlock } from '@/components/ContactBlock'
 import { ServiceJsonLd } from '@/components/JsonLd'
@@ -94,11 +95,19 @@ export default function HomePage() {
       </div>
       </div>
 
-      {/* Offer block */}
+      {/* Offer block — portrait of Emily balances the right side */}
       <SectionIntro
         eyebrow="The offer"
         title="One designer. One flat fee. Fast turn around times."
         className="mt-24 sm:mt-32 lg:mt-40"
+        aside={
+          <FadeIn
+            scaleIn
+            className="mx-auto w-full max-w-[460px] lg:mx-0 lg:ml-auto"
+          >
+            <EmilyPortrait width={460} />
+          </FadeIn>
+        }
       >
         <p>
           I design for churches on a flat $997 a month subscription. I become your remote graphic designer, on call, with fast turn around times.
@@ -125,11 +134,17 @@ export default function HomePage() {
         </FadeInStagger>
       </Container>
 
-      {/* See the work */}
+      {/* See the work — a strong sermon series piece with subtle scroll parallax */}
       <SectionIntro
         eyebrow="See the work"
         title="Custom graphic design for churches."
         className="mt-24 sm:mt-32 lg:mt-40"
+        aside={
+          <WorkShowcase
+            src="/portfolio/sermon-malachi.webp"
+            alt="Sermon series art for a Malachi series, designed by Emily Farmer"
+          />
+        }
       >
         <p>
           Sermon series. Branding. Social media. Announcements. Signage. Custom built around your church and your voice.
