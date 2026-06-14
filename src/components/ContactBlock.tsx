@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
@@ -22,17 +21,11 @@ export function ContactBlock({ heading, children }: Props) {
             <div className="mt-6 text-xl text-neutral-300">{children}</div>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Button href={siteConfig.bookingUrl}>Book a call with Emily</Button>
-              <Link
-                href={`tel:${siteConfig.phoneTel}`}
-                className="text-sm font-semibold text-white underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2"
-              >
-                Or text {siteConfig.phone}
-              </Link>
             </div>
           </div>
 
           <Border className="mt-16 pt-10" invert>
-            <dl className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-3 text-sm">
+            <dl className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 text-sm">
               <div>
                 <dt className="font-display font-semibold uppercase tracking-wider text-white/70">
                   Email
@@ -43,19 +36,6 @@ export function ContactBlock({ heading, children }: Props) {
                     className="text-white hover:text-[var(--color-cta)]"
                   >
                     {siteConfig.email}
-                  </a>
-                </dd>
-              </div>
-              <div>
-                <dt className="font-display font-semibold uppercase tracking-wider text-white/70">
-                  Phone
-                </dt>
-                <dd className="mt-3">
-                  <a
-                    href={`tel:${siteConfig.phoneTel}`}
-                    className="text-white hover:text-[var(--color-cta)]"
-                  >
-                    {siteConfig.phone}
                   </a>
                 </dd>
               </div>
