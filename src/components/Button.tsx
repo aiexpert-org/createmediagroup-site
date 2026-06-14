@@ -45,12 +45,14 @@ export function Button({
 
   const merged = cn(
     'group relative isolate inline-flex items-center justify-center gap-1.5 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4',
-    isDark
-      ? 'text-white focus-visible:outline-white'
-      : 'text-neutral-950 focus-visible:outline-neutral-950',
-    isPrimary
-      ? 'text-lg font-semibold sm:text-xl'
-      : 'text-base font-medium',
+    // Focus ring tracks the background so it stays visible on dark sections.
+    isDark ? 'focus-visible:outline-white' : 'focus-visible:outline-neutral-950',
+    // A primary CTA is a solid-yellow "label tape" with dark text on every
+    // background, so its text color is context-independent (the marker handles
+    // the contrast). Secondary/ghost text still flips with tone because their
+    // marker only appears on hover.
+    isPrimary ? 'text-neutral-950' : isDark ? 'text-white' : 'text-neutral-950',
+    isPrimary ? 'text-lg font-semibold sm:text-xl' : 'text-base font-medium',
     className,
   )
 

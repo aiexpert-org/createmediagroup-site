@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
 import { HeroMosaic, HeroMosaicBackground } from '@/components/HeroMosaic'
+import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { ChurchLogos } from '@/components/ChurchLogos'
 import { ContactBlock } from '@/components/ContactBlock'
 import { ServiceJsonLd } from '@/components/JsonLd'
@@ -60,9 +61,12 @@ export default function HomePage() {
             <h1 className="font-display text-[2.75rem] leading-[1.05] font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-[4rem] lg:leading-[1.1]">
               Unlimited graphic design for churches.
             </h1>
-            <p className="mt-6 max-w-2xl text-xl text-neutral-600">
-              Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.
-            </p>
+            <div className="mt-6 flex max-w-2xl items-start gap-4">
+              <EmilyAvatar size={72} priority className="mt-1" />
+              <p className="text-xl text-neutral-600">
+                Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.
+              </p>
+            </div>
             <div className="pointer-events-auto mt-10 flex flex-wrap items-center gap-6">
               <Button href={siteConfig.waitlistUrl}>Join the wait list</Button>
               <Button href="/portfolio" variant="ghost">

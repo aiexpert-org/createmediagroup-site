@@ -4,12 +4,21 @@ import { useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { FadeIn } from '@/components/FadeIn'
 
 export type Piece = {
   src: string
   alt: string
   category: string
+}
+
+export type PortfolioCategory = {
+  key: string
+  title: string
+  description: string
+  /** Tailwind aspect-ratio class for this category's tiles, e.g. 'aspect-video'. */
+  aspectClass: string
+  items: Piece[]
 }
 
 function CloseIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -140,54 +149,147 @@ function Lightbox({
   )
 }
 
-export function PortfolioGallery({ pieces }: { pieces: Piece[] }) {
+function Tile({
+  piece,
+  aspectClass,
+  onOpen,
+}: {
+  piece: Piece
+  aspectClass: string
+  onOpen: () => void
+}) {
+  return (
+    <figure className="group flex flex-col">
+      <button
+        type="button"
+        onClick={onOpen}
+        aria-label={`View ${piece.alt} full size`}
+        className={`relative block w-full overflow-hidden rounded-2xl bg-neutral-100 ring-1 ring-neutral-900/5 transition duration-300 hover:ring-2 hover:ring-[var(--color-cta)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 ${aspectClass}`}
+      >
+        <Image
+          src={piece.src}
+          alt={piece.alt}
+          fill
+          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+          className="object-contain p-3 transition duration-500 group-hover:scale-[1.03]"
+        />
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 flex items-center justify-center bg-neutral-950/0 opacity-0 transition group-hover:bg-neutral-950/10 group-hover:opacity-100"
+        >
+          <span className="rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-neutral-950 shadow-sm">
+            View full size
+          </span>
+        </span>
+      </button>
+      <figcaption className="mt-2.5 text-xs font-medium uppercase tracking-wider text-neutral-500">
+        {piece.category}
+      </figcaption>
+    </figure>
+  )
+}
+
+const INITIAL_VISIBLE = 9
+
+function CategorySection({
+  category,
+  startIndex,
+  onOpen,
+}: {
+  category: PortfolioCategory
+  startIndex: number
+  onOpen: (globalIndex: number) => void
+}) {
+  const [expanded, setExpanded] = useState(false)
+  const hasMore = category.items.length > INITIAL_VISIBLE
+  const visible = expanded ? category.items : category.items.slice(0, INITIAL_VISIBLE)
+  const hiddenCount = category.items.length - INITIAL_VISIBLE
+
+  return (
+    <section aria-labelledby={`cat-${category.key}`} className="scroll-mt-24">
+      <FadeIn>
+        <h2
+          id={`cat-${category.key}`}
+          className="font-display text-2xl font-semibold tracking-tight text-neutral-950 sm:text-3xl"
+        >
+          {category.title}
+        </h2>
+        <p className="mt-2 max-w-2xl text-base text-neutral-600">
+          {category.description}
+        </p>
+      </FadeIn>
+
+      <ul
+        role="list"
+        className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+      >
+        {visible.map((piece, i) => (
+          <FadeIn as="li" key={piece.src}>
+            <Tile
+              piece={piece}
+              aspectClass={category.aspectClass}
+              onOpen={() => onOpen(startIndex + i)}
+            />
+          </FadeIn>
+        ))}
+      </ul>
+
+      {hasMore ? (
+        <div className="mt-8">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="group relative isolate inline-flex items-center gap-1.5 text-base font-medium text-neutral-950"
+          >
+            <span className="underline decoration-dashed underline-offset-4 decoration-neutral-400 transition-colors group-hover:decoration-[var(--color-cta)]">
+              {expanded ? 'Show fewer' : `Show ${hiddenCount} more`}
+            </span>
+            <span
+              aria-hidden="true"
+              className={`transition-transform duration-200 ${expanded ? '-rotate-90' : 'rotate-90'}`}
+            >
+              &rsaquo;
+            </span>
+          </button>
+        </div>
+      ) : null}
+    </section>
+  )
+}
+
+export function PortfolioCategories({
+  categories,
+}: {
+  categories: PortfolioCategory[]
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [mounted, setMounted] = useState(false)
-
   useEffect(() => setMounted(true), [])
+
+  // Flatten in display order so the lightbox can arrow through every piece.
+  const allPieces = categories.flatMap((c) => c.items)
+  const offsets: number[] = []
+  categories.reduce((acc, c) => {
+    offsets.push(acc)
+    return acc + c.items.length
+  }, 0)
 
   return (
     <>
-      <FadeInStagger faster>
-        <ul role="list" className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
-          {pieces.map((piece, i) => (
-            <FadeIn as="li" key={piece.src}>
-              <figure className="group flex flex-col">
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(i)}
-                  aria-label={`View ${piece.alt} full size`}
-                  className="relative block aspect-square w-full overflow-hidden rounded-2xl bg-neutral-100 ring-1 ring-neutral-900/5 transition duration-300 hover:ring-2 hover:ring-[var(--color-cta)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"
-                >
-                  <Image
-                    src={piece.src}
-                    alt={piece.alt}
-                    fill
-                    sizes="(min-width: 1024px) 30vw, 50vw"
-                    className="object-contain p-3 transition duration-500 group-hover:scale-[1.03]"
-                    priority={i < 3}
-                  />
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 flex items-center justify-center bg-neutral-950/0 opacity-0 transition group-hover:bg-neutral-950/10 group-hover:opacity-100"
-                  >
-                    <span className="rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-neutral-950 shadow-sm">
-                      View full size
-                    </span>
-                  </span>
-                </button>
-                <figcaption className="mt-2.5 text-xs font-medium uppercase tracking-wider text-neutral-500">
-                  {piece.category}
-                </figcaption>
-              </figure>
-            </FadeIn>
-          ))}
-        </ul>
-      </FadeInStagger>
+      <div className="space-y-20 sm:space-y-28">
+        {categories.map((category, ci) => (
+          <CategorySection
+            key={category.key}
+            category={category}
+            startIndex={offsets[ci]}
+            onOpen={setOpenIndex}
+          />
+        ))}
+      </div>
 
       {mounted && openIndex !== null ? (
         <Lightbox
-          pieces={pieces}
+          pieces={allPieces}
           index={openIndex}
           onClose={() => setOpenIndex(null)}
           onNavigate={setOpenIndex}

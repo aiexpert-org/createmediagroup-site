@@ -316,29 +316,30 @@ export function HeroMosaicBackground() {
           <div
             key={`${src}-${i}`}
             tabIndex={-1}
-            className="group pointer-events-auto relative cursor-pointer overflow-hidden rounded-sm transition duration-300 ease-out hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
+            className="group pointer-events-auto relative cursor-pointer overflow-hidden rounded-sm transition duration-[480ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
           >
             <Image
               src={src}
               alt=""
               fill
               sizes="(min-width: 1024px) 10vw, (min-width: 640px) 12vw, 16vw"
-              className="object-cover opacity-55 brightness-95 grayscale-[0.85] transition duration-500 ease-out group-hover:scale-[1.04] group-hover:opacity-100 group-hover:brightness-105 group-hover:grayscale-0"
+              className="object-cover opacity-55 brightness-95 grayscale-[0.85] transition duration-[480ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] group-hover:opacity-100 group-hover:brightness-105 group-hover:grayscale-0"
               priority={i < 10}
             />
           </div>
         ))}
       </div>
 
-      {/* Right-to-left white gradient: ~96% white on the left where the copy
-          sits, fading to ~8% on the right so the tiles show through.
-          `pointer-events-none` so it does not swallow hover on the tiles below
-          (without it, this full-bleed overlay intercepts every tile hover). */}
+      {/* Right-to-left white gradient. Fully opaque white across the left ~35%
+          where the headline / CTAs live, so even when a tile behind the copy
+          hovers to full color the text stays legible (the opaque overlay sits
+          above the tiles). It then fades slowly so colorful tiles still show on
+          the right. `pointer-events-none` so it does not swallow tile hover. */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 28%, rgba(255,255,255,0.55) 62%, rgba(255,255,255,0.08) 100%)',
+            'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.45) 75%, rgba(255,255,255,0) 100%)',
         }}
       />
       {/* Soft white fade into the page below. */}

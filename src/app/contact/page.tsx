@@ -6,6 +6,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { PageIntro } from '@/components/PageIntro'
 import { WaitListForm } from '@/components/WaitListForm'
+import { EmilyPortrait } from '@/components/EmilyAvatar'
 import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
@@ -32,6 +33,16 @@ export default function ContactPage() {
           </FadeIn>
 
           <FadeIn>
+            <div className="mb-10 max-w-md">
+              <EmilyPortrait width={440} />
+              <div className="mt-5 rounded-2xl bg-neutral-50 p-5 ring-1 ring-inset ring-neutral-900/5">
+                <p className="text-base text-neutral-700">
+                  This is who reads every signup. Emily will reach out personally
+                  by email when a spot opens.
+                </p>
+              </div>
+            </div>
+
             <h2 className="font-display text-base font-semibold text-neutral-950">
               How it works
             </h2>

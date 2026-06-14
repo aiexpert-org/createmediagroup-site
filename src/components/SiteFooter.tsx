@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
+import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { navItems, siteConfig } from '@/lib/site-config'
 
 export function SiteFooter() {
@@ -69,9 +70,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-200 pt-8 pb-12">
-          <p className="text-sm text-neutral-500">
-            © {siteConfig.brand} {new Date().getFullYear()}. All work designed by{' '}
-            {siteConfig.designer}.
+          <p className="flex flex-wrap items-center gap-x-1.5 text-sm text-neutral-500">
+            © {siteConfig.brand} {new Date().getFullYear()}. All work designed by
+            <EmilyAvatar size={32} />
+            <span className="font-medium text-neutral-600">{siteConfig.designer}.</span>
           </p>
           <p className="text-sm text-neutral-500">
             Made in {siteConfig.city}, {siteConfig.state}.

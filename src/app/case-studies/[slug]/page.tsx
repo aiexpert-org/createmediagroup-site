@@ -12,6 +12,7 @@ import {
   getCaseStudyBySlug,
 } from '@/lib/case-studies'
 import { getChurchBySlug } from '@/lib/churches'
+import { ArticleByline } from '@/components/EmilyAvatar'
 import { siteConfig } from '@/lib/site-config'
 
 type RouteParams = { slug: string }
@@ -103,6 +104,7 @@ export default async function CaseStudyPage({
               </div>
             ) : null}
           </dl>
+          <ArticleByline className="mt-8" trailing={<> in {siteConfig.city}, {siteConfig.state}</>} />
         </FadeIn>
       </Container>
 

@@ -18,6 +18,12 @@ export type Church = {
   engagement: string
   workTypes: string[]
   excerpt: string
+  /** True when a real logo was extracted (vs a wordmark fallback). Drives which
+   *  row of the trust marquee a church lands in. */
+  realLogo: boolean
+  /** True when the church has real prior case-study narrative (recovered from
+   *  the old site), vs an auto-scaffolded placeholder. */
+  hasCaseStudy: boolean
 }
 
 export const churches: Church[] = (churchesData as Church[])
@@ -40,14 +46,13 @@ export function churchHero(slug: string): string {
   return churchLogo(slug, 'black')
 }
 
-// Split the 20 churches into two marquee rows of 10. The rows alternate active
-// and past clients so each row carries the same visual weight, then each half
-// of the alphabetical list is dealt out top/bottom for variety.
+// Split the 20 churches into two marquee rows of 10. Churches with real
+// extracted logos get the most visual emphasis, so they fill the top row
+// (which scrolls left-to-right); wordmark fallbacks settle into the bottom row.
+// Within each tier we keep alphabetical order for stability.
 export function marqueeRows(): [Church[], Church[]] {
-  const top: Church[] = []
-  const bottom: Church[] = []
-  churches.forEach((church, i) => {
-    ;(i % 2 === 0 ? top : bottom).push(church)
-  })
-  return [top, bottom]
+  const ordered = [...churches].sort(
+    (a, b) => Number(b.realLogo) - Number(a.realLogo) || a.name.localeCompare(b.name),
+  )
+  return [ordered.slice(0, 10), ordered.slice(10, 20)]
 }

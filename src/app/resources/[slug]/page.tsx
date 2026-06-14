@@ -8,6 +8,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { ContactBlock } from '@/components/ContactBlock'
 import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd'
+import { ArticleByline } from '@/components/EmilyAvatar'
 import {
   getAllPostSlugs,
   getPostBySlug,
@@ -94,23 +95,28 @@ export default async function ArticlePage({
             {post.title}
           </h1>
           <p className="mt-6 text-xl text-neutral-600">{post.description}</p>
-          <p className="mt-6 text-sm text-neutral-500">
-            By {siteConfig.designer} in {siteConfig.city}, {siteConfig.state}
-            {siteConfig.googleBusinessUrl ? (
+          <ArticleByline
+            className="mt-6"
+            trailing={
               <>
-                {' '}
-                <span aria-hidden="true">&middot;</span>{' '}
-                <a
-                  href={siteConfig.googleBusinessUrl}
-                  className="underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View on Google
-                </a>
+                {' '}in {siteConfig.city}, {siteConfig.state}
+                {siteConfig.googleBusinessUrl ? (
+                  <>
+                    {' '}
+                    <span aria-hidden="true">&middot;</span>{' '}
+                    <a
+                      href={siteConfig.googleBusinessUrl}
+                      className="underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View on Google
+                    </a>
+                  </>
+                ) : null}
               </>
-            ) : null}
-          </p>
+            }
+          />
         </FadeIn>
       </Container>
 

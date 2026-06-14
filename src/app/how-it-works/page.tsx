@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StepList, type Step } from '@/components/StepList'
 import { ContactBlock } from '@/components/ContactBlock'
 import { HeroMosaicBackground } from '@/components/HeroMosaic'
+import { EmilyPortrait } from '@/components/EmilyAvatar'
 
 export const metadata: Metadata = {
   title: 'How it works',
@@ -59,14 +59,35 @@ export default function HowItWorksPage() {
         </div>
         {/* `pointer-events-none` so the cursor reaches the mosaic tiles behind
             the headline and every tile lights up on hover (the hero has no
-            interactive elements of its own). */}
+            interactive elements of its own). The portrait sits in the right
+            third over the colorful side of the mosaic; the right-to-left white
+            gradient keeps the left clean where the H1 lives. */}
         <div className="pointer-events-none relative z-10">
-          <PageIntro eyebrow="How it works" title="From inquiry to a finished file, start to finish.">
-            <p className="italic text-neutral-700">Simple and efficient.</p>
-            <p className="mt-4">
-              You send me what you need. I design it. You review. I revise and send you the completed files.
-            </p>
-          </PageIntro>
+          <Container className="mt-24 sm:mt-32 lg:mt-40">
+            <FadeIn>
+              <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-3">
+                <div className="lg:col-span-2">
+                  <h1>
+                    <span className="block font-display text-base font-semibold tracking-wider uppercase text-neutral-950">
+                      How it works
+                    </span>
+                    <span className="mt-6 block max-w-3xl font-display text-[2.75rem] leading-[1.05] sm:text-6xl lg:text-[4rem] lg:leading-[1.1] font-medium tracking-tight text-balance text-neutral-950">
+                      From inquiry to a finished file, start to finish.
+                    </span>
+                  </h1>
+                  <div className="mt-6 max-w-2xl text-xl text-neutral-600">
+                    <p className="italic text-neutral-700">Simple and efficient.</p>
+                    <p className="mt-4">
+                      You send me what you need. I design it. You review. I revise and send you the completed files.
+                    </p>
+                  </div>
+                </div>
+                <div className="mx-auto w-full max-w-xs lg:col-span-1 lg:ml-auto">
+                  <EmilyPortrait width={360} />
+                </div>
+              </div>
+            </FadeIn>
+          </Container>
         </div>
       </div>
 

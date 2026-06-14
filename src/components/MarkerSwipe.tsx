@@ -35,7 +35,7 @@ export function MarkerSwipe({ className }: { className?: string }) {
         <path
           d="M 1,11 L 6,3.5 L 94,3.5 L 99,11 L 94,18.5 L 6,18.5 Z"
           fill="var(--color-cta)"
-          opacity="0.85"
+          opacity="0.9"
         />
       </svg>
     </span>

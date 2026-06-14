@@ -6,6 +6,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
+import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { ContactBlock } from '@/components/ContactBlock'
 import { FaqJsonLd, ServiceJsonLd } from '@/components/JsonLd'
 import { siteConfig } from '@/lib/site-config'
@@ -196,6 +197,13 @@ export default function SubscriptionPage() {
             featured
           />
         </div>
+
+        <FadeIn className="mt-10 flex items-center justify-center gap-4">
+          <EmilyAvatar size={56} />
+          <p className="max-w-sm text-base text-neutral-600">
+            You&rsquo;re paying Emily directly. No agency, no account managers.
+          </p>
+        </FadeIn>
       </Container>
 
       {/* Categories */}
