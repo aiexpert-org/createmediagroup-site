@@ -65,7 +65,7 @@ export default function HowItWorksPage() {
             keeps the left clean where the H1 lives; the colorful mosaic fills
             the right. No portrait here, per Emily. */}
         <div className="pointer-events-none relative z-10">
-          <Container className="mt-24 sm:mt-32 lg:mt-40">
+          <Container className="mt-8 pb-12 sm:mt-12 sm:pb-20 lg:mt-16 lg:pb-28">
             <FadeIn>
               <h1>
                 <span className="block font-display text-base font-semibold tracking-wider uppercase text-neutral-950 [text-shadow:0_0_6px_rgba(255,255,255,0.8)]">

@@ -73,6 +73,13 @@ export function SiteHeader() {
                       : 'text-neutral-700 hover:text-neutral-950',
                   )}
                   aria-current={active ? 'page' : undefined}
+                  // Drop focus after a MOUSE click so the keyboard focus ring
+                  // never lingers as a box around the active item once the page
+                  // navigates. e.detail is 0 for keyboard (Enter) activation, so
+                  // keyboard users keep their focus-visible ring for a11y.
+                  onClick={(e) => {
+                    if (e.detail !== 0) e.currentTarget.blur()
+                  }}
                 >
                   <MarkerSwipe
                     className={cn(
@@ -131,6 +138,9 @@ export function SiteHeader() {
                         : 'text-neutral-700 hover:text-neutral-950',
                     )}
                     aria-current={active ? 'page' : undefined}
+                    onClick={(e) => {
+                      if (e.detail !== 0) e.currentTarget.blur()
+                    }}
                   >
                     <MarkerSwipe
                       className={cn(
