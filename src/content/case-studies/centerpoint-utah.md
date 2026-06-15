@@ -1,40 +1,45 @@
 ---
-title: "Centerpoint Church — case study"
-church: "Centerpoint Church"
-slug: "centerpoint-utah"
-location: "Utah"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/centerpoint-utah-black.png"
-excerpt: "A clean cross mark and a consistent visual system that carries Centerpoint's brand from the lobby to the feed."
+title: Centerpoint Church
+church: Centerpoint Church
+slug: centerpoint-utah
+location: 'Eagle Mountain, UT'
+status: past
+engagement: Past project
+image: /church-logos/centerpoint-utah-black.png
+excerpt: >-
+  A multi-ministry design subscription with CenterPoint Church in Utah, working
+  with Communications Director Ethan Closson and Executive Pastor Chris Allen
+  across sermon series, youth events, signage, and class branding. The
+  subscription ran from spring 2025 through October 2025, when CenterPoint moved
+  the role in-house.
 tags:
-  - "Branding"
-  - "Sermon series art"
-  - "Social graphics"
+  - sermon-series
+  - youth
+  - signage
+  - branding
+  - intake-process
 ---
-Centerpoint Church is one of the churches Emily designs for on an ongoing basis. Based in Utah, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+CenterPoint Church sits in Eagle Mountain, Utah, with the tagline "Making Jesus the center point." The graphic design subscription ran from spring 2025 through October 2025. My main contacts were Ethan Closson, the Communications Director, and Chris Allen on the executive side for invoicing. Other staff (Josh Harbin in Spiritual Formation, Nick Anderson with the youth team, Lindsey Poulton on the design side) came in for specific projects.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, Centerpoint Church had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+Ethan was the operator who kept everything running. Early on we set up a Google Form for graphic requests so the briefs would come in with consistent fields. After a few weeks of using it, I noticed I was getting too much description and not quite enough of the right info, so I asked Ethan if we could rework it. He sent me a draft form the same afternoon, I tweaked the wording so volunteers wouldn't feel like they had to fill out the sample-screenshot field if they didn't have a reference in mind, and he shipped the updated version. That small loop set the tone. Clear briefs in, clear designs out.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+## The work
 
-## What Emily designed
+CenterPoint sent a wide range of projects through the form. Sermon series for the adult congregation (I Believe, Wreck The Roof, Bear Fruit). Youth ministry assets for CP YTH, including a Junior High Pool Party promo and a Volunteer Web Page request from Nick Anderson. Class branding for Josh Harbin's Dream Team and If/Then leadership tracks. And a constant stream of signage: sandwich board signs, front-of-stage 8.5x11 signs, OVerflow Starting Point directional signs.
 
-Emily took on branding, sermon series art, and social graphics for Centerpoint Church, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+Some of these were Canva-native rather than Illustrator, since the CenterPoint staff didn't have Illustrator licensed. Josh asked specifically for Canva templates on Dream Team so the team could edit them later. I flagged early that multi-page designs (like full leader guides and calendars) sat outside what I offered, and we landed on a one-page templatized approach that could be reused across documents.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+## A specific moment
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like Centerpoint Church.
+The Wreck The Roof sermon series in May 2025 is a good example of how a request usually moved through the studio. Ethan submitted the brief on May 14 through the form. I sent two color directions on May 21, riffing on the reference he'd attached. Ethan came back on May 27 with a clean piece of feedback: he liked the red, pink, salmon, and purple version best, asked for a subtitle ("How far would you go for Jesus?"), and let me know he'd made a huge typo in the project name. It was Wreck The Roof, not Reck. I added the W, dropped in the subtitle, and sent the revised set the next morning. Six business days from brief to a near-finished sermon series package.
 
-## The result
+## In their words
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+> "Hey Emily! These are great. I like the red/pink/salmon and purple one the best. I made a huge typo! It is Wreck The Roof, haha! Will you add a 'W' to it? Can we also add the subtitle 'How far would you go for Jesus?'"
+> — Ethan Closson, Communications Director, May 27, 2025
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the Centerpoint Church archive.
+## Where things stand
 
-If your church is fighting the same brand drift, the wait list is the place to start.
-
+Chris Allen reached out on October 29, 2025 to let me know CenterPoint was closing out the subscription. They had been looking for an in-house hire who could combine several roles into one position, and that hire had landed. Ethan had given me a heads up a couple months earlier so I had runway to plan, which I appreciated. I told Chris the same in my reply, and we wrapped on a good note. The November 19 follow-up from Ethan asking for AI project files for the If/Then class graphics was the final handoff. CenterPoint left with full source files for anything they need to keep edited internally.

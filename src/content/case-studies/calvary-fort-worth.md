@@ -1,40 +1,49 @@
 ---
-title: "Calvary Fort Worth — case study"
-church: "Calvary Fort Worth"
-slug: "calvary-fort-worth"
-location: "Fort Worth, TX"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/calvary-fort-worth-black.png"
-excerpt: "Weekly sermon series art and social graphics that keep a growing Fort Worth congregation looking like one church across every screen."
+title: Calvary Fort Worth
+church: Calvary Fort Worth
+slug: calvary-fort-worth
+location: 'Fort Worth, TX'
+status: past
+engagement: Past project
+image: /church-logos/calvary-fort-worth-black.png
+excerpt: >-
+  A bilingual sermon, Easter, and signage rollout for Calvary Church Fort Worth,
+  with Pastor Anthony Morehead and Production Pastor Chris Carbajal as the main
+  points of contact. The graphic design subscription ran from February through
+  April 2026.
 tags:
-  - "Sermon series art"
-  - "Social graphics"
-  - "Announcements"
+  - bilingual
+  - sermon-series
+  - easter
+  - print
+  - social
+  - signage
 ---
-Calvary Fort Worth is one of the churches Emily designs for on an ongoing basis. Based in Fort Worth, TX, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+Calvary Church Fort Worth is a bilingual congregation on McPherson Road that runs services in both English and Spanish. The graphic design subscription started in February 2026 and wrapped at the end of March 2026, when the church decided to bring more of that work in-house. I worked mostly with Pastor Anthony Morehead and Production Pastor Chris Carbajal, plus their financial team for the direct deposit setup.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, Calvary Fort Worth had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+Pastor Anthony brought me on at $500 a month, direct deposit on the 1st, with Laura Davis on the finance side handling the paperwork. He looped Laura in on February 6, 2026 to get the recurring payment set up. From the very first project he came in with clear specs. Sizes, brand notes, links to last year's reference files in Dropbox. He kept the brief tight and let me focus on the design.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+## The work
 
-## What Emily designed
+Almost everything was bilingual. English and Spanish versions of the same asset, often on the same day. The rhythm broke down into three buckets. Sermon series graphics (a title slide, a scripture slide, a blank slide, social sizes in both languages). Easter, which was its own season unto itself. And a steady stream of one-off print pieces, slides, and event graphics for Pastor Chris on the production side.
 
-Emily took on sermon series art, social graphics, and announcements for Calvary Fort Worth, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+The Easter rollout in February and March covered a full set: main sermon graphic, invite cards, door hangers, water bottle labels, floor decals, road banners, social media in four sizes, and updated logos for both languages. Pastor Anthony pulled examples from the prior year's Dropbox so I could keep visual continuity with what the congregation had already seen.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+Pastor Chris ran a separate track for the youth ministry, CYC. The April series was called Mega Series, and he gave me brand elements, slide dimensions, an LED wall size at 3456 wide, and a 2-bit visual style cue Pastor Blake wanted incorporated. I sent first-round options the same week he asked.
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like Calvary Fort Worth.
+## A specific moment
 
-## The result
+The Easter main graphic became the source file for the whole season. Pastor Anthony's original note said it was the first Easter project and the most important one, with multiple flower backgrounds to choose from. I sent options with different font directions on February 16. After he picked a direction, I extended that look across the invite cards, the door hanger, the water bottle label, the floor decal, the road banner, and all the social sizes. Several of these went out in both English and Spanish.
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+When I sent the social sizes, Pastor Anthony came back asking for the AI files instead of just the PNGs. He wanted to play with the road banner himself because it sits on a busy road and the fonts need to be readable at speed. That kind of detail (a banner that has to work for drivers, not just for a phone screen) is what made the Calvary work satisfying. They knew their congregation and their context.
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the Calvary Fort Worth archive.
+## In their words
 
-If your church is fighting the same brand drift, the wait list is the place to start.
+> "These are wonderful Emily, thank you so much. I'm going with the English version, the Spanish one has last year's date, but that's ok. The artwork is super clear."
+> — Pastor Anthony Morehead, February 28, 2026
 
+## Where things stand
+
+Calvary discontinued the graphic design subscription on March 30, 2026, after the Easter season wrapped. Pastor Anthony had mentioned at the start of the arrangement that this was the plan if they could shift the work in-house, so the timing was not a surprise. I still have all the source files for anything they ever need to revisit, and the door is open if a future project calls for outside help.

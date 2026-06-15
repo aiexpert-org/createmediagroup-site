@@ -1,40 +1,44 @@
 ---
-title: "Ignite Church — case study"
-church: "Ignite Church"
-slug: "ignite-church"
-location: "United States"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/ignite-church-black.png"
-excerpt: "A flame-mark identity and energetic series art that match the pace of a church built around momentum."
+title: Ignite Church
+church: Ignite Church
+slug: ignite-church
+location: 'Pekin, IL'
+status: past
+engagement: Past project
+image: /church-logos/ignite-church-black.png
+excerpt: >-
+  A subscription design partnership with Pastor Russ Shearer and Laura Schussele
+  covering sermon series art, slides, banners, and event collateral. Wrapped at
+  the end of October 2024 after roughly five months of weekly work.
 tags:
-  - "Branding"
-  - "Sermon series art"
-  - "Social graphics"
+  - sermon-series
+  - event-graphics
+  - slides
+  - banners
+  - print
+  - subscription
 ---
-Ignite Church is one of the churches Emily designs for on an ongoing basis. Based in United States, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+Ignite Church in Pekin came in as a subscription client in the summer of 2024. Pastor Russ Shearer and his office manager, Laura Schussele, ran point on requests. Russ handled vision for sermon series art. Laura handled the steady drumbeat of event slides, flyers, and announcement graphics.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, Ignite Church had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+The first month set the tone. Russ would email a series concept, I would send back three or four directions, and we would land on something inside two rounds of feedback. Laura would line up the smaller weekly asks: men's breakfast slides, youth ministry graphics, newcomer event flyers. Sometimes the request was loose ("open to ideas, just see what you come up with"). Sometimes Russ had a specific reference photo from another church's livestream that he wanted built into a fall theme. Both modes worked. I leaned on whatever direction they gave me and filled in the rest.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+## The work
 
-## What Emily designed
+Across the engagement I shipped sermon series packages, fall-themed livestream slides, Newcomer's Lunch and Quick Connect templates designed to be re-used across the year, Flashpoint Youth Ministry graphics, holiday slides, and the Fall Kickoff banner. Most requests came in with multiple sizes attached: a 1920x1080 for projection, a 4.43" x 2.25" flyer cut, and sometimes a banner crop. The standing rule we landed on was that I would produce the design once, get approval, and then size it out so nothing got duplicated mid-revision.
 
-Emily took on branding, sermon series art, and social graphics for Ignite Church, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+Projector color was a real conversation early on. Russ pulled the fall slides up on the sanctuary projector and the yellow tones I had used were reading completely off compared to my monitor. I sent revised palettes and we agreed to nail down a color set on the projector before I committed the rest of the fall designs. That kind of feedback loop is the part subscription work actually buys you. One-off projects do not give you that calibration.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+## A specific moment
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like Ignite Church.
+The Newcomer's Lunch and Quick Connect slides were the longest-tail piece of work I did for Ignite. Russ asked for two related templates he could re-use across the upcoming ministry year by swapping only the dates. I sent direction options first, locked the look, then handed back both the print sizes and the working AI files so the team could update them in-house going forward. That is what good subscription work should leave behind. The client should be able to keep using the system after you are gone.
 
-## The result
+## In their words
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+> "We're so appreciative of the work that you've done for us (you've been great to work with)."
+> — Russ Shearer, Pastor, October 2024
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the Ignite Church archive.
+## Where things stand
 
-If your church is fighting the same brand drift, the wait list is the place to start.
-
+Ignite wrapped at the end of October 2024. Russ wrote in to let me know the church was not going to renew for November. The notice was tighter than I would have liked since I had been planning around that monthly income, and I told him so. He apologized, owned it, and wished me well. The work was good while it lasted and the team was kind to deal with. Ignite is filed as a completed engagement, not a soured one.

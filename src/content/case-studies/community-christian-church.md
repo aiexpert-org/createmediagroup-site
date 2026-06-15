@@ -1,40 +1,47 @@
 ---
-title: "Community Christian Church — case study"
-church: "Community Christian Church"
-slug: "community-christian-church"
-location: "United States"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/community-christian-church-black.png"
-excerpt: "The C3 mark anchors a full announcement and signage system so every weekend touchpoint feels intentional and on-brand."
+title: Community Christian Church
+church: Community Christian Church
+slug: community-christian-church
+location: Maryland
+status: active
+engagement: Active since July 2024
+image: /church-logos/community-christian-church-black.png
+excerpt: >-
+  A multi-year engagement with Community Christian Church (CCC) that started as
+  a monthly subscription and shifted to per-project work in early 2025. Adam
+  Hawkey on the executive side has been the main contact across postcards,
+  Christmas mailers, kids ministry signage, sermon series graphics, and logo
+  work.
 tags:
-  - "Branding"
-  - "Announcements"
-  - "Signage"
+  - postcards
+  - christmas
+  - kids-ministry
+  - logo
+  - per-project
 ---
-Community Christian Church is one of the churches Emily designs for on an ongoing basis. Based in United States, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+Community Christian Church goes by CCC. Their tagline is "Helping people find their way back to God." Adam Hawkey is the Executive Minister and has been my main point of contact since the engagement started in 2024. Other staff have come in for specific tracks: Lisa Molite for C3 Kids signage, Michelle DiMarzio on the production side, Nick Blevins on the children's and student team. The relationship has gone through two phases. A monthly subscription through December 2024, then per-project work from 2025 onward.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, Community Christian Church had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+The earliest project in my records is a Food Truck Sunday postcard reformat in August 2024, but the subscription was already running by then. Through fall 2024 we had a steady cadence. Office signage. Bathroom frames. A Corn Maze Night at Beachmont postcard with $10 ticket pricing tested and pulled. A full Christmas service invite mailer with a holiday-hatted dog photo. C3 Kids signs for the kids department, with sometimes-tricky printer requirements that needed vector format with cut lines.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+In early December 2024, Adam let me know CCC's giving had declined through the year and they were making budget cuts across the board. The monthly subscription wrapped at end of year. He was straightforward about the situation and said he'd be in touch for per-project work starting January 1. That's exactly what happened.
 
-## What Emily designed
+## The work
 
-Emily took on branding, announcements, and signage for Community Christian Church, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+The per-project phase has been steady. A Summer Kickoff package refresh in April 2025 (bathroom sign, postcard front and back, event slide, all dated for June 1). A Costume Sunday postcard date update in July 2025. A 2025 update to a partner-churches graphic in November 2025, adding Anthology Charles Town, WV to the list. A logo recreation for a partner church app in April 2026, which we priced at $100 because the only file Adam had was a low-res raster and the logo needed to be rebuilt as a vector.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+The work that comes through most often is print. Postcards mailed to the community for big Sunday pushes (Christmas, Summer Kickoff, Costume Sunday, Corn Maze Night). The brand fonts are usually Gill Sans and Adobe Garamond Pro.
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like Community Christian Church.
+## A specific moment
 
-## The result
+The 2024 Christmas mailer was a good example of how the CCC process moves. Adam sent a raw picture of a dog in a holiday hat on November 19, with the dimensions (6x4 double-sided postcard) and a couple of font directions he'd been considering. I sent two layout options the same day. The next morning he picked option one and asked for three tweaks: center the front text down a little, change a parenthetical to say "optional," and adjust a line break on the back. I sent the print-ready PDFs the next day. From brief to print files in about 48 hours, with one revision round in between. That's the cadence Adam tends to work in, and it's why the relationship has stayed easy across both phases of the engagement.
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+## In their words
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the Community Christian Church archive.
+> "These are great! We're going with option 1."
+> — Adam Hawkey, Executive Minister, November 20, 2024
 
-If your church is fighting the same brand drift, the wait list is the place to start.
+## Where things stand
 
+CCC is active as a per-project client. The most recent thread in my inbox is from May 14, 2026, with Adam confirming an invoice payment. The April 2026 logo recreation for the partner church app was the last design project before that. Per-project work suits both sides at this point, and the door stays open for the next round whenever a Sunday push or a new initiative needs it.

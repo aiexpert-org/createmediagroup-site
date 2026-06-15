@@ -1,40 +1,55 @@
 ---
-title: "Faith Community Fellowship — case study"
-church: "Faith Community Fellowship"
-slug: "faith-community-fellowship"
-location: "United States"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/faith-community-fellowship-black.png"
-excerpt: "A family-focused brand system and weekly series art that make a multi-ministry church feel like one connected family."
+title: Faith Community Fellowship
+church: Faith Community Fellowship
+slug: faith-community-fellowship
+location: 'Trussville, AL'
+status: active
+engagement: Active partnership
+image: /church-logos/faith-community-fellowship-black.png
+excerpt: >-
+  Active design partner for a growing Alabama church. Sermon series, kids
+  ministry, men's and women's events, holiday campaigns, branded merchandise,
+  and event-specific banners and 2-up flyers.
 tags:
-  - "Branding"
-  - "Sermon series art"
-  - "Social graphics"
+  - weekly graphics
+  - kids ministry
+  - events
+  - merchandise
+  - banners
+  - Alabama
 ---
-Faith Community Fellowship is one of the churches Emily designs for on an ongoing basis. Based in United States, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+Faith Community Fellowship in Trussville, Alabama is an active client running through a structured graphic-request system that I think every church should adopt. Jana Martin, their media director, sends each project as its own email with a clear subject line dated like 06.10.26 Graphic Request, followed by a title. Every email has the same body fields: ITEM, THEME/COLORS, text to include, sizes, deadline, and the Dropbox link for final files. The system is so consistent that I can pull any project from any month and know exactly what was asked for.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, Faith Community Fellowship had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+Jana is the central contact at FCF. My archive shows steady weekly traffic through 2025 and 2026, with the relationship clearly established well before that. The pattern is mature: Jana sends the request in the structured format, I reply "Received :)" within the hour, the proofs come back over the next day or two, Jana shares them with the team, and the finals go to the Dropbox folder that holds everything.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+## The work
 
-## What Emily designed
+The FCF design calendar is dense. In a typical recent stretch I have shipped: a Back to School Prayer and Worship Night graphic, the Summer Fun Nights graphics with 2-up flyers, a Father's Day graphic plus a Father's Day mug and tin can logo, an At The Movies summer series (Christmas in July themed), a Family Day banner and business cards, Family Day promo graphics with an alternate Founded 250 title for the same date, vinyl decals with scripture for a wall installation (1 Corinthians 16:13 plus a second verse, measured against the church's actual wall dimensions), Day Camp deliverables with Toy Story 5 colors and a QR code, Water Baptism and Baby Dedication updates, Graduation Sunday graphics with photo direction notes, a Mother's Day tumbler logo, a Men's Breakfast date refresh, Women's Breakfast graphics, the RAK (Random Acts of Kindness) poster in two versions, a Father-Son Day for kids 5 to 10, and Cafe TV monitor artwork.
 
-Emily took on branding, sermon series art, and social graphics for Faith Community Fellowship, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+A couple of those projects are worth zooming in on because they show how the relationship handles the un-glamorous work.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+The vinyl decals project. Jana sent measurements for a 35-inch maximum height across four walls, and we worked through the math on each wall in detail. At one point she gave me the wall dimensions in inches for all four sides and asked me to confirm whether the 1 Corinthians 16:13 verse on three rows would max out width-wise at 173.4 inches given a 35-inch height. We went back and forth several times before the printer got the file. That is the kind of project that does not look like design from the outside but absolutely is design.
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like Faith Community Fellowship.
+The Family Day and Founded 250 dual title. Jana asked for a second proof of the same Family Day promo graphics with "Founded 250" swapped in for "Family Day" because the team was still deciding which title fit better for the day. I sent both versions same-day. Small ask, real impact: it lets the team make a final naming decision with the actual designs in front of them rather than picking blind.
 
-## The result
+## A specific moment: the missions poster that was no longer needed
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+In March 2026, right before I left for a vacation, Jana sent through a Missions Poster request and said she wanted to go ahead and send it in case I could fit it in. I did not get to it. When I came back, I emailed her on April 13 to check whether she still needed it. Her reply, April 14, 2026: "Hey, Emily. This is the project I needed right before your trip. I no longer need it. Thanks for checking!"
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the Faith Community Fellowship archive.
+That exchange is unremarkable on its own. What makes it case-study-worthy is that this is a church and a designer that have been working together long enough to handle a missed window without anyone losing trust. The project moved on, we both flagged the change, and the next week we were back on the FCF Kids deliverables and Mother's Day work. No drama. No re-billing argument. No backlog.
 
-If your church is fighting the same brand drift, the wait list is the place to start.
+## A second moment: the FCF Kids working file mix-up
 
+Same week, Jana asked me to update the FCF Kids poster, graphics, and 2-up flyers to remove one date and adjust the start of another. I made the edits and sent them. She wrote back: "Hey, Emily. I just realized that was a link to an old working file that I sent. It wasn't the most updated version you'd created for us. Sorry about that! Can you apply the requested changes to" the right file. I redid the edits on the correct version and sent them within the hour. Her reply was a clean "Thanks, Emily!"
+
+This is the rhythm of the FCF account: tight loops, mutual flexibility, no email drama. Jana runs media at the church. I run design from the contractor side. We have built a workflow where both of us know how to recover quickly from the small misses that come with any real production calendar.
+
+## In their words
+
+Jana, on the May 2026 Family Day banner and business cards turnaround, June 9, 2026: "Thanks for getting this to me so quickly, Emily! I will share this with the team." Direct, warm, and efficient. That tone runs across the entire FCF archive.
+
+## Where things stand
+
+The current open work as of mid-June 2026 includes the At The Movies summer series in a Christmas in July direction with photo backgrounds (Christmas trees, movie reel, tickets, theater, popcorn), the Back to School Prayer and Worship Night graphic, and the recurring monthly invoice cycle running through Jana for processing. The cadence is steady, the system is clean, and the FCF account is the model I point to when people ask what a well-organized church communications team looks like from a designer's chair.

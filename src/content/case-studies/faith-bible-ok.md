@@ -1,40 +1,47 @@
 ---
-title: "Faith Bible Church — case study"
-church: "Faith Bible Church"
-slug: "faith-bible-ok"
-location: "Oklahoma"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/faith-bible-ok-black.png"
-excerpt: "Clear announcement and signage design that helps an Oklahoma congregation know what's happening and where to go."
+title: Faith Bible Church
+church: Faith Bible Church
+slug: faith-bible-ok
+location: 'Edmond, Oklahoma'
+status: past
+engagement: Past project
+image: /church-logos/faith-bible-ok-black.png
+excerpt: >-
+  Missions prayer cards, individual missionary profiles, presentation slides,
+  and ongoing print design for a Bible church with active overseas work. The
+  relationship ran through about ten months and a brand refresh.
 tags:
-  - "Announcements"
-  - "Social graphics"
-  - "Signage"
+  - missions
+  - prayer-cards
+  - print
+  - slides
+  - monthly-subscription
 ---
-Faith Bible Church is one of the churches Emily designs for on an ongoing basis. Based in Oklahoma, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+Faith Bible Church in Oklahoma runs an active missions program with field work in Dawnu and among the Tarahumara people in Mexico. Most of the design work I did for them grew out of those missions programs and the prayer-card cadence that Tonya Zunigha ran for the congregation. The engagement spanned about ten months, from May 2023 through the end of March 2024.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, Faith Bible Church had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+The first month invoice went out at the start of May 2023 covering May 1 through June 1. By that point, the church was already brand-refreshed (I noted in the invoice email that the look would be a little different because we had just gone through a re-brand with a new logo). The arrangement was a monthly subscription billed to Ricardo Colon in administration, with Jay Risner on copy. The project briefs came from Tonya on the missions side and from Emily Brittain (Tonya's assistant) on smaller items.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+## The work
 
-## What Emily designed
+The prayer cards were the recurring core. Tonya would brief me on a missions focus, send over photo galleries and prayer points, and I would design front-and-back cards plus matching presentation slides for when she taught.
 
-Emily took on announcements, social graphics, and signage for Faith Bible Church, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+The Tarahumara card was the bigger lift. Tonya needed a card for the new missions focus launching on a Sunday in June, with QR codes for two different giving links, prayer points with seven staff members, and references to "the Colonia" rather than "the community." The card iterated through a few revisions across June 8 and 9 (changing "personal care" to "personal hygiene," updating the prayer point copy), and then in late August I rebuilt it as individual missionary profile cards for the seven staff plus a group slide for Tonya's teaching presentations.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+The Dawnu prayer card ran on its own track. I designed a summer card in May 2023 ahead of a June print deadline, then refreshed it again in late August as part of a three-project bundle (Dawnu prayer card, Tarahumara prayer card, and the individual missionary cards) targeting a September 7 deadline.
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like Faith Bible Church.
+Beyond the missions work, the smaller throughput came from Emily Brittain. A two-project drop in late September with a Tuesday turnaround, a single project the next day with a 3 PM deadline that I caught late in the day and got across the line. A request the following April to reopen a 2021 file (which I had unfortunately lost to a computer hard drive failure earlier in the engagement). Slides built from the missions card content for Tonya's presentations.
 
-## The result
+## A specific moment
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+The Tarahumara card request came in at 3 PM on a Thursday with a Sunday launch. Tonya opened the brief with "I know this is very last minute, so I understand if you can't do it." I sent back a first round inside three hours. Her response: "amazing! thank you so so much!" with two small copy revisions I turned around the same evening. That thread shows up in my head whenever someone asks how missions communication actually works at speed. The window is small, the stakes feel real, and the cards have to be ready for the bulletin spot on Sunday.
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the Faith Bible Church archive.
+## In their words
 
-If your church is fighting the same brand drift, the wait list is the place to start.
+> "amazing! thank you so so much!"
+> Tonya Zunigha, Missions Director, June 2023
 
+## Where things stand
+
+The Faith Bible engagement closed at the end of March 2024 when the church moved graphic design in-house. Jay confirmed the cancellation directly: "Yes. We discussed the cancellation recently. I think it's time." He covered the first two weeks of April as a transition payment. The handoff was clean and the door was left open for one-off projects during busy seasons or holidays. The prayer-card library, individual missionary profile cards, and presentation slides are still in rotation for the Dawnu and Tarahumara missions programs.

@@ -1,40 +1,47 @@
 ---
-title: "Lifepoint Church — case study"
-church: "Lifepoint Church"
-slug: "lifepoint-church"
-location: "United States"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/lifepoint-church-black.png"
-excerpt: "Ongoing series and social design that keep Lifepoint's weekend communication clear, current, and consistent."
+title: Lifepoint Church
+church: Lifepoint Church
+slug: lifepoint-church
+location: 'Wilmington, NC'
+status: past
+engagement: Past project
+image: /church-logos/lifepoint-church-black.png
+excerpt: >-
+  A high-volume subscription partnership with Melissa Swann, Creative Project
+  Manager at Lifepoint Wilmington, covering sermon series art, kids ministry
+  collateral, care room cards, social posts, and print pieces during a stretch
+  when their in-house designer was at capacity.
 tags:
-  - "Sermon series art"
-  - "Social graphics"
-  - "Announcements"
+  - sermon-series
+  - kids-ministry
+  - print
+  - social-media
+  - subscription
+  - care-cards
 ---
-Lifepoint Church is one of the churches Emily designs for on an ongoing basis. Based in United States, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+Lifepoint Church in Wilmington, North Carolina is a multi-campus church running services at Pine Valley, Leland, Porters Neck, and Carolina Beach. Melissa Swann, their Creative Project Manager, brought me in during the spring of 2022 to take pressure off their in-house designer and to handle bigger series projects the team did not have bandwidth to build from scratch.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, Lifepoint Church had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+Our first big project together was the Binge the Bible sermon series. Melissa was clear that this was the first time Lifepoint had handed a full series to an outside contractor, and Binge the Bible took priority over everything else as we built it out. Once that was in motion she opened the floodgates on the rest. A typical week from her would land in my inbox as a list of eight to ten items. New kids ministry first-time guest cards, a 90-day tithe card refresh, care room cards organized by topic, social posts for service times, set list graphics for the Sunday worship lineup, a kids newsletter template, lobby TV announcement slide refreshes.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+I had to flag capacity early. After one ten-item week landed I wrote back asking which projects were top priority, because the volume was not going to all fit inside a week. Melissa was good about it. The newsletter went first, the welcome card second, then care room, then the Sunday socials.
 
-## What Emily designed
+## The work
 
-Emily took on sermon series art, social graphics, and announcements for Lifepoint Church, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+The Care Room cards were the project I am most proud of from this engagement. Lifepoint keeps a set of cards in their care and prayer room with verses keyed to topics like addiction, adultery, baptism, and others. The existing set had drifted off-brand. I rebuilt the whole set using their branding guide, sent style options first, locked on a direction, and then produced the full topic list. I advised Melissa to have someone on her end spell-check the final files before printing, which I do on every print job, because I would rather catch a typo at her desk than at the printer.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+The Kids First-Time Guest card was the other meaningful build. Melissa wanted a two-sided card that limited how much the check-in volunteers had to read aloud to first-time parents. I built two front options in different color directions, she picked the more colorful one, we tightened the back copy into bullets, and shipped.
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like Lifepoint Church.
+## A specific moment
 
-## The result
+The Binge the Bible AI files were one of the harder moments. I had a hard drive failure that took out my working files for that series before Lifepoint asked for them back. I had the JPGs on Dropbox, but the editable AI files were gone. I told Melissa straight. Her in-house designer recreated the main black logo and the team kept the series running for another season. Not the conversation I wanted to have. Worth telling because it shaped how I back up working files going forward.
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+## In their words
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the Lifepoint Church archive.
+> "We can definitely work ahead most of the time. The series (Binge the bible) is the first time we have given a full series to a contractor. Anything binge the bible takes precedence over the other things."
+> — Melissa Swann, Creative Project Manager, April 2022
 
-If your church is fighting the same brand drift, the wait list is the place to start.
+## Where things stand
 
+Lifepoint moved off the monthly subscription in the late summer of 2022. Melissa wrote in to say they were not in a position to use a monthly service enough to make it worth it. I offered a smaller monthly package or a project-by-project arrangement, and she came back saying project-by-project would work for them, with new series support likely coming up again in the new year. The relationship ended on good terms. Lifepoint is the kind of client I would gladly take a one-off series project from any time.

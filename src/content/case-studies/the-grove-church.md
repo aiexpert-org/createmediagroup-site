@@ -1,41 +1,46 @@
 ---
-title: "The Grove Church — case study"
-church: "The Grove Church"
-slug: "the-grove-church"
-location: "United States"
-status: "active"
-engagement: "Ongoing"
-image: "/church-logos/the-grove-church-black.png"
-excerpt: "A high-resolution brand and full series system that let The Grove scale its design without losing a unified look."
+title: The Grove Church
+church: The Grove Church
+slug: the-grove-church
+location: 'Marysville, Washington'
+status: past
+engagement: Past project
+image: /church-logos/the-grove-church-black.png
+excerpt: >-
+  A monthly subscription engagement with The Grove Church in Washington state
+  that ran for roughly a year, starting with Evan Westerfield on the media team
+  and transitioning to Eli Angulo as Creative Director in June 2024. The work
+  spanned sermon series art, youth and kids ministry signage, missions content,
+  and a steady stream of event graphics through February 2025.
 tags:
-  - "Branding"
-  - "Sermon series art"
-  - "Social graphics"
-  - "Signage"
+  - sermon-series
+  - youth-ministry
+  - kids-ministry
+  - signage
+  - subscription
+  - missions
 ---
-The Grove Church is one of the churches Emily designs for on an ongoing basis. Based in United States, the team came to Create Church Media for the same reason most churches do: the weekend kept coming, the design didn't keep up, and the brand had started to drift across every surface.
+The Grove Church is in Washington state. Their domain is grove.church. I worked with two main creative leads during the engagement. Evan Westerfield (ewesterfield@grove.church) ran the media side when I came on. Eli Angulo (eangulo@grove.church) stepped in as Creative Director in June 2024. Aleah Loffer (aloffer@grove.church) came in on the kids ministry side for events like the Back to School Bash. The brand colors and fonts were specific (Museo Sans Rounded and a brand green at #019447), and Grove kept that brand discipline tight across every piece.
 
-## The challenge
+## How we started
 
-Like a lot of growing churches, The Grove Church had capable people doing design in the margins of other jobs. Sermon art got built the week of. Social graphics came from whoever had a free hour. Over time, the church started to look like several different churches that happened to share a name. Nothing was wrong, exactly. It just wasn't pulling in one direction.
+The earliest project on record is the New Series called Three Years that Changed the World, kicked off by Evan on February 1, 2024. From there we ramped quickly. Easter design work in mid-February, a Shuttling logo design, QR code cards, a Missions Map, and the new Not It sermon series in early March. By April we were working on entrance and exit signs, a Grove Men lanyard, and Grove Kids signage. The subscription was in full swing by spring.
 
-What they needed wasn't another tool. They needed one person who owned the look across everything and could keep it consistent week after week.
+## The work
 
-## What Emily designed
+Grove ran multiple ministry tracks at once and I covered most of them. Sermon series art across Three Years that Changed the World, Not It, Never Gonna Give You Up, Suit Yourself, and others. Kids ministry signage, touch cards, A-Frame parking signs for the Back to School Bash, and a major Discipleship Booklet that Evan handed off as a "big project" in August 2024. Youth ministry assets including a YTH Sunday push, Move Up Sunday, and the eventual final youth ministry sign in February 2025. Outreach events like iHeart Summer Fest, Fight Hunger, and Respite Day. A standalone Breakfast Club piece. Holiday and seasonal cadence around Easter, Thanksgiving, and the new year.
 
-Emily took on branding, sermon series art, social graphics, and signage for The Grove Church, building from a single visual system so each piece reinforced the next. The work covered the surfaces a congregation actually touches:
+The work pace tightened in the second half of the year. Eli came on as Creative Director on June 11, 2024 and we ran straight from his first projects (a new series called Never Gonna Give You Up, an iHeart Summer Fest print job) through Christmas. There was a stretch where projects piled up faster than I could comfortably ship, and I had to plan around a holiday schedule and a New Year's schedule with him directly.
 
-- A consistent treatment for sermon series art that carried from the stage to the app to the lock screen.
-- Social graphics built on the same type and color decisions, so the feed looked like the church.
-- Announcements and supporting collateral that stayed on-brand without slowing the comms team down.
+## A specific moment
 
-Every request ran through the subscription, so the staff stopped scrambling and started planning. Instead of asking who could make the graphic, they asked what the series needed, and the design showed up looking like The Grove Church.
+The handoff from Evan to Eli is the moment that captures Grove best for me. On May 29, 2024 Evan emailed, "I wanted to email and let you know that effective June 11 I will be stepping into another role at the church and not have my hand in media anymore. Eli Angulo, who I think you've worked with on a couple projects will be taking over as Creative Lead. I'll make sure to brief him on our process and do everything I can to make the transition as smooth as possible. So as of June 11 he will be the one reaching out on all future projects, I'll also be cc'ing him in projects up until that point so he can get an idea of how that works. I've really enjoyed working together so I'm bummed about stepping out of that, but excited for this new role." That is the cleanest internal handoff I have ever experienced as a vendor. Evan did exactly what he said he would do. Eli was up to speed by the first project he sent solo. No drop in quality, no confusion about brand assets, no missed deadlines. That is how a church should run a vendor transition.
 
-## The result
+## In their words
 
-The most useful outcome is the one nobody notices: the church reads as one church now. A first-time guest sees the same identity on the invite, the screen, and the wall. The staff got their margins back, and the brand stopped depending on whoever was free that week.
+"Again it has been a pleasure working with you!!"
+Eli Angulo, Creative Director, The Grove Church, February 13, 2025 (Final Project email)
 
-> This is a scaffolded case study. Emily will replace this section with the specific story, the real timeline, and finished work from the The Grove Church archive.
+## Where things stand
 
-If your church is fighting the same brand drift, the wait list is the place to start.
-
+The engagement wrapped in February 2025. Eli's "Final Project" email on February 13 was a vertical 33.5x80 inch youth ministry sign for Wednesday Night YTH and Sunday Breakfast Club. We iterated on the brand green tweak and the orientation correction (the sign was vertical, not horizontal), and shipped. The Grove Church is a past client and one of the proudest engagements on my list. The brand work was tight, the team was respectful and clear, and the relationship closed on a thank-you note rather than a budget cut. That's a rare and good way to end.

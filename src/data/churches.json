@@ -13,7 +13,7 @@
     ],
     "excerpt": "Weekly sermon series art and social graphics that keep a growing Fort Worth congregation looking like one church across every screen.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "centerpoint-utah",
@@ -29,7 +29,7 @@
     ],
     "excerpt": "A clean cross mark and a consistent visual system that carries Centerpoint's brand from the lobby to the feed.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "central-coast-young-adults",
@@ -44,7 +44,7 @@
     ],
     "excerpt": "Bold event identity and social campaigns built to reach young adults on the Central Coast where they already spend their attention.",
     "realLogo": false,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "community-christian-church",
@@ -60,7 +60,7 @@
     ],
     "excerpt": "The C3 mark anchors a full announcement and signage system so every weekend touchpoint feels intentional and on-brand.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "cornerstone-buzz",
@@ -76,7 +76,7 @@
     ],
     "excerpt": "Series art and weekly social that give Cornerstone a steady, recognizable rhythm people can follow from week to week.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "cornerstone-manteca",
@@ -92,7 +92,7 @@
     ],
     "excerpt": "A refined ring mark and matching sermon and print collateral that hold up across a busy weekend production.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "eastown-church",
@@ -108,7 +108,7 @@
     ],
     "excerpt": "A confident wordmark and ongoing series design that keep Eastown feeling current without losing its identity.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "faith-bible-ok",
@@ -124,7 +124,7 @@
     ],
     "excerpt": "Clear announcement and signage design that helps an Oklahoma congregation know what's happening and where to go.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "faith-community-fellowship",
@@ -140,7 +140,7 @@
     ],
     "excerpt": "A family-focused brand system and weekly series art that make a multi-ministry church feel like one connected family.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "fcc-santa-maria",
@@ -173,7 +173,7 @@
     ],
     "excerpt": "Series art plus a distinct kids-ministry sub-brand that give For The One a cohesive look for every age in the room.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "holland-chapel",
@@ -188,7 +188,7 @@
     ],
     "excerpt": "A clean wordmark and print collateral built to fit the character of a long-standing chapel community.",
     "realLogo": false,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "ignite-church",
@@ -204,7 +204,7 @@
     ],
     "excerpt": "A flame-mark identity and energetic series art that match the pace of a church built around momentum.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "lifepoint-church",
@@ -220,7 +220,7 @@
     ],
     "excerpt": "Ongoing series and social design that keep Lifepoint's weekend communication clear, current, and consistent.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "northpointe-community-church",
@@ -236,7 +236,7 @@
     ],
     "excerpt": "A polished brand and wayfinding system that help a growing community church feel established and easy to navigate.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "sanibel-community-church",
@@ -252,7 +252,7 @@
     ],
     "excerpt": "Brand and print design with an island sensibility, built for a close-knit Sanibel congregation and its visitors.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "shelby-church",
@@ -268,7 +268,7 @@
     ],
     "excerpt": "Series art and announcement design that keep a community church looking sharp without adding work to the staff.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "swg-leadership",
@@ -283,7 +283,7 @@
     ],
     "excerpt": "Leadership-brand identity and social design for a ministry focused on developing the next set of church leaders.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "the-crossing-church",
@@ -299,7 +299,7 @@
     ],
     "excerpt": "A steady stream of series art and social graphics that give The Crossing a consistent presence every weekend.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   },
   {
     "slug": "the-grove-church",
@@ -316,6 +316,6 @@
     ],
     "excerpt": "A high-resolution brand and full series system that let The Grove scale its design without losing a unified look.",
     "realLogo": true,
-    "hasCaseStudy": false
+    "hasCaseStudy": true
   }
 ]
