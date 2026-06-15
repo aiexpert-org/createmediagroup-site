@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Border } from '@/components/Border'
 import { ContactBlock } from '@/components/ContactBlock'
 import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import {
@@ -14,6 +13,7 @@ import {
 } from '@/lib/case-studies'
 import { getChurchBySlug, churchLogo } from '@/lib/churches'
 import { ArticleByline } from '@/components/EmilyAvatar'
+import { SelectedWork } from '@/components/SelectedWork'
 import { siteConfig } from '@/lib/site-config'
 
 type RouteParams = { slug: string }
@@ -141,36 +141,7 @@ export default async function CaseStudyPage({
       </Container>
 
       <Container className="mt-16 sm:mt-20">
-        <FadeIn className="mx-auto max-w-4xl">
-          <Border className="pt-10">
-            <h2 className="font-display text-2xl font-semibold tracking-tight text-neutral-950">
-              Selected work
-            </h2>
-            <p className="mt-3 max-w-2xl text-sm text-neutral-600">
-              Finished pieces from the {study.church} archive are being added.
-              These slots fill in as Emily backfills each church&rsquo;s work.
-            </p>
-            <ul
-              role="list"
-              className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6"
-            >
-              {(study.tags.length > 0
-                ? study.tags
-                : ['Sermon series art', 'Social graphics', 'Branding']
-              )
-                .concat(['Coming soon', 'Coming soon', 'Coming soon'])
-                .slice(0, 6)
-                .map((label, i) => (
-                  <li
-                    key={`${label}-${i}`}
-                    className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-neutral-100 px-3 text-center text-xs font-medium uppercase tracking-wider text-neutral-400 ring-1 ring-inset ring-neutral-900/5"
-                  >
-                    {label}
-                  </li>
-                ))}
-            </ul>
-          </Border>
-        </FadeIn>
+        <SelectedWork slug={slug} church={study.church} />
       </Container>
 
       <Container className="mt-16">
