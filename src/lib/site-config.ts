@@ -22,6 +22,13 @@ export const siteConfig = {
     'mailto:emily@createchurchmedia.com?subject=Joining%20the%20wait%20list',
   // Google Business Profile URL. Empty until Brett fills it in.
   googleBusinessUrl: '',
+  // Direct "write a review" link for Emily's Google Business Profile, used by
+  // the footer "Leave a 5-star review" link. Placeholder for now: no public GBP
+  // listing for Create Church Media / Create Media Group turned up in search.
+  // TODO: replace with Emily's actual GBP review URL once she sends it. Cleanest
+  // format is https://search.google.com/local/writereview?placeid=<PLACE_ID>,
+  // or a Google-generated https://g.page/r/<short-code>/review short link.
+  googleReviewUrl: 'https://www.google.com/business/',
 } as const
 
 export const navItems = [

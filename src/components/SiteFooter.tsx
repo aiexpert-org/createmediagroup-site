@@ -6,6 +6,14 @@ import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { navItems, siteConfig } from '@/lib/site-config'
 
+function StarIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M10 1.5l2.47 5.18 5.68.77-4.16 3.94 1.05 5.61L10 14.9l-5.04 2.6 1.05-5.61L1.85 7.45l5.68-.77z" />
+    </svg>
+  )
+}
+
 export function SiteFooter() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
@@ -71,12 +79,27 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-200 pt-8 pb-12">
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-200 pt-8 pb-12">
           <p className="flex flex-wrap items-center gap-x-1.5 text-sm text-neutral-500">
             © {siteConfig.brand} {new Date().getFullYear()}. All work designed by
             <EmilyAvatar size={32} />
             <span className="font-medium text-neutral-600">{siteConfig.designer}.</span>
           </p>
+
+          {/* TODO: replace with Emily's actual GBP review URL once she sends it
+              (see siteConfig.googleReviewUrl). */}
+          <a
+            href={siteConfig.googleReviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-700 transition hover:text-neutral-950"
+          >
+            <StarIcon className="h-4 w-4 text-[var(--color-cta)]" />
+            <span className="underline-offset-4 decoration-[var(--color-cta)] group-hover:underline">
+              Leave a 5-star review
+            </span>
+          </a>
+
           <p className="text-sm text-neutral-500">
             Made in {siteConfig.city}, {siteConfig.state}.
           </p>
