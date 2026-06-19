@@ -10,6 +10,7 @@ type Payload = {
   lastName?: string
   email?: string
   churchDomain?: string
+  referralCode?: string
   // Which CTA the signup came from (header, footer, case-study:<slug>, etc).
   source?: string
   // Honeypot. Real users never fill this.
@@ -25,12 +26,11 @@ const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 /**
  * Wait-list intake for the shared modal.
  *
- * Fans the signup out to three places, in priority order, none of which block
- * the others:
+ * Fans the signup out to two places, in priority order, neither of which
+ * blocks the other:
  *  1. Google Sheet via an Apps Script web app (WAITLIST_SHEET_WEBHOOK_URL) so
  *     Brett can see every lead and which CTA it came from.
- *  2. GHL contact (best-effort) so it lands in Emily's pipeline.
- *  3. Resend email to Emily (the hard requirement — a non-OK status here lets
+ *  2. Resend email to Emily (the hard requirement. A non-OK status here lets
  *     the client surface an error rather than silently dropping a lead).
  *
  * See _handoff/google-sheets-waitlist-setup-2026-06-15.md for the Sheet setup.
@@ -52,6 +52,7 @@ export async function POST(req: Request): Promise<NextResponse> {
   const lastName = clean(body.lastName, 80)
   const email = clean(body.email, 200)
   const churchDomain = clean(body.churchDomain, 200)
+  const referralCode = clean(body.referralCode, 80)
   const source = clean(body.source, 120) || 'unknown'
   const name = [firstName, lastName].filter(Boolean).join(' ')
   const timestamp = new Date().toISOString()
@@ -60,13 +61,18 @@ export async function POST(req: Request): Promise<NextResponse> {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 422 })
   }
 
-  const record = { firstName, lastName, email, churchDomain, source, timestamp }
+  const record = {
+    firstName,
+    lastName,
+    email,
+    churchDomain,
+    referralCode,
+    source,
+    timestamp,
+  }
 
-  // Best-effort fan-out. Neither the Sheet nor the CRM blocks the email.
-  await Promise.allSettled([
-    appendToSheet(record),
-    createGhlContact({ ...record, name }),
-  ])
+  // Best-effort fan-out. The Sheet write does not block the email.
+  await Promise.allSettled([appendToSheet(record)])
 
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
@@ -85,6 +91,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     `Email: ${email}`,
     `Church domain: ${churchDomain || '(not provided)'}`,
     `Source: ${source}`,
+    `Referral code: ${referralCode || '(not provided)'}`,
     `Time: ${timestamp}`,
   ].join('\n')
 
@@ -112,6 +119,7 @@ type Record = {
   lastName: string
   email: string
   churchDomain: string
+  referralCode: string
   source: string
   timestamp: string
 }
@@ -125,30 +133,5 @@ async function appendToSheet(record: Record): Promise<void> {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(record),
-  })
-}
-
-async function createGhlContact(p: Record & { name: string }): Promise<void> {
-  const apiKey = process.env.GHL_API_KEY
-  const locationId = process.env.GHL_LOCATION_ID
-  if (!apiKey || !locationId) return
-
-  const tags = ['wait-list-2026', `source:${p.source}`]
-  await fetch('https://services.leadconnectorhq.com/contacts/', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      Version: '2021-07-28',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      locationId,
-      firstName: p.firstName || p.name || undefined,
-      lastName: p.lastName || undefined,
-      email: p.email,
-      website: p.churchDomain || undefined,
-      source: `Website wait list (${p.source})`,
-      tags,
-    }),
   })
 }
