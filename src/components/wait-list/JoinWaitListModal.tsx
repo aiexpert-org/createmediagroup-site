@@ -329,7 +329,7 @@ export function JoinWaitListModal({
                       type="text"
                       name="referralCode"
                       autoComplete="off"
-                      placeholder="Referral code (optional, e.g. michele okimura 2026)"
+                      placeholder="Referral code (optional)"
                       value={referralCode}
                       onChange={(e) => setReferralCode(e.target.value)}
                       disabled={status === 'submitting'}
