@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server'
 
-import { siteConfig } from '@/lib/site-config'
-
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
@@ -26,14 +24,17 @@ const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 /**
  * Wait-list intake for the shared modal.
  *
- * Fans the signup out to two places, in priority order, neither of which
- * blocks the other:
- *  1. Google Sheet via an Apps Script web app (WAITLIST_SHEET_WEBHOOK_URL) so
- *     Brett can see every lead and which CTA it came from.
- *  2. Resend email to Emily (the hard requirement. A non-OK status here lets
- *     the client surface an error rather than silently dropping a lead).
+ * Single dependency: an Apps Script web app under Emily's
+ * emily@createchurchmedia.com Workspace (WAITLIST_SHEET_WEBHOOK_URL).
+ * The Apps Script does two things in one call:
+ *   1. Appends a row to the `CCM Wait List Signups` Google Sheet.
+ *   2. Sends Emily a notification email via MailApp.sendEmail.
  *
- * See _handoff/google-sheets-waitlist-setup-2026-06-15.md for the Sheet setup.
+ * Both run inside Emily's Workspace with her permissions. No external
+ * email service, no API keys to rotate, no FROM-domain verification.
+ *
+ * See _handoff/google-sheets-waitlist-setup-2026-06-15.md and the
+ * 2026-06-19 amendment doc for the current Apps Script source.
  */
 export async function POST(req: Request): Promise<NextResponse> {
   let body: Payload
@@ -54,7 +55,6 @@ export async function POST(req: Request): Promise<NextResponse> {
   const churchDomain = clean(body.churchDomain, 200)
   const referralCode = clean(body.referralCode, 80)
   const source = clean(body.source, 120) || 'unknown'
-  const name = [firstName, lastName].filter(Boolean).join(' ')
   const timestamp = new Date().toISOString()
 
   if (!EMAIL_RE.test(email)) {
@@ -63,6 +63,11 @@ export async function POST(req: Request): Promise<NextResponse> {
 
   if (!churchDomain) {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 422 })
+  }
+
+  const webhookUrl = process.env.WAITLIST_SHEET_WEBHOOK_URL
+  if (!webhookUrl) {
+    return NextResponse.json({ ok: false, error: 'not_configured' }, { status: 503 })
   }
 
   const record = {
@@ -75,38 +80,11 @@ export async function POST(req: Request): Promise<NextResponse> {
     timestamp,
   }
 
-  // Best-effort fan-out. The Sheet write does not block the email.
-  await Promise.allSettled([appendToSheet(record)])
-
-  const apiKey = process.env.RESEND_API_KEY
-  if (!apiKey) {
-    return NextResponse.json({ ok: false, error: 'not_configured' }, { status: 503 })
-  }
-
-  const to = process.env.WAITLIST_TO || siteConfig.email
-  const from =
-    process.env.WAITLIST_FROM || `Create Church Media <noreply@${siteConfig.domain}>`
-  const who = name || email
-  const subject = `[CCM wait list] New signup: ${who} (${source})`
-  const text = [
-    'New wait list signup',
-    '',
-    `Name: ${name || '(not provided)'}`,
-    `Email: ${email}`,
-    `Church domain: ${churchDomain || '(not provided)'}`,
-    `Source: ${source}`,
-    `Referral code: ${referralCode || '(not provided)'}`,
-    `Time: ${timestamp}`,
-  ].join('\n')
-
   try {
-    const res = await fetch('https://api.resend.com/emails', {
+    const res = await fetch(webhookUrl, {
       method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ from, to: [to], reply_to: email, subject, text }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(record),
     })
     if (!res.ok) {
       return NextResponse.json({ ok: false, error: 'send_failed' }, { status: 502 })
@@ -116,26 +94,4 @@ export async function POST(req: Request): Promise<NextResponse> {
   }
 
   return NextResponse.json({ ok: true })
-}
-
-type Record = {
-  firstName: string
-  lastName: string
-  email: string
-  churchDomain: string
-  referralCode: string
-  source: string
-  timestamp: string
-}
-
-// POST the signup to the Apps Script web app, which appends a row to the
-// "CCM Wait List Signups" sheet. No-op until the webhook URL is configured.
-async function appendToSheet(record: Record): Promise<void> {
-  const url = process.env.WAITLIST_SHEET_WEBHOOK_URL
-  if (!url) return
-  await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(record),
-  })
 }
