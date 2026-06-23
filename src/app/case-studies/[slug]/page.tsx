@@ -35,10 +35,20 @@ export async function generateMetadata({
 
   return buildMetadata({
     title: `${study.church} · Case Study`,
-    description: study.excerpt,
+    description: clampDescription(study.excerpt),
     path: `/case-studies/${slug}`,
     type: 'article',
   })
+}
+
+// Keep meta descriptions in the ~155-char SERP window. Trim at a word boundary
+// and add an ellipsis so longer case-study excerpts do not get cut mid-word.
+function clampDescription(text: string, max = 155): string {
+  const clean = text.replace(/\s+/g, ' ').trim()
+  if (clean.length <= max) return clean
+  const cut = clean.slice(0, max - 1)
+  const lastSpace = cut.lastIndexOf(' ')
+  return `${cut.slice(0, lastSpace > 0 ? lastSpace : cut.length).trim()}…`
 }
 
 export default async function CaseStudyPage({

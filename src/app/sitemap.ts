@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { siteConfig } from '@/lib/site-config'
-import { getAllPostSlugs } from '@/lib/blog'
+import { getAllPosts } from '@/lib/blog'
 import { getAllCaseStudySlugs } from '@/lib/case-studies'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date()
   const routes = ['/', '/how-it-works', '/subscription', '/portfolio', '/case-studies', '/resources', '/contact']
 
@@ -14,9 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '/' ? 1 : 0.7,
   }))
 
-  const articleEntries: MetadataRoute.Sitemap = getAllPostSlugs().map((slug) => ({
-    url: `${siteConfig.url}/resources/${slug}`,
-    lastModified,
+  // Per-article lastmod from each post's own publish date, not the build time.
+  const posts = await getAllPosts()
+  const articleEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${siteConfig.url}/resources/${post.slug}`,
+    lastModified: post.date ? new Date(post.date) : lastModified,
     changeFrequency: 'monthly',
     priority: 0.6,
   }))

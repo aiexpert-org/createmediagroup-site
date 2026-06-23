@@ -7,6 +7,8 @@ export function OrganizationJsonLd() {
   // Service-area business (no storefront), publicly based in Indianapolis and
   // serving the surrounding metro. areaServed drives which local Map Pack
   // queries CCM can surface for.
+  // Local Indianapolis-metro signals for the Map Pack, plus the United States
+  // since the client roster spans 11+ states (the work is remote-first).
   const areaServed = [
     { '@type': 'City', name: 'Indianapolis' },
     { '@type': 'City', name: 'Carmel' },
@@ -16,6 +18,7 @@ export function OrganizationJsonLd() {
     { '@type': 'City', name: 'Greenwood' },
     { '@type': 'AdministrativeArea', name: 'Hamilton County, IN' },
     { '@type': 'State', name: 'Indiana' },
+    { '@type': 'Country', name: 'United States' },
   ]
 
   const data = {
