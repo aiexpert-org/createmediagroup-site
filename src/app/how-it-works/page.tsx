@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: 'How it works',
   description:
     'From inquiry to a finished file. The five-step process Emily uses to design unlimited church graphics on a monthly subscription.',
+  alternates: { canonical: '/how-it-works' },
 }
 
 const STEPS: Step[] = [
