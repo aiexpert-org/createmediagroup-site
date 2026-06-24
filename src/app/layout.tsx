@@ -20,13 +20,13 @@ const monaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    template: `%s · ${siteConfig.brand}`,
-    default: `${siteConfig.brand} · Unlimited graphic design for churches`,
+    template: `%s | ${siteConfig.brand}`,
+    default: `${siteConfig.brand}: Unlimited graphic design for churches`,
   },
   description: siteConfig.description,
   openGraph: {
     type: 'website',
-    title: `${siteConfig.brand} · Unlimited graphic design for churches`,
+    title: `${siteConfig.brand}: Unlimited graphic design for churches`,
     description: siteConfig.description,
     siteName: siteConfig.brand,
     locale: 'en_US',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${siteConfig.brand} · Unlimited graphic design for churches`,
+    title: `${siteConfig.brand}: Unlimited graphic design for churches`,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },

@@ -5,10 +5,10 @@ export function OrganizationJsonLd() {
   if (siteConfig.googleBusinessUrl) sameAs.push(siteConfig.googleBusinessUrl)
 
   // Service-area business (no storefront), publicly based in Indianapolis and
-  // serving the surrounding metro. areaServed drives which local Map Pack
-  // queries CCM can surface for.
-  // Local Indianapolis-metro signals for the Map Pack, plus the United States
-  // since the client roster spans 11+ states (the work is remote-first).
+  // serving the surrounding metro. The city-level areaServed list drives which
+  // local Map Pack queries CCM can surface for; the GeoCircle gives Google a
+  // single coordinate + radius answer for "near me" queries. The Country entry
+  // covers the remote roster that spans 11+ states.
   const areaServed = [
     { '@type': 'City', name: 'Indianapolis' },
     { '@type': 'City', name: 'Carmel' },
@@ -19,6 +19,16 @@ export function OrganizationJsonLd() {
     { '@type': 'AdministrativeArea', name: 'Hamilton County, IN' },
     { '@type': 'State', name: 'Indiana' },
     { '@type': 'Country', name: 'United States' },
+    {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 39.7684,
+        longitude: -86.1581,
+      },
+      // ~50 mile radius around Indianapolis, covering the metro.
+      geoRadius: '80000',
+    },
   ]
 
   const data = {
@@ -46,6 +56,11 @@ export function OrganizationJsonLd() {
       addressRegion: siteConfig.state,
       addressCountry: 'US',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 39.7684,
+      longitude: -86.1581,
+    },
     areaServed,
     serviceArea: {
       '@type': 'GeoCircle',
@@ -68,6 +83,32 @@ export function OrganizationJsonLd() {
         addressCountry: 'US',
       },
     },
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        name: 'Monthly Subscription',
+        price: String(siteConfig.pricing.monthly),
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: String(siteConfig.pricing.monthly),
+          priceCurrency: 'USD',
+          unitCode: 'MON',
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Annual Prepay',
+        price: String(siteConfig.pricing.annual),
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: String(siteConfig.pricing.annual),
+          priceCurrency: 'USD',
+          unitCode: 'ANN',
+        },
+      },
+    ],
     sameAs,
   }
 
@@ -185,7 +226,7 @@ export function ArticleJsonLd({ title, description, slug, date, image }: Article
       url: siteConfig.url,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteConfig.url}/og-image.jpg`,
+        url: `${siteConfig.url}${siteConfig.ogImage}`,
       },
     },
     mainEntityOfPage: {

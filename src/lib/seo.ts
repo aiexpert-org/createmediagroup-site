@@ -21,6 +21,8 @@ type BuildMetadataOptions = {
  * matching og:url, and an og:image + twitter:image on every page. Pass the short
  * title and the framework appends the brand via the title template; the og:title
  * is composed to the full brand string here so social cards read correctly.
+ * Separator is ` | ` to match the layout title template; the home title uses a
+ * colon since the brand leads the string.
  */
 export function buildMetadata({
   title,
@@ -31,8 +33,8 @@ export function buildMetadata({
 }: BuildMetadataOptions): Metadata {
   const isHome = path === '/'
   const fullTitle = isHome
-    ? `${siteConfig.brand} · Unlimited graphic design for churches`
-    : `${title} · ${siteConfig.brand}`
+    ? `${siteConfig.brand}: Unlimited graphic design for churches`
+    : `${title} | ${siteConfig.brand}`
   const image = ogImage ?? siteConfig.ogImage
 
   return {

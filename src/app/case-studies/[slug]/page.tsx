@@ -34,7 +34,7 @@ export async function generateMetadata({
   if (!study) return {}
 
   return buildMetadata({
-    title: `${study.church} · Case Study`,
+    title: `${study.church}: Case Study`,
     description: clampDescription(study.excerpt),
     path: `/case-studies/${slug}`,
     type: 'article',
