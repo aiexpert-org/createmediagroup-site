@@ -32,12 +32,12 @@ export async function generateMetadata({
   if (!study) return {}
 
   return {
-    title: `${study.church} — Case Study`,
+    title: `${study.church}: Case Study`,
     description: study.excerpt,
     alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {
       type: 'article',
-      title: `${study.church} — Case Study`,
+      title: `${study.church}: Case Study`,
       description: study.excerpt,
       url: `${siteConfig.url}/case-studies/${slug}`,
       siteName: siteConfig.brand,

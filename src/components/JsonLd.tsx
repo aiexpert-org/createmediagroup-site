@@ -5,8 +5,9 @@ export function OrganizationJsonLd() {
   if (siteConfig.googleBusinessUrl) sameAs.push(siteConfig.googleBusinessUrl)
 
   // Service-area business (no storefront), publicly based in Indianapolis and
-  // serving the surrounding metro. areaServed drives which local Map Pack
-  // queries CCM can surface for.
+  // serving the surrounding metro. The city-level areaServed list drives which
+  // local Map Pack queries CCM can surface for; the GeoCircle gives Google a
+  // single coordinate + radius answer for "near me" queries.
   const areaServed = [
     { '@type': 'City', name: 'Indianapolis' },
     { '@type': 'City', name: 'Carmel' },
@@ -16,6 +17,16 @@ export function OrganizationJsonLd() {
     { '@type': 'City', name: 'Greenwood' },
     { '@type': 'AdministrativeArea', name: 'Hamilton County, IN' },
     { '@type': 'State', name: 'Indiana' },
+    {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 39.7684,
+        longitude: -86.1581,
+      },
+      // ~50 mile radius around Indianapolis, covering the metro.
+      geoRadius: '80000',
+    },
   ]
 
   const data = {
@@ -34,6 +45,11 @@ export function OrganizationJsonLd() {
       addressLocality: siteConfig.city,
       addressRegion: siteConfig.state,
       addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 39.7684,
+      longitude: -86.1581,
     },
     areaServed,
     serviceArea: {
@@ -57,6 +73,32 @@ export function OrganizationJsonLd() {
         addressCountry: 'US',
       },
     },
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        name: 'Monthly Subscription',
+        price: String(siteConfig.pricing.monthly),
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: String(siteConfig.pricing.monthly),
+          priceCurrency: 'USD',
+          unitCode: 'MON',
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Annual Prepay',
+        price: String(siteConfig.pricing.annual),
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: String(siteConfig.pricing.annual),
+          priceCurrency: 'USD',
+          unitCode: 'ANN',
+        },
+      },
+    ],
     sameAs,
   }
 

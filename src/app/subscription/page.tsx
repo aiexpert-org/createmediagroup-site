@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: 'Subscription',
   description:
     'One flat fee. Unlimited graphic design for churches. $997 a month or $9,997 annual prepay. Same designer, same access, same turn around times.',
+  alternates: { canonical: '/subscription' },
 }
 
 const PLAN_BULLETS = [
@@ -61,7 +62,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'What does "unlimited" actually mean?',
     answer:
-      'Unlimited requests, unlimited revisions, no per-project pricing. There’s a single shared queue with one designer. We work together until you are completely happy with the finished project. Same-day rush is available when you flag the urgency.',
+      'Unlimited requests, unlimited revisions, flat monthly pricing. There is a single shared queue with one designer. We work together until you are completely happy with the finished project. Same-day rush is available when you flag the urgency.',
   },
   {
     question: 'Is there a contract?',
@@ -81,7 +82,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'Will I work with the same designer every time?',
     answer:
-      'Yes, I am the designer on every request. No account managers, no rotating cast of contractors, no “let me hand this off to our specialist.”',
+      'Yes. Every project comes to Emily directly. Same designer, same access, same turnaround every time.',
   },
   {
     question: 'Do you do websites?',
@@ -176,7 +177,7 @@ export default function SubscriptionPage() {
       <PageIntro eyebrow="Subscription" title="One flat fee.">
         <p className="text-2xl text-neutral-700">Everything your church needs designed.</p>
         <p className="mt-4">
-          No long wait times. No per-project pricing. No upsells on revisions. Just a flat monthly subscription and a designer who actually knows your church.
+          A flat monthly subscription with same-day turnaround. One designer who answers her own messages. Revisions are part of the deal.
         </p>
       </PageIntro>
 
@@ -204,7 +205,7 @@ export default function SubscriptionPage() {
         <FadeIn className="mt-10 flex items-center justify-center gap-4">
           <EmilyAvatar size={56} />
           <p className="max-w-sm text-base text-neutral-600">
-            You&rsquo;re paying Emily directly. No agency, no account managers.
+            You&rsquo;re paying Emily directly. One designer, end to end.
           </p>
         </FadeIn>
       </Container>

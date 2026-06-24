@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: 'Portfolio',
   description:
     'See the work. Sermon series, announcements, logos and branding, social media, signage and print designed by Emily Farmer for churches across the country.',
+  alternates: { canonical: '/portfolio' },
 }
 
 function titleCase(slug: string): string {
