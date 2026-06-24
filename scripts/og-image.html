@@ -1,0 +1,69 @@
+<!doctype html>
+<!--
+  Source for /public/og-image.jpg (1200x630 social share card).
+  Brand DNA: purple #6a12a6 ground, yellow #eedd47 accent, white "create" wordmark.
+  Regenerate with: node scripts/generate-og.mjs (renders this file to public/og-image.jpg).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: #6a12a6;
+    position: relative;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 72px 80px;
+    color: #ffffff;
+  }
+  /* Soft brand glow in the corner for depth. */
+  .glow {
+    position: absolute;
+    width: 700px; height: 700px;
+    right: -180px; top: -240px;
+    background: radial-gradient(circle, rgba(238,221,71,0.22) 0%, rgba(238,221,71,0) 70%);
+    pointer-events: none;
+  }
+  .wordmark { height: 64px; width: auto; display: block; }
+  .headline {
+    font-size: 78px;
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    max-width: 940px;
+  }
+  .accent { color: #eedd47; }
+  .rule { width: 96px; height: 8px; background: #eedd47; border-radius: 999px; margin: 0 0 28px; }
+  .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .foot .domain { color: #eedd47; letter-spacing: 0.01em; }
+  .foot .by { color: rgba(255,255,255,0.85); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow"></div>
+    <img class="wordmark" src="../public/logos/create-wordmark-white.png" alt="Create Church Media" />
+    <div>
+      <div class="rule"></div>
+      <div class="headline">Unlimited graphic design <span class="accent">for churches.</span></div>
+    </div>
+    <div class="foot">
+      <span class="domain">createchurchmedia.com</span>
+      <span class="by">Designed by Emily Farmer</span>
+    </div>
+  </div>
+</body>
+</html>

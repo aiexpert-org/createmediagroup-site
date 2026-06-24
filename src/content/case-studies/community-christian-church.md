@@ -40,7 +40,8 @@ The 2024 Christmas mailer was a good example of how the CCC process moves. Adam 
 ## In their words
 
 > "These are great! We're going with option 1."
-> — Adam Hawkey, Executive Minister, November 20, 2024
+>
+> Adam Hawkey, Executive Minister, November 20, 2024
 
 ## Where things stand
 

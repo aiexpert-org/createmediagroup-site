@@ -42,7 +42,8 @@ The Easter set carried its own moment. I had built the Easter services graphic a
 ## In their words
 
 > "My men's leader asked if you could do something with an image of bacon."
-> — Michele Herman, Operations
+>
+> Michele Herman, Operations
 
 ## Where things stand
 

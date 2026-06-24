@@ -7,13 +7,14 @@ import { StepList, type Step } from '@/components/StepList'
 import { ContactBlock } from '@/components/ContactBlock'
 import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { HeroMosaicBackground } from '@/components/HeroMosaic'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'How it works',
   description:
     'From inquiry to a finished file. The five-step process Emily uses to design unlimited church graphics on a monthly subscription.',
-  alternates: { canonical: '/how-it-works' },
-}
+  path: '/how-it-works',
+})
 
 const STEPS: Step[] = [
   {

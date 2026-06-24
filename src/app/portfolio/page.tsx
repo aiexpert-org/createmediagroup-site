@@ -11,13 +11,14 @@ import {
   type Piece,
   type PortfolioCategory,
 } from '@/components/PortfolioGallery'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Portfolio',
   description:
     'See the work. Sermon series, announcements, logos and branding, social media, signage and print designed by Emily Farmer for churches across the country.',
-  alternates: { canonical: '/portfolio' },
-}
+  path: '/portfolio',
+})
 
 function titleCase(slug: string): string {
   return slug

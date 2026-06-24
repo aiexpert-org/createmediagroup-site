@@ -13,12 +13,13 @@ import { WorkShowcase } from '@/components/WorkShowcase'
 import { ChurchLogos } from '@/components/ChurchLogos'
 import { ContactBlock } from '@/components/ContactBlock'
 import { ServiceJsonLd } from '@/components/JsonLd'
-import { siteConfig } from '@/lib/site-config'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Unlimited graphic design for churches',
-  description: siteConfig.description,
-}
+export const metadata: Metadata = buildMetadata({
+  description:
+    'Unlimited church graphic design on a flat monthly subscription. Emily Farmer designs sermon art, branding, social, and signage for churches across the country.',
+  path: '/',
+})
 
 const FEATURES = [
   {

@@ -39,7 +39,8 @@ The Saturday before Advent, Jamie emailed me at 3:45 in the afternoon asking for
 ## In their words
 
 > "Thanks for all you've done to help us."
-> — Rick Ruble, Lead Pastor, November 2024
+>
+> Rick Ruble, Lead Pastor, November 2024
 
 ## Where things stand
 

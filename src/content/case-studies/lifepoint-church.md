@@ -40,7 +40,8 @@ The Binge the Bible AI files were one of the harder moments. I had a hard drive 
 ## In their words
 
 > "We can definitely work ahead most of the time. The series (Binge the bible) is the first time we have given a full series to a contractor. Anything binge the bible takes precedence over the other things."
-> — Melissa Swann, Creative Project Manager, April 2022
+>
+> Melissa Swann, Creative Project Manager, April 2022
 
 ## Where things stand
 

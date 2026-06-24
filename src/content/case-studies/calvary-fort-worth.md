@@ -42,7 +42,8 @@ When I sent the social sizes, Pastor Anthony came back asking for the AI files i
 ## In their words
 
 > "These are wonderful Emily, thank you so much. I'm going with the English version, the Spanish one has last year's date, but that's ok. The artwork is super clear."
-> — Pastor Anthony Morehead, February 28, 2026
+>
+> Pastor Anthony Morehead, February 28, 2026
 
 ## Where things stand
 

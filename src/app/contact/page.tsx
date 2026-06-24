@@ -8,13 +8,14 @@ import { PageIntro } from '@/components/PageIntro'
 import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { EmilyPortrait } from '@/components/EmilyAvatar'
 import { siteConfig } from '@/lib/site-config'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Join the wait list',
   description:
     'Emily takes on a small number of new churches each quarter. Join the Create Church Media wait list and she will reach out by email when a spot opens.',
-  alternates: { canonical: '/contact' },
-}
+  path: '/contact',
+})
 
 export default function ContactPage() {
   return (

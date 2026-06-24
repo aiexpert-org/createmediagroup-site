@@ -2,8 +2,13 @@ export const siteConfig = {
   brand: 'Create Church Media',
   shortBrand: 'CCM',
   domain: 'createchurchmedia.com',
-  url: 'https://createchurchmedia.com',
+  // Canonical host is www. The bare apex 308-redirects to www, so every
+  // canonical, og:url, sitemap entry, and JSON-LD url must use the www host to
+  // match the resolved address. Changing this one value propagates everywhere.
+  url: 'https://www.createchurchmedia.com',
   email: 'emily@createchurchmedia.com',
+  // Default social share card, 1200x630, lives at /og-image.jpg.
+  ogImage: '/og-image.jpg',
   city: 'Indianapolis',
   state: 'IN',
   designer: 'Emily Farmer',
@@ -22,13 +27,15 @@ export const siteConfig = {
     'mailto:emily@createchurchmedia.com?subject=Joining%20the%20wait%20list',
   // Google Business Profile URL. Empty until Brett fills it in.
   googleBusinessUrl: '',
-  // Direct "write a review" link for Emily's Google Business Profile, used by
-  // the footer "Leave a 5-star review" link. Placeholder for now: no public GBP
-  // listing for Create Church Media / Create Media Group turned up in search.
-  // TODO: replace with Emily's actual GBP review URL once she sends it. Cleanest
-  // format is https://search.google.com/local/writereview?placeid=<PLACE_ID>,
-  // or a Google-generated https://g.page/r/<short-code>/review short link.
-  googleReviewUrl: 'https://www.google.com/business/',
+  // Direct "write a review" link for Emily's Google Business Profile. Empty
+  // until Emily sends her real GBP review URL. The footer "Leave a 5-star
+  // review" CTA only renders when this is set, so it stays hidden rather than
+  // pointing at the generic Google Business signup page (which the audit flagged
+  // as a broken-intent link, and there are no on-site reviews to back the claim).
+  // TODO: set to Emily's GBP review URL once she sends it. Cleanest format is
+  // https://search.google.com/local/writereview?placeid=<PLACE_ID>, or a
+  // Google-generated https://g.page/r/<short-code>/review short link.
+  googleReviewUrl: '',
 } as const
 
 export const navItems = [

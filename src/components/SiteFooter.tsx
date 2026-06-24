@@ -86,19 +86,22 @@ export function SiteFooter() {
             <span className="font-medium text-neutral-600">{siteConfig.designer}.</span>
           </p>
 
-          {/* TODO: replace with Emily's actual GBP review URL once she sends it
-              (see siteConfig.googleReviewUrl). */}
-          <a
-            href={siteConfig.googleReviewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-700 transition hover:text-neutral-950"
-          >
-            <StarIcon className="h-4 w-4 text-[var(--color-cta)]" />
-            <span className="underline-offset-4 decoration-[var(--color-cta)] group-hover:underline">
-              Leave a 5-star review
-            </span>
-          </a>
+          {/* The 5-star review CTA only shows once Emily provides a real GBP
+              review URL (siteConfig.googleReviewUrl). Hidden until then so it
+              never points at the generic Google Business signup page. */}
+          {siteConfig.googleReviewUrl ? (
+            <a
+              href={siteConfig.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-700 transition hover:text-neutral-950"
+            >
+              <StarIcon className="h-4 w-4 text-[var(--color-cta)]" />
+              <span className="underline-offset-4 decoration-[var(--color-cta)] group-hover:underline">
+                Leave a 5-star review
+              </span>
+            </a>
+          ) : null}
 
           <p className="text-sm text-neutral-500">
             Made in {siteConfig.city}, {siteConfig.state}.

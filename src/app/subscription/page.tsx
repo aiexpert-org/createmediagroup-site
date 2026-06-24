@@ -9,13 +9,14 @@ import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { ContactBlock } from '@/components/ContactBlock'
 import { FaqJsonLd, ServiceJsonLd } from '@/components/JsonLd'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Subscription',
   description:
     'One flat fee. Unlimited graphic design for churches. $997 a month or $9,997 annual prepay. Same designer, same access, same turn around times.',
-  alternates: { canonical: '/subscription' },
-}
+  path: '/subscription',
+})
 
 const PLAN_BULLETS = [
   'One designer.',

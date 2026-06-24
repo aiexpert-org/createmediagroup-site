@@ -8,21 +8,14 @@ import { PageIntro } from '@/components/PageIntro'
 import { ContactBlock } from '@/components/ContactBlock'
 import { getAllCaseStudies } from '@/lib/case-studies'
 import { churchLogo } from '@/lib/churches'
-import { siteConfig } from '@/lib/site-config'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Case Studies',
   description:
     'Churches across the country Emily Farmer has designed for. Sermon series art, branding, social media, announcements and signage, week after week.',
-  alternates: { canonical: '/case-studies' },
-  openGraph: {
-    type: 'website',
-    title: `Case Studies | ${siteConfig.brand}`,
-    description:
-      'Churches across the country Emily Farmer has designed for, from sermon series art to full brand systems.',
-    url: `${siteConfig.url}/case-studies`,
-  },
-}
+  path: '/case-studies',
+})
 
 export default async function CaseStudiesPage() {
   const studies = await getAllCaseStudies()

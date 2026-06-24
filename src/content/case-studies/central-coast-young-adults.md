@@ -36,7 +36,8 @@ Around September 2023 I sent Erica and her co-leader Daniella Skinner a note abo
 ## In their words
 
 > "you're the best girly thank you !"
-> — Erica Hardy, December 15, 2023
+>
+> Erica Hardy, December 15, 2023
 
 ## Where things stand
 

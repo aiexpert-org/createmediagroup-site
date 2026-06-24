@@ -8,27 +8,14 @@ import { PageIntro } from '@/components/PageIntro'
 import { Border } from '@/components/Border'
 import { ContactBlock } from '@/components/ContactBlock'
 import { getAllPosts, formatPostDate } from '@/lib/blog'
-import { siteConfig } from '@/lib/site-config'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Resources',
   description:
     'Notes from Emily Farmer on church design, brand consistency, comms team workflows, and the subscription model.',
-  alternates: { canonical: '/resources' },
-  openGraph: {
-    type: 'website',
-    title: `Resources | ${siteConfig.brand}`,
-    description:
-      'Notes from Emily Farmer on church design, brand consistency, comms team workflows, and the subscription model.',
-    url: `${siteConfig.url}/resources`,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Resources | ${siteConfig.brand}`,
-    description:
-      'Notes from Emily Farmer on church design, brand consistency, comms team workflows, and the subscription model.',
-  },
-}
+  path: '/resources',
+})
 
 export default async function ResourcesPage() {
   const posts = await getAllPosts()

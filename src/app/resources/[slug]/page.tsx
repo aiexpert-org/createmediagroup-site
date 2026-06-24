@@ -7,7 +7,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { ContactBlock } from '@/components/ContactBlock'
-import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd'
+import { ArticleJsonLd, FaqJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd'
 import { ArticleByline } from '@/components/EmilyAvatar'
 import {
   getAllPostSlugs,
@@ -76,6 +76,13 @@ export default async function ArticlePage({
         image={post.image}
       />
       {post.faqs && post.faqs.length > 0 ? <FaqJsonLd faqs={post.faqs} /> : null}
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: post.title, path: `/resources/${slug}` },
+        ]}
+      />
 
       <Container className="mt-12 sm:mt-20">
         <FadeIn className="mx-auto max-w-3xl">

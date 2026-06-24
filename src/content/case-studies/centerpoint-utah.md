@@ -37,7 +37,8 @@ The Wreck The Roof sermon series in May 2025 is a good example of how a request 
 ## In their words
 
 > "Hey Emily! These are great. I like the red/pink/salmon and purple one the best. I made a huge typo! It is Wreck The Roof, haha! Will you add a 'W' to it? Can we also add the subtitle 'How far would you go for Jesus?'"
-> — Ethan Closson, Communications Director, May 27, 2025
+>
+> Ethan Closson, Communications Director, May 27, 2025
 
 ## Where things stand
 

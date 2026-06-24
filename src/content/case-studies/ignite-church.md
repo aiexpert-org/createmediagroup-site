@@ -37,7 +37,8 @@ The Newcomer's Lunch and Quick Connect slides were the longest-tail piece of wor
 ## In their words
 
 > "We're so appreciative of the work that you've done for us (you've been great to work with)."
-> — Russ Shearer, Pastor, October 2024
+>
+> Russ Shearer, Pastor, October 2024
 
 ## Where things stand
 

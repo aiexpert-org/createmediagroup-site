@@ -7,7 +7,8 @@ export function OrganizationJsonLd() {
   // Service-area business (no storefront), publicly based in Indianapolis and
   // serving the surrounding metro. The city-level areaServed list drives which
   // local Map Pack queries CCM can surface for; the GeoCircle gives Google a
-  // single coordinate + radius answer for "near me" queries.
+  // single coordinate + radius answer for "near me" queries. The Country entry
+  // covers the remote roster that spans 11+ states.
   const areaServed = [
     { '@type': 'City', name: 'Indianapolis' },
     { '@type': 'City', name: 'Carmel' },
@@ -17,6 +18,7 @@ export function OrganizationJsonLd() {
     { '@type': 'City', name: 'Greenwood' },
     { '@type': 'AdministrativeArea', name: 'Hamilton County, IN' },
     { '@type': 'State', name: 'Indiana' },
+    { '@type': 'Country', name: 'United States' },
     {
       '@type': 'GeoCircle',
       geoMidpoint: {
@@ -38,8 +40,16 @@ export function OrganizationJsonLd() {
     url: siteConfig.url,
     email: siteConfig.email,
     description: siteConfig.description,
-    image: `${siteConfig.url}/og-image.jpg`,
+    image: `${siteConfig.url}${siteConfig.ogImage}`,
     priceRange: '$$',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        email: siteConfig.email,
+        contactType: 'customer support',
+        availableLanguage: 'English',
+      },
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: siteConfig.city,
@@ -216,12 +226,92 @@ export function ArticleJsonLd({ title, description, slug, date, image }: Article
       url: siteConfig.url,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteConfig.url}/og-image.jpg`,
+        url: `${siteConfig.url}${siteConfig.ogImage}`,
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteConfig.url}/resources/${slug}`,
+    },
+  }
+  if (image) data.image = `${siteConfig.url}${image}`
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
+type BreadcrumbItem = { name: string; path: string }
+
+export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${siteConfig.url}${item.path}`,
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
+type CaseStudyJsonLdProps = {
+  church: string
+  excerpt: string
+  slug: string
+  location: string
+  image?: string
+}
+
+export function CaseStudyJsonLd({
+  church,
+  excerpt,
+  slug,
+  location,
+  image,
+}: CaseStudyJsonLdProps) {
+  const data: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${church} church design case study`,
+    description: excerpt,
+    about: {
+      '@type': 'Organization',
+      name: church,
+      location,
+    },
+    author: {
+      '@type': 'Person',
+      name: siteConfig.designer,
+      url: siteConfig.url,
+    },
+    creator: {
+      '@type': 'Person',
+      name: siteConfig.designer,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.brand,
+      url: siteConfig.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.url}${siteConfig.ogImage}`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${siteConfig.url}/case-studies/${slug}`,
     },
   }
   if (image) data.image = `${siteConfig.url}${image}`
